@@ -215,9 +215,9 @@ def slide_summary(s, c):
         y = 1.4 + i * 1.72
         box(s, LEFT, y, 3.5, 1.52, name=f"stat-card-{i + 1}")
         tf = textbox(s, LEFT + 0.25, y + 0.18, 3.0, 0.62)
-        add_para(tf, [(c.get(f"s1_stat{i + 1}_value", ""), dict(size=32, color=RULE[i], bold=True))], first=True)
+        add_para(tf, [(c.get(f"stat{i + 1}", ""), dict(size=32, color=RULE[i], bold=True))], first=True)
         tf = textbox(s, LEFT + 0.25, y + 0.88, 3.0, 0.55)
-        add_para(tf, [(c.get(f"s1_stat{i + 1}_label", ""), dict(size=11.5))], first=True)
+        add_para(tf, [(c.get(f"stat{i + 1}_text", ""), dict(size=11.5))], first=True)
     tf = textbox(s, 4.45, 1.35, RIGHT - 4.45, 5.0, name="summary-body")
     first = True
     for label, keys in (("Context", ["s1_context"]), ("Key findings", ["s1_finding1", "s1_finding2", "s1_finding3"]),

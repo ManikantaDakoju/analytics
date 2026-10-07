@@ -59,24 +59,31 @@ Produce the Slide_Content table with two columns, Key | Value, using exactly the
 ```
 *Paste the Key | Value table into the Slide_Content tab (column B), save the workbook in Excel.*
 
-### Prompt 8 – Build the deck (choose one route)
+### Prompt 8 – Build the deck (no code needed)
 
-**Route A – Same output as the POC deck (recommended). Copilot with code interpreter, or any Python.**
-Upload `build_deck.py`, the EY template (.pptx) and the completed workbook to a Copilot chat or agent that can run Python (code interpreter or "Analyst"), then send:
-```
-Run the attached Python script build_deck.py exactly as written, with no changes, using:
---template <EY_Template.pptx> --workbook <Client_Country_Nature_Mapping.xlsx> --out <Client>_Nature_Priorities.pptx
-If a library is missing, tell me which one; do not rewrite the script. Give me the output file to download.
-```
-If Copilot cannot run code, run it yourself, if EY allows Python on your laptop:
-`pip install python-pptx openpyxl` then
-`python build_deck.py --template EY_Template.pptx --workbook <workbook>.xlsx --out <Client>_Nature_Priorities.pptx`
+You need:
+- `Nature_Deck_Skeleton_EY.pptx`: the EY template with all three slides already laid out, and placeholders such as `{{s1_title}}` and `{{1_name}}`
+- the **Deck_Tokens** tab of your client workbook: every placeholder with its value, calculated by formulas from Scoring and Slide_Content
 
-**Route B – Copilot in PowerPoint (no code).** Open a new deck from the EY template, then:
-```
-Using this presentation's EY template, add three content slides from the text below. Keep my wording exactly. Slide 1: three stat boxes on the left and the summary bullets on the right. Slide 2: a native table with columns #, Sub-theme, NBSAP $ | no., Client exposure, Score, Tier, Key client evidence, then a Low-priority line. Slide 3: four cards side by side (evidence, support, output), then the cross-cutting line and next steps. Put sources in the speaker notes. Do not add images or change the theme.
-<paste Slide_Content table and the ranked Scoring rows>
-```
-Route B gives a similar structure, but layouts vary from run to run; adjust spacing by hand.
+**Step 8a – Prepare**
+1. Save your client workbook in Excel, so the formulas recalculate.
+2. Make a copy of `Nature_Deck_Skeleton_EY.pptx` named `<Client>_Nature_Priorities.pptx` and open it in PowerPoint.
+3. In the workbook's **Deck_Tokens** tab, copy columns A and B from row 5 down.
 
-**Route C – Manual.** Paste each Slide_Content value into the template placeholders (about 15 minutes).
+**Step 8b – Ask Copilot in PowerPoint** (Copilot pane inside the open deck)
+```
+This presentation contains placeholders in double curly braces, for example {{s1_title}} and {{1_name}}.
+Replace every placeholder with the matching Value from the table below. Replace only the placeholder text: keep all fonts, colours, shapes, positions and tables exactly as they are. Also replace placeholders in the speaker notes. If a Value is blank, delete the placeholder and leave the cell or box empty. Do not add, move, resize or restyle anything, and do not rewrite any Value.
+<paste the Placeholder | Value table>
+```
+Then check:
+- No `{{` is left anywhere (use Home → Find, and search for `{{`).
+- On page 3, delete any empty table rows: select the row, then right-click → Delete Rows.
+- Optional: colour the Tier cells for High rows yellow, to match the POC deck.
+
+**Fallback if Copilot can't do the replacement:** use PowerPoint's own **Home → Replace (Ctrl+H)**.
+- Copy each placeholder from column A and its value from column B, then click **Replace All**.
+- Doing all of them takes about 20–25 minutes. The layout never changes, because you only replace text.
+- Do slide 1 and slide 3 boxes first. For the page 3 table, you can click into each cell and paste.
+
+**Optional – build_deck.py:** where Python is allowed (not on EY laptops at present), `build_deck.py` builds the same deck in one step. See the playbook.

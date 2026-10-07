@@ -45,7 +45,7 @@ Sub-market IDs and definitions are in the Sub_Markets tab. Always map to the sub
 **Slide_Content:** Key | Value, using exactly these keys:
 - cover_title, cover_date, client_name
 - s1_title, s1_section
-- s1_stat1_value, s1_stat1_label, s1_stat2_value, s1_stat2_label, s1_stat3_value, s1_stat3_label
+- stat1, stat1_text, stat2, stat2_text, stat3, stat3_text
 - s1_context, s1_finding1, s1_finding2, s1_finding3, s1_priorities, s1_implication, s1_footnote, s1_notes
 - s2_title, s2_section, s2_low_note, s2_footnote, s2_notes
 - s3_title, s3_section
