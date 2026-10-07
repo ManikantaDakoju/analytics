@@ -40,7 +40,17 @@ Sub-market IDs and definitions are in the Sub_Markets tab. Always map to the sub
 
 **NBSAP_Targets:** Country_ID | SubTheme_ID | NBSAP goal / target reference | Policy signal strength (High/Medium/Low) | Page
 
-**Scoring (agent part only):** SubTheme_ID | C1 Materiality | C2 Action gap | C4 Regulatory & market momentum | Evidence_IDs | Rationale | Client exposure (as disclosed)
+**Scoring (agent part only):** SubTheme_ID | C1 Materiality | C2 Action gap | C4 Regulatory & market momentum | Evidence_IDs | Rationale | Client exposure (as disclosed) | Key evidence for slide (≤12 words) | Exposure for slide (≤4 words)
+
+**Slide_Content:** Key | Value, using exactly these keys:
+- cover_title, cover_date, client_name
+- s1_title, s1_section
+- s1_stat1_value, s1_stat1_label, s1_stat2_value, s1_stat2_label, s1_stat3_value, s1_stat3_label
+- s1_context, s1_finding1, s1_finding2, s1_finding3, s1_priorities, s1_implication, s1_footnote, s1_notes
+- s2_title, s2_section, s2_low_note, s2_footnote, s2_notes
+- s3_title, s3_section
+- s3_card1_title, s3_card1_score, s3_card1_evidence, s3_card1_support, s3_card1_output (and the same five keys for cards 2–4)
+- s3_crosscutting, s3_next1, s3_next2, s3_next3, s3_footnote, s3_notes
 
 ---
 
