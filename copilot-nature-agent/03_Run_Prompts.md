@@ -61,9 +61,10 @@ Produce the Slide_Content table with two columns, Key | Value, using exactly the
 - Slide 1 cards: c1 = the national NBSAP signal (leave c1_stat and c1_stat_text blank unless I give you a figure; use the largest themes for the proof points); c2 = regulation and market drivers cited in the sources; c3 = why the client is exposed (headline nature-priority exposure, main gaps, main actions). Each proof point is a bold lead (≤3 words, usually a figure) plus ≤8 words.
 - Slide 2 tiles t1–t6: the client's disclosed exposures most relevant to the High and Medium priorities, largest first, with the linked priority ranks (e.g. #3 #4) and whether the client classes the sector as nature priority. Use "Not disclosed" or "Not split" rather than estimating.
 - Slide 3 cards 1–4 are the top four priorities (merge two water sub-themes into one card if both rank).
-For *_notes keys, list sources one per line. Return the table only.
+For *_notes keys, list sources one per line.
+Follow the knowledge file 04_Slide_Writing_Guide_and_Example exactly: keep every value within its character limit and match the length and style of the LBG worked example, but never copy its facts. Run the guide's self-check before replying. Return the table only.
 ```
-*Paste the Key | Value table into the Slide_Content tab (column B), save the workbook in Excel.*
+*Paste the Key | Value table into the Slide_Content tab (column B) and save the workbook in Excel. Column F flags anything "Too long" or "Missing". Fix those, or ask Copilot: "Shorten these values to their limits: <paste the flagged rows>".*
 
 ### Prompt 8 – Build the deck (no code needed)
 

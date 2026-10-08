@@ -20,6 +20,7 @@ How to repeat the LBG proof of concept for any client in any country covered by 
 | `01_Agent_Instructions.md` | Paste into the agent's **Instructions** field (about 4,000 characters; Copilot usually allows 8,000) |
 | `02_Methodology_and_Specifications.md` | Save as .docx or .pdf and upload as agent **Knowledge** |
 | `03_Run_Prompts.md` | The exact prompts for each run, in order |
+| `04_Slide_Writing_Guide_and_Example` (.docx and .md) | Upload the .docx as agent **Knowledge**. Shows Copilot how to write every slide field: rules, limits, good and weak examples, and the full LBG example. |
 | `Nature_Opportunity_Master_Template.xlsx` | Blank workbook for every client; contains the full taxonomy, all countries' NBSAP commitments and a Slide_Content tab |
 | `Nature_Deck_Skeleton_EY.pptx` | EY template with the 3 slides laid out and placeholders, ready to fill for each client |
 | `build_deck.py` | Out of date (earlier layout); kept for reference only |
@@ -32,7 +33,7 @@ How to repeat the LBG proof of concept for any client in any country covered by 
 4. **Knowledge:** upload these files:
    - `02_Methodology_and_Specifications` (.docx or .pdf)
    - the master template
-   - the EY slide template, as a reference for layout names
+   - `04_Slide_Writing_Guide_and_Example.docx` (how to write each slide field)
 5. **Capabilities:**
    - Turn web search **off**. You upload the sources, which keeps runs repeatable.
    - Turn on code interpreter if EY has it enabled; it helps with reading Excel files.
