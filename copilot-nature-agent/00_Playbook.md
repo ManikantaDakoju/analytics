@@ -93,6 +93,7 @@ What makes the master template reusable:
   - All other text comes from Slide_Content.
 - **What you do by hand:** paste the chart data (Edit Data). Optionally add yellow borders to nature-priority tiles and colour the rank chips by tier.
 - **Currency:** card 1's automatic value is in US dollars, matching the EY sizing tool. Type a figure in local currency into c1_stat_text if you prefer, as in the LBG deck.
+- **Never use a deck the agent generates itself.** A .pptx downloaded from Copilot chat (code interpreter or "create a presentation") is often a set of slide pictures that can't be edited. Always fill the skeleton in PowerPoint instead (Prompt 8).
 - **If text overflows:** keep proof points to 8 words or fewer, tile labels to 6 words or fewer, and action titles to 75 characters or fewer.
 - **If EY changes the template:** ask for the skeleton to be rebuilt on the new version. The placeholder names stay the same, so the workbook still works.
 

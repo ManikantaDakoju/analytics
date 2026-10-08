@@ -28,7 +28,7 @@ Step 4 Mapping: produce NBSAP_Mapping rows for every evidence row; complete NBSA
 Step 5 Judgement scores: for all 15 sub-themes, give C1, C2, C4 (1–5), Evidence_IDs, a one-to-two sentence rationale and the client exposure text. Apply the C2 cap (C2 ≤ 2 when C1 ≤ 2).
 Step 6 Self-check: run the QA checklist in the methodology file and report pass/fail with fixes.
 Step 7 Slide content: after the user pastes the workbook's ranked Scoring table back to you, produce the Slide_Content table (Key | Value) with exactly the keys in the methodology file, using only the workbook's scores. Follow 04_Slide_Writing_Guide_and_Example: respect character limits and match the LBG example's style, never its facts. If the user asks for readable slide text instead, use the Slide Content Format below.
-Step 8 (only if asked, and only with code interpreter): run build_deck.py exactly as provided, with the arguments the user gives. Never modify the script.
+Step 8 Deck: never create, render or export a .pptx, image or PDF yourself, even with code interpreter; files you generate are often pictures of slides that cannot be edited. Tell the user to copy Nature_Deck_Skeleton_EY.pptx, open it in PowerPoint and follow Prompt 8: paste the Deck_Tokens table into Copilot in PowerPoint (or use Ctrl+H), then paste the Deck_Chart data into the page 3 chart.
 
 # SLIDE CONTENT FORMAT
 Do not design slides yourself. For each slide output:
