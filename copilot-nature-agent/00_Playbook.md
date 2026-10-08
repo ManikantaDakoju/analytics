@@ -9,7 +9,7 @@ How to repeat the LBG proof of concept for any client in any country covered by 
 | **Copilot agent** | Reads client documents, extracts evidence and exposure, maps to the taxonomy, proposes C1, C2 and C4 scores, drafts slide text | Language tasks where AI is fast |
 | **Master template (Excel)** | Holds the taxonomy and country NBSAP data; calculates C3, C5, weighted score, tier, rank and confidence; runs QA checks | Maths stays consistent and auditable across every client |
 | **Deck skeleton + Copilot in PowerPoint** | The skeleton is the EY template with the 3 slides already laid out. Copilot in PowerPoint (or Find and Replace) swaps placeholders for the values in the workbook's Deck_Tokens tab | No code; same layout for every client |
-| **build_deck.py** (optional) | Builds the same deck in one step where Python is allowed | Not available on EY laptops at present |
+| **build_deck.py** (out of date) | Builds the earlier layout only | Kept for reference; not used |
 | **You** | Check the evidence, approve scores, sign off | Professional judgement and quality |
 
 ## 2. Files in this pack
@@ -22,7 +22,7 @@ How to repeat the LBG proof of concept for any client in any country covered by 
 | `03_Run_Prompts.md` | The exact prompts for each run, in order |
 | `Nature_Opportunity_Master_Template.xlsx` | Blank workbook for every client; contains the full taxonomy, all countries' NBSAP commitments and a Slide_Content tab |
 | `Nature_Deck_Skeleton_EY.pptx` | EY template with the 3 slides laid out and placeholders, ready to fill for each client |
-| `build_deck.py` | Optional script; only where Python is allowed |
+| `build_deck.py` | Out of date (earlier layout); kept for reference only |
 
 ## 3. One-time setup (about 20 minutes)
 
@@ -50,7 +50,7 @@ How to repeat the LBG proof of concept for any client in any country covered by 
 | 5 | Paste C1, C2, C4, Evidence_IDs, Rationale, Exposure into the blue columns of Scoring. **Review each score.** | Prompt 5 |
 | 6 | Fix anything flagged. Check the QA_Log tab is all Pass. | Prompt 6 |
 | 7 | Copy the ranked Scoring table back to the agent; paste its Key / Value output into the Slide_Content tab; save in Excel | Prompt 7 |
-| 8 | Copy the deck skeleton, open it in PowerPoint, paste the Deck_Tokens table into Copilot in PowerPoint (or use Ctrl+H), delete empty table rows | Prompt 8 |
+| 8 | Copy the deck skeleton and open it in PowerPoint. Paste the Deck_Tokens table into Copilot in PowerPoint (or use Ctrl+H), then paste the Deck_Chart data into the page 3 chart (Edit Data). | Prompt 8 |
 
 ## 5. Is the mapping file UK-only?
 
@@ -80,12 +80,19 @@ What makes the master template reusable:
 
 ## 6. Getting output like the POC deck without code
 
-- **Fixed layout:** `Nature_Deck_Skeleton_EY.pptx` holds the final layout: stat boxes, ranked table, four cards and panels on your EY template. Only placeholder text changes between clients, so the format matches the POC every time.
-- **Calculated values:** the **Deck_Tokens** tab works out every placeholder value with formulas. Table rows come in rank order from Scoring, the NBSAP column comes from Taxonomy, the Low list is built automatically, and all text comes from Slide_Content.
-- **What you fix by hand:**
-  - Delete the empty table rows. There are 12 rows; unused ones come out blank.
-  - Optionally colour the High tier cells yellow.
-- **If a cell overflows:** keep "Key evidence for slide" to 12 words or fewer, and use action titles of 75 characters or fewer, so the table and titles fit.
+- **Fixed layout:** `Nature_Deck_Skeleton_EY.pptx` holds the final layout on your EY template:
+  - **Page 2:** the executive summary story (signal, rules, why the client), the top four priorities and a "So what" line.
+  - **Page 3:** a priority bar chart beside the client's exposure tiles.
+  - **Page 4:** the "How EY can assist" cards.
+
+  Only text and chart data change between clients.
+- **Calculated values:**
+  - The **Deck_Tokens** tab works out every placeholder value with formulas: the top-four priorities, the Low list (using short names), and the national commitment count and value for card 1.
+  - The **Deck_Chart** tab gives the ranked chart data, ready to paste.
+  - All other text comes from Slide_Content.
+- **What you do by hand:** paste the chart data (Edit Data). Optionally add yellow borders to nature-priority tiles and colour the rank chips by tier.
+- **Currency:** card 1's automatic value is in US dollars, matching the EY sizing tool. Type a figure in local currency into c1_stat_text if you prefer, as in the LBG deck.
+- **If text overflows:** keep proof points to 8 words or fewer, tile labels to 6 words or fewer, and action titles to 75 characters or fewer.
 - **If EY changes the template:** ask for the skeleton to be rebuilt on the new version. The placeholder names stay the same, so the workbook still works.
 
 ## 7. Tips for reliable Copilot runs

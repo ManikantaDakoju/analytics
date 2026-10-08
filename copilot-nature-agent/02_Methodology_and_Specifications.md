@@ -43,11 +43,15 @@ Sub-market IDs and definitions are in the Sub_Markets tab. Always map to the sub
 **Scoring (agent part only):** SubTheme_ID | C1 Materiality | C2 Action gap | C4 Regulatory & market momentum | Evidence_IDs | Rationale | Client exposure (as disclosed) | Key evidence for slide (≤12 words) | Exposure for slide (≤4 words)
 
 **Slide_Content:** Key | Value, using exactly these keys:
-- cover_title, cover_date, client_name
+- cover_title, cover_date, client_name, client_short
 - s1_title, s1_section
-- stat1, stat1_text, stat2, stat2_text, stat3, stat3_text
-- s1_context, s1_finding1, s1_finding2, s1_finding3, s1_priorities, s1_implication, s1_footnote, s1_notes
-- s2_title, s2_section, s2_low_note, s2_footnote, s2_notes
+- c1_head, c1_stat, c1_stat_text, c1_p1_lead, c1_p1, c1_p2_lead, c1_p2, c1_p3_lead, c1_p3. These cover card 1, the national signal. Leave c1_stat and c1_stat_text blank to use the automatic count and value of the country's NBSAP commitments.
+- c2_… (the same nine keys) for card 2, rules and markets
+- c3_… (the same nine keys) for card 3, why the client is exposed
+- s1_found_note, s1_sowhat, s1_footnote, s1_notes
+- s2_title, s2_section, exp_unit
+- t1_value, t1_label, t1_links, t1_flag (and the same four keys for tiles 2–6)
+- s2_sowhat, s2_footnote, s2_notes
 - s3_title, s3_section
 - s3_card1_title, s3_card1_score, s3_card1_evidence, s3_card1_support, s3_card1_output (and the same five keys for cards 2–4)
 - s3_crosscutting, s3_next1, s3_next2, s3_next3, s3_footnote, s3_notes
@@ -98,8 +102,8 @@ Sub-market IDs and definitions are in the Sub_Markets tab. Always map to the sub
 
 | Slide | Title (≤75 chars, action title) | Content |
 |---|---|---|
-| 1 Executive summary | Overall finding | Three stat callouts (largest nature-related exposure figure; number of High sub-themes "x of 15"; one gap figure). Body ≤120 words: Context (1 bullet), Key findings (3 bullets: exposure, action, gap), Top priorities (High sub-themes with scores), Implication (1 bullet). |
-| 2 Priorities | Pattern in the ranking | Table: # · Sub-theme · NBSAP value and number · Client exposure · Score · Tier · Key client evidence (≤12 words). All High and Medium rows (max 12). Low sub-themes listed in a panel below with scores. Footnote: weights and data caveats. |
+| 1 Executive summary (story) | Why the client cannot ignore the national nature agenda | Three linked cards, each with a heading, one headline figure and three short proof points. **1 The signal:** national NBSAP commitments, using the automatic count and value plus the largest themes. **2 The rules:** regulation and market drivers cited in the sources. **3 Why the client:** headline nature-priority exposure plus the main gaps and actions. Then "What we found" (top four priorities with scores, filled automatically), one note line, and a yellow "So what" sentence. |
+| 2 Opportunity priority vs client exposure | How the priorities line up with where the client lends | **Left:** bar chart of High and Medium priorities, data pasted from the Deck_Chart tab. Low list underneath, filled automatically. **Right:** six exposure tiles (value, sector, linked priority ranks, nature-priority flag), taken only from disclosed figures; use "Not split" or "Not disclosed" when a figure isn't available. Yellow "So what" sentence and footnote. |
 | 3 How EY can assist | What EY could help the client do | Four cards (top four priorities; merge two water sub-themes if both rank). Each card has three parts: What the public evidence shows · How EY could support · Indicative output. Then one "Across all four" line and Proposed next steps (3). Support areas are labelled as "to be aligned with the EY CCaSS service catalogue". |
 
 Every slide has the client line "<Client> | <section>" and speaker notes in this form:

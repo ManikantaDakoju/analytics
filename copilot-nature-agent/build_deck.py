@@ -1,4 +1,6 @@
-"""Build the 3-slide Nature Opportunity deck on the EY template.
+"""OUT OF DATE: builds the earlier page 2 and 3 layouts. Use Nature_Deck_Skeleton_EY.pptx and Prompt 8 instead.
+
+Build the 3-slide Nature Opportunity deck on the EY template.
 
 Usage:
     python build_deck.py --template EY_Template.pptx --workbook <Client>_<Country>_Nature_Mapping.xlsx --out <Client>_Nature_Priorities.pptx

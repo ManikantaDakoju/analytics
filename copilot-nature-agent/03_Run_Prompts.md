@@ -55,7 +55,13 @@ Step 6. Run the QA checklist in the methodology file against everything you prod
 ```
 Step 7. Here is the final ranked Scoring table from the workbook:
 <paste table>
-Produce the Slide_Content table with two columns, Key | Value, using exactly the keys listed in the Slide_Content tab of the master template (cover_title … s3_notes). Follow the guidance limits for each key. Use only these scores and the evidence already extracted. Cards 1–4 on slide 3 are the top four priorities (merge two water sub-themes into one card if both rank). For *_notes keys, list sources one per line. Return the table only.
+Here are the country's NBSAP commitments by sub-theme (Taxonomy tab: Sub-theme, number, USD bn):
+<paste Taxonomy columns D, G and H>
+Produce the Slide_Content table with two columns, Key | Value, using exactly the keys listed in the Slide_Content tab of the master template (cover_title … s3_notes). Follow the guidance limits for each key. Use only these scores and the evidence already extracted.
+- Slide 1 cards: c1 = the national NBSAP signal (leave c1_stat and c1_stat_text blank unless I give you a figure; use the largest themes for the proof points); c2 = regulation and market drivers cited in the sources; c3 = why the client is exposed (headline nature-priority exposure, main gaps, main actions). Each proof point is a bold lead (≤3 words, usually a figure) plus ≤8 words.
+- Slide 2 tiles t1–t6: the client's disclosed exposures most relevant to the High and Medium priorities, largest first, with the linked priority ranks (e.g. #3 #4) and whether the client classes the sector as nature priority. Use "Not disclosed" or "Not split" rather than estimating.
+- Slide 3 cards 1–4 are the top four priorities (merge two water sub-themes into one card if both rank).
+For *_notes keys, list sources one per line. Return the table only.
 ```
 *Paste the Key | Value table into the Slide_Content tab (column B), save the workbook in Excel.*
 
@@ -76,14 +82,18 @@ This presentation contains placeholders in double curly braces, for example {{s1
 Replace every placeholder with the matching Value from the table below. Replace only the placeholder text: keep all fonts, colours, shapes, positions and tables exactly as they are. Also replace placeholders in the speaker notes. If a Value is blank, delete the placeholder and leave the cell or box empty. Do not add, move, resize or restyle anything, and do not rewrite any Value.
 <paste the Placeholder | Value table>
 ```
-Then check:
+**Step 8c – Paste the chart data (page 3)**
+1. In the workbook's **Deck_Chart** tab, copy cells A4:C13 (headers and 9 rows).
+2. In PowerPoint, right-click the bar chart on page 3, choose **Edit Data**, click cell A1 of the small data sheet and paste. Close the data sheet.
+3. If fewer than 9 rows have values, delete the empty rows in the data sheet so the chart shows no blank bars.
+
+**Then check:**
 - No `{{` is left anywhere (use Home → Find, and search for `{{`).
-- On page 3, delete any empty table rows: select the row, then right-click → Delete Rows.
-- Optional: colour the Tier cells for High rows yellow, to match the POC deck.
+- **Optional polish on page 3:** give the tiles of nature-priority sectors a yellow border, and colour the rank chips by tier (High yellow, Medium grey), to match the LBG deck.
 
 **Fallback if Copilot can't do the replacement:** use PowerPoint's own **Home → Replace (Ctrl+H)**.
 - Copy each placeholder from column A and its value from column B, then click **Replace All**.
 - Doing all of them takes about 20–25 minutes. The layout never changes, because you only replace text.
-- Do slide 1 and slide 3 boxes first. For the page 3 table, you can click into each cell and paste.
+- Work through the slides in order, from the cover to page 4.
 
-**Optional – build_deck.py:** where Python is allowed (not on EY laptops at present), `build_deck.py` builds the same deck in one step. See the playbook.
+**build_deck.py is now out of date:** it builds the previous page 2 and 3 layouts. Use the skeleton route above.
