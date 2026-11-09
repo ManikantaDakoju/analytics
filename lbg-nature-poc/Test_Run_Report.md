@@ -39,3 +39,26 @@
 3. **LBG Annual / Sustainability Report 2025:** to confirm the "not yet visible" items and subsidence.
 4. **The points Helen thought looked wrong** in the earlier review.
 5. **Your own Copilot run**, to see how Copilot itself handles Prompts 3b, 5 and 7.
+
+---
+
+## v4.2 addendum: UK Industrial Strategy added (9 November 2026)
+
+- **Source (SRC-09):** The UK's Modern Industrial Strategy, print-ready PDF.
+  - Downloaded directly from GOV.UK (35,377,105 bytes; the size matches GOV.UK's listing).
+  - The file's link and SHA-256 checksum are recorded in Sources. The PDF itself is not stored in the repo because of its size.
+- **Evidence:** 11 quotes, all word for word on their page; plus 2 LBG exposure rows (financial, business and other services £75.6bn; postal and telecommunications £7.1bn).
+- **Growth_Sectors:** all eight IS-8 sectors added.
+  - **A nature need is recorded only where a source states one:**
+    - Advanced Manufacturing (water availability, p.110)
+    - Clean Energy (EA framework: energy water demand)
+    - Digital and Technologies (data centres: water, land, power)
+  - **Five sectors are marked "None stated in sources reviewed":** Creative, Defence, Financial Services, Life Sciences, Professional and Business Services.
+- **A conclusion corrected during the check:**
+  - A first keyword search suggested the Industrial Strategy "barely mentions nature". Reading every hit showed that it does name nature degradation as a risk to growth (p.115), nature recovery in regulation (p.76) and a Nature Restoration Fund (p.82).
+  - The accurate point, now used, is that the strategy does not set out the water or nature needs of its eight sectors (water appears only for the Oxford–Cambridge reservoirs), while the Environment Agency says growth cannot happen without water.
+- **Page 2 "So what":** "Government backs 8 growth sectors (32% of the economy) and says growth cannot happen without water. Financing water and flood resilience is how banks share in that growth." Traced: C-033 (EV-090), C-034 (EV-080), C-119 (EY view).
+- **Talk tracks:**
+  - Page 2: the IS-8 and the reservoirs.
+  - Page 3: capital deployment against the IS-8 (largest overlap: financial and business services; the water-hungry growth sectors are small or not split in LBG's disclosures) and the capability point.
+- **Result:** 21 of 21 QA checks pass; 101 evidence items; 84 claims; no placeholders left in the deck.

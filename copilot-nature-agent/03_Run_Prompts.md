@@ -1,4 +1,4 @@
-# Run prompts (v4.1) – copy into the Copilot agent, one at a time
+# Run prompts (v4.2) – copy into the Copilot agent, one at a time
 
 Replace the text in <angle brackets>. After each answer:
 1. Check the answer.
@@ -39,13 +39,13 @@ Step 3. From <SRC-0x> (<tab or page of the exposure / concentration / nature-pri
 
 ### Prompt 3b – National growth priorities (once per country)
 Attach the country's official strategies, e.g. for the UK:
-- the Modern Industrial Strategy (if available)
+- The UK's Modern Industrial Strategy (GOV.UK collection "The UK's Modern Industrial Strategy 2025"; the print-ready PDF is about 35MB, so if Copilot rejects it, attach the executive summary pages and the sector list on p.115)
 - the AI Opportunities Action Plan
 - the Environment Agency National Framework for Water Resources 2025
 
 Use official national documents only, no more than 3 years old: growth or industrial strategy, sector plans, national water or infrastructure plans. No media.
 ```
-Step 3b for <SRC-07, SRC-08>. These are national government strategies. (a) Produce Evidence_Log rows (continue from <EV-0xx>), Evidence type "Growth priority", Scope "External driver", for every growth sector the government names as a priority and every statement of what those sectors need from nature (water, land, flood protection, power). Quotes exact, 25 words or fewer, printed and PDF page. (b) Then produce Growth_Sectors rows: Growth_ID (GS-01 …) | Growth sector (as named in the source) | Priority Evidence_IDs | Nature dependency (as stated in the source) | Dependency Evidence_IDs | Linked themes (EY view) | Client exposure link (Evidence_IDs from Client_Exposure, or "Not split") | Note. Only include a dependency that a source states; never infer one. Return the two tables only.
+Step 3b for <SRC-07, SRC-08>. These are national government strategies. (a) Produce Evidence_Log rows (continue from <EV-0xx>), Evidence type "Growth priority", Scope "External driver", for every growth sector the government names as a priority and every statement of what those sectors need from nature (water, land, flood protection, power). Quotes exact, 25 words or fewer, printed and PDF page. (b) Then produce Growth_Sectors rows: Growth_ID (GS-01 …) | Growth sector (as named in the source) | Priority Evidence_IDs | Nature dependency (as stated in the source) | Dependency Evidence_IDs | Linked themes (EY view) | Client exposure link (Evidence_IDs from Client_Exposure, or "Not split") | Note. Only include a dependency that a source states; never infer one. If no source states a nature need for a priority sector, still list the sector and write "None stated in sources reviewed" in Dependency Evidence_IDs, with a Note. Return the two tables only.
 ```
 *Runs after Prompt 3, so the exposure Evidence_IDs exist. Paste the evidence into Evidence_Log and the growth rows into Growth_Sectors from row 5. Column I must show OK.*
 

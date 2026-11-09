@@ -1,8 +1,10 @@
-# LBG nature opportunities: feedback tracker (v4.1, 9 November 2026)
+# LBG nature opportunities: feedback tracker (v4.2, 9 November 2026)
 
 This replaces `Feedback_Tracker_v3.md`. It records the status of every point from the partner review (22 October 2026) against the v4.1 toolkit and LBG pack (cover plus 4 pages; page 5 written by the EY team).
 
 ## Done
+
+Also done in v4.2: the full UK growth sector list (Industrial Strategy, SRC-09), previously partly done.
 
 | # | Feedback (who) | Where |
 |---|---|---|
@@ -11,7 +13,7 @@ This replaces `Feedback_Tracker_v3.md`. It records the status of every point fro
 | 3 | Market opportunity underweighted; it is about capital deployment (Sean) | Weights 25/20/15/15/25; C5 = share of national money |
 | 4 | "Risk reduction" is unclear (Sean) | Renamed "Flood and coastal risk reduction" |
 | 5 | Is the £60bn their number? (Sean) | Figures separated and traced; context band explains what we measured |
-| 6 | Forward-looking view: government growth sectors and their nature needs (Sean) | **Prompt 3b** and the Growth_Sectors tab. Page 2 tiles 3 and 4 now come from government (Environment Agency; AI Opportunities Action Plan in Growth_Sectors). |
+| 6 | Forward-looking view: government growth sectors and their nature needs (Sean) | **Prompt 3b** and the Growth_Sectors tab: the Industrial Strategy's eight sectors (IS-8), the EA water framework and the AI plan. Page 2 tiles 3–4 and the "So what" now come from government sources. |
 | 7 | Turn risks into opportunities, e.g. subsidence (Sean) | Page 4 opportunity row |
 | 8 | How do we make it Lloyds-specific? (Sean, Helen) | Page 5 data ladder |
 | 9 | Explain the method briefly (Sean) | "How we score" footnote; context band |
@@ -25,8 +27,7 @@ This replaces `Feedback_Tracker_v3.md`. It records the status of every point fro
 
 | # | Feedback | Gap | Needs |
 |---|---|---|---|
-| 15 | Where to direct capital / RWAs by sector (Sean) | Uses exposure as % of the book. Growth sectors are linked to LBG exposure in Growth_Sectors, but not yet shown as a slide view. | Pillar 3 for RWAs; decision whether to add a growth-vs-book view |
-| 16 | Full UK growth sector list (Industrial Strategy) | Only the sectors the Environment Agency names | Industrial Strategy PDF |
+| 15 | Where to direct capital / RWAs by sector (Sean) | Growth_Sectors sets the IS-8 against LBG's book (talk track on page 3). Not yet a slide view; uses exposure, not RWAs. | Pillar 3 for RWAs; decision whether to add a growth-vs-book view to a slide |
 | 17 | Subsidence | Absence check on four documents only | LBG Annual / Sustainability Report 2025 |
 
 ## Not done

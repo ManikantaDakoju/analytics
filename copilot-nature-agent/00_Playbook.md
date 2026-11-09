@@ -1,4 +1,4 @@
-# Nature Opportunity Assessment – Copilot Playbook (v4.1)
+# Nature Opportunity Assessment – Copilot Playbook (v4.2)
 
 How to produce the client pack (cover + 4 pages) for any client, in any country covered by the EY NBSAP Nature Sizing workbook, using Microsoft 365 Copilot, Excel and PowerPoint only. No code, and no tools beyond Microsoft 365.
 
@@ -46,8 +46,8 @@ The speaker notes list the sources for every claim automatically, and QA_Log fai
 | `tools/nature_v41/` (repo only) | Scripts EY used to build and test the toolkit. Not needed to run it. |
 
 The LBG worked example is in `lbg-nature-poc/`:
-- `LBG_UK_Nature_Mapping_v4.1.xlsx`: the master template filled in for LBG, with every QA check passing
-- `LBG_Nature_Opportunities_v4.1.pptx`: the skeleton filled from that workbook
+- `LBG_UK_Nature_Mapping_v4.2.xlsx`: the master template filled in for LBG, with every QA check passing
+- `LBG_Nature_Opportunities_v4.2.pptx`: the skeleton filled from that workbook
 
 ## 4. One-time setup (about 20 minutes)
 

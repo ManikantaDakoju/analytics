@@ -84,5 +84,21 @@ def patch(wb):
         if rd.cell(x,1).value=='Tabs': rd.cell(x,2).value=rd.cell(x,2).value.replace('NBSAP_Mapping |','NBSAP_Mapping | Growth_Sectors |')
     put(rd,rd.max_row+1,1,'v4.1 changes',BD); put(rd,rd.max_row,2,'Paste areas: Scoring W:AC (Prompt 5) and Slide_Content J:L (Prompt 7), looked up by ID so row order does not matter. Growth_Sectors tab (Prompt 2b). Page 2 context band (s1_ctx_what and s1_ctx_measured written by Excel; s1_ctx_why by the agent). Client calculations look up by Evidence_ID.')
     return ctx_row
+import openpyxl as _o
+def patch42(wb):
+    """Template-level v4.2 changes (also applied to the blank master)."""
+    g=wb['Growth_Sectors']
+    for r in range(5,61):
+        f=g.cell(r,9).value
+        if isinstance(f,str) and f.startswith('=IF(A') and 'None' not in f:
+            g.cell(r,9).value=f.replace(f'=IF(A{r}="","",',f'=IF(A{r}="","",IF(LEFT(E{r},4)="None",IF(H{r}="","Add note","OK (none stated)"),')[:-1]+'))'
+    g['A2']=g['A2'].value+' Where no source states a nature need, write "None stated in sources reviewed" in column E (not D) and explain in Note.'
+    s=wb['Slide_Content']
+    for r in range(5,120):
+        if s.cell(r,1).value=='s1_sowhat': s.cell(r,5).value=200
+        if s.cell(r,1).value in ('s1_talk','s2_talk','s3_talk'): s.cell(r,5).value=1000
+    rd=wb['README']; rd.cell(1,1).value='Nature Opportunity Master Template (v4.2)'
+    r=rd.max_row+1; rd.cell(r,1).value='v4.2 changes'; rd.cell(r,2).value='Growth_Sectors accepts "None stated in sources reviewed" for sectors whose nature need no source states. s1_sowhat limit 200; talk tracks 1,000.'
+
 if __name__=='__main__':
-    wb=openpyxl.load_workbook(sys.argv[1]); patch(wb); wb.save(sys.argv[2]); print('patched',sys.argv[2])
+    wb=openpyxl.load_workbook(sys.argv[1]); patch(wb); patch42(wb); wb.save(sys.argv[2]); print('patched v4.2',sys.argv[2])

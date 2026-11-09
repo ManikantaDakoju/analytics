@@ -1,4 +1,4 @@
-# Methodology and Specifications – Nature Opportunity Assessment (v4.1)
+# Methodology and Specifications – Nature Opportunity Assessment (v4.2)
 
 Source ID in the workbook: **SRC-METH**. Upload this file to the Copilot agent's Knowledge as .docx or .pdf. It matches the tabs of **Nature_Opportunity_Master_Template.xlsx** (v4) and the deck skeleton **Nature_Deck_Skeleton_EY.pptx** (cover + 4 pages).
 
@@ -204,7 +204,7 @@ Every value on pages 2–4 is traced. The chain is:
 
 **Scoring (agent part, pasted at Scoring!W5):** SubTheme_ID | C1 | C2 | C4 | Evidence_IDs | Rationale | Client exposure (as disclosed)
 
-**Growth_Sectors (Prompt 3b):** Growth_ID | Growth sector (as named in the source) | Priority Evidence_IDs | Nature dependency (as stated in the source) | Dependency Evidence_IDs | Linked themes (EY view) | Client exposure link (Evidence_IDs or "Not split") | Note
+**Growth_Sectors (Prompt 3b):** Growth_ID | Growth sector (as named in the source) | Priority Evidence_IDs | Nature dependency (as stated in the source) | Dependency Evidence_IDs | Linked themes (EY view) | Client exposure link (Evidence_IDs or "Not split") | Note. List every priority sector the strategy names; where no source states a nature need, write "None stated in sources reviewed" in Dependency Evidence_IDs.
 
 **Classification review (optional):** Example_ID | Current SubTheme_ID | Proposed SubTheme_ID | Rationale (EY view)
 
