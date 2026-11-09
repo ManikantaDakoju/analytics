@@ -1,4 +1,4 @@
-# Nature Opportunity Assessment – Copilot Playbook (v4.2)
+# Nature Opportunity Assessment – Copilot Playbook (v4.3)
 
 How to produce the client pack (cover + 4 pages) for any client, in any country covered by the EY NBSAP Nature Sizing workbook, using Microsoft 365 Copilot, Excel and PowerPoint only. No code, and no tools beyond Microsoft 365.
 
@@ -46,8 +46,8 @@ The speaker notes list the sources for every claim automatically, and QA_Log fai
 | `tools/nature_v41/` (repo only) | Scripts EY used to build and test the toolkit. Not needed to run it. |
 
 The LBG worked example is in `lbg-nature-poc/`:
-- `LBG_UK_Nature_Mapping_v4.2.xlsx`: the master template filled in for LBG, with every QA check passing
-- `LBG_Nature_Opportunities_v4.2.pptx`: the skeleton filled from that workbook
+- `LBG_UK_Nature_Mapping_v4.3.xlsx`: the master template filled in for LBG, with every QA check passing
+- `LBG_Nature_Opportunities_v4.3.pptx`: the skeleton filled from that workbook
 
 ## 4. One-time setup (about 20 minutes)
 
@@ -66,7 +66,7 @@ The LBG worked example is in `lbg-nature-poc/`:
 | 1 | Paste Sources from row 7 | 1 |
 | 2 | Paste Evidence_Log, one source at a time. **Spot-check 5 quotes against the PDF page.** | 2 |
 | 3 | Paste Client_Exposure (including the group total) and the matching evidence rows | 3 |
-| 3b | Attach the country's official growth strategies (e.g. Industrial Strategy, AI Opportunities Action Plan, Environment Agency water framework). Paste the evidence rows and the Growth_Sectors rows. Do this once per country and reuse it for later clients. | 3b |
+| 3b | Attach the country's official growth strategies (e.g. Industrial Strategy, AI Opportunities Action Plan, Environment Agency water framework) and, optionally, the ENCORE Insights Country Dashboard data (countries.encorenature.org). Paste the evidence rows and the Growth_Sectors rows. Do this once per country and reuse it for later clients. | 3b |
 | 4 | Paste NBSAP_Mapping. Approve any classification review in NBSAP_Commitments columns N and O. | 4 |
 | 5 | Paste the whole table at Scoring!W5 (any row order). **Review each score.** | 5 |
 | 6 | Paste Glossary rows (from row 60) and Calculations rows (from row 30). Save. | 6 |

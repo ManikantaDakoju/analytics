@@ -1,4 +1,4 @@
-# Slide Writing Guide and Worked Example (v4.2)
+# Slide Writing Guide and Worked Example (v4.3)
 
 Knowledge file for the Copilot agent. It shows how to write every Slide_Content value for pages 2–4, and the Claims_Register rows behind them. Use it with SRC-METH (02_Methodology_and_Specifications). Page 5 is written by the EY team.
 
@@ -38,7 +38,7 @@ Knowledge file for the Copilot agent. It shows how to write every Slide_Content 
 | s3_col1_gap | Theme ranked 1: not yet visible in the documents reviewed | 150 | Flood exposure of the £365.6bn mortgage book (LBG’s mortgage climate flag reflects home energy use). Volume of resilience lending. | LBG has failed to disclose flood risk | Critical tone; absence must be "not yet visible" with sources searched. |
 | s3_col1_opp | Theme ranked 1: opportunity (EY view) | 125 | Resilience and remediation lending for homes and property, e.g. flood retrofit and subsidence repair. | Big opportunity | Not specific; no rationale. |
 | s3_sowhat | One sentence: the next step for the client | 170 | LBG already has the framework, partnerships and flagship deals. The next step is scale: targets, lending volumes and portfolio data for water and flood. | EY can help with many things | Not the client's next step; page 5 covers EY. |
-| s1_ctx_why | Context band, third block: why it matters for the client’s sector, quoted (e.g. finance gap, role of private finance) | 150 | LBG’s own report puts the UK nature finance gap at £56bn and says private finance has a vital role in closing it for nature-based solutions. | Nature is important for banks | No evidence, no figure, no source. |
+| s1_ctx_why | Context band, third block: why it matters for the client’s sector, quoted (e.g. finance gap, role of private finance) | 150 | Over half (51%) of UK economic output depends highly on nature (ENCORE). LBG puts the UK nature finance gap at £56bn. | Nature is important for banks | No evidence, no figure, no source. |
 
 Structural keys (no Claim_IDs needed): cover_title, cover_date, client_name, s1_section, s1_heading_r, s1_rules_lead, s1_footnote, s1_talk, s2_section, s2_talk, s3_section, s3_footnote, s3_talk.
 
@@ -68,7 +68,7 @@ Excel writes these page 2 texts itself (do not write them): s1_ctx_what, s1_ctx_
 | s1_rules_lead | Rules are tightening: |  | 24 | 21 |
 | s1_rules | 10% biodiversity net gain (BNG) mandatory since Feb 2024; PRA SS5/25 raises physical-risk expectations for banks. | C-028, C-029, C-030, C-031, C-032 | 120 | 113 |
 | s1_sowhat | Government backs 8 growth sectors (32% of the economy) and says growth cannot happen without water. Financing water and flood resilience is how banks share in that growth. | C-033, C-034, C-119 | 200 | 171 |
-| s1_footnote | Sources: EY NBSAP Nature Sizing workbook (UK commitments; indicative; EY classification review); HM Government, Modern Industrial Strategy (2025) p.115; Environment Agency, National Framework for Water Resources 2025, pp.3, 6; LBG Built to Last (2026), PDF pp.7, 10, 11; LBG Working with nature (2024) pp.3, 7, 13. |  | 330 | 314 |
+| s1_footnote | Sources: EY NBSAP Nature Sizing workbook (indicative); Modern Industrial Strategy (2025) p.115; Environment Agency, National Framework for Water Resources 2025, pp.3, 6; Global Canopy, ENCORE Insights Country Dashboard (2026); LBG Built to Last (2026), PDF pp.7, 10, 11; LBG Working with nature (2024) pp.7, 13. |  | 330 | 311 |
 | s1_talk | Quick context first: every country has a national nature plan; in the UK it is the Environmental Improvement Plan 2025, and EY tracks the funded commitments behind it. Of c.£60bn, 69% goes to water and flood. Then the direction of travel: the Industrial Strategy backs eight sectors, 32% of the economy, and calls nature degradation a risk to growth; it plans new reservoirs so development is not held back by water. The Environment Agency goes further: growth cannot happen without water. Close: water and flood resilience is a growth market for banks. |  | 1000 | 553 |
 | s2_title | LBG meets that money mainly through flood risk in its mortgage book | C-001, C-040 | 68 | 67 |
 | s2_section | What it means for LBG |  | 30 | 21 |
@@ -78,7 +78,7 @@ Excel writes these page 2 texts itself (do not write them): s1_ctx_what, s1_ctx_
 | s2_link_DM | Mortgages £365.6bn (57%) and property £26.3bn (4%). Flood exposure of the book not disclosed. | C-041, C-042, C-043, C-044, C-045, C-046 | 105 | 93 |
 | s2_link_P | Manufacturing £13.1bn (2.0%); indirect link. | C-058, C-059, C-060 | 105 | 44 |
 | s2_sowhat | 69% of UK nature money targets water and flood, but energy and water supply is only 1.9% of LBG’s book. LBG’s largest link is indirect: flood risk across £365.6bn of mortgages. | C-010, C-048, C-061, C-041, C-046 | 190 | 176 |
-| s2_talk | Same themes, now set against LBG. Read across each row: how much UK money goes there, and where LBG’s book touches it. Water and flood lead on priority, but LBG’s direct water lending is small (1.9% of the book). The big link is the mortgage book, through flood risk. If asked why flood scores 4.6 and water 4.5: both are water-related and together they are 69% of UK commitments. Capital deployment: the Growth_Sectors tab sets the eight priority sectors against LBG’s book. The largest overlap is financial and business services; the water-hungry growth sectors (clean energy, manufacturing, data centres) are small or not split. Capital also needs capability: lending into sectors such as data centres needs teams that understand them. |  | 1000 | 738 |
+| s2_talk | Same themes, now set against LBG. Read across each row: how much UK money goes there, and where LBG’s book touches it. Water and flood lead on priority, but LBG’s direct water lending is small (1.9% of the book). The big link is the mortgage book, through flood risk. If asked why flood scores 4.6 and water 4.5: both are water-related and together they are 69% of UK commitments. Capital deployment: the Growth_Sectors tab sets the eight priority sectors against LBG’s book. The largest overlap is financial and business services; the water-hungry growth sectors (clean energy, manufacturing, data centres) are small or not split. ENCORE shows the water and flood dependency of LBG’s larger nature-linked sectors: construction (flood mitigation 0.59, water supply 0.48), agriculture (water supply 0.70) and food (0.67), against banking at 0.23. Capital also needs capability: lending into sectors such as data centres needs teams that understand them. |  | 1000 | 952 |
 | s3_title | LBG has the foundations; the gaps are scale, targets and disclosure | C-070 | 68 | 67 |
 | s3_section | LBG today: strengths and gaps |  | 40 | 29 |
 | s3_col1_today | Published Built to Last (2026) on climate resilience. With NatWest, underwrote £238.5m for Cleve Hill, which has coastal flood defences. Flood doors and barriers eligible for finance. | C-071, C-072, C-073, C-074 | 185 | 183 |
@@ -93,7 +93,7 @@ Excel writes these page 2 texts itself (do not write them): s1_ctx_what, s1_ctx_
 | s3_sowhat | LBG already has the framework, partnerships and flagship deals. The next step is scale: targets, lending volumes and portfolio data for water and flood. | C-092 | 170 | 152 |
 | s3_footnote | Sources: LBG Working with nature (2024) p.4; Built to Last (2026) PDF pp.14–17; Sustainability Data Sheet 2025, tabs 18 and 20; Sustainable Financing Framework 2025 pp.11–15. "Not yet visible" = not found in these four documents; to be checked against the Annual and Sustainability Reports 2025. Scores from page 3. |  | 330 | 315 |
 | s3_talk | Credit LBG first: HARP, Cleve Hill, the Soil Association partnership, and a financing framework that already covers water, flood resilience and regenerative farming. Then the gaps, framed as not yet visible: portfolio flood exposure, lending volumes and nature targets. Then the opportunity row. Keep the conversation on opportunity, not risk. |  | 1000 | 343 |
-| s1_ctx_why | LBG’s own report puts the UK nature finance gap at £56bn and says private finance has a vital role in closing it for nature-based solutions. | C-001, C-117, C-118 | 150 | 140 |
+| s1_ctx_why | Over half (51%) of UK economic output depends highly on nature (ENCORE). LBG puts the UK nature finance gap at £56bn. | C-120, C-121, C-001, C-117 | 150 | 117 |
 
 ## 4. Worked example: Claims_Register (all rows)
 
@@ -181,8 +181,9 @@ Excel writes these page 2 texts itself (do not write them): s1_ctx_what, s1_ctx_
 | C-113 | s1 | auto:s1_ctx_measured | c.£60bn, indicative | Calculated | CALC-02 |  | £60.0bn, shown as c.£60bn |
 | C-114 | s1 | auto:s1_ctx_measured | EY’s NBSAP sizing tool … to 5 themes | Definition | DEF-THEME | ABB-EY, ABB-NBSAP |  |
 | C-117 | s1 | s1_ctx_why | UK nature finance gap at £56bn | Quoted fact | EV-008 |  | "the finance gap to meet the UK’s nature related outcomes in the UK is £56 billion" |
-| C-118 | s1 | s1_ctx_why | private finance has a vital role in closing it for nature-based solutions | Quoted fact | EV-013 |  | "Private financial institutions have a vital role to play in closing the finance gap for NbS." |
 | C-119 | s1 | s1_sowhat | Financing water and flood resilience is how banks share in that growth | EY view | EV-080 | EV-095, EV-032, CALC-TOP2-S | Growth needs water (EV-080, EV-095); water and flood take 69% of UK NBSAP money (CALC-TOP2-S); LBG cites a $100–130bn adaptation financing opportunity for banks (EV-032) |
+| C-120 | s1 | s1_ctx_why | Over half (51%) of UK economic output depends highly on nature | Quoted fact | EV-103 | DEF-OUTPUT | ENCORE "GVA % High Dep" for GB = 51.38, shown as 51% |
+| C-121 | s1 | s1_ctx_why | ENCORE | Abbreviation | ABB-ENCORE | ABB-ENC2, SRC-10 | Full licence citation in Sources (SRC-10) |
 
 ## 5. Self-check before replying
 

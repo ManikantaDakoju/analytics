@@ -62,3 +62,22 @@
   - Page 2: the IS-8 and the reservoirs.
   - Page 3: capital deployment against the IS-8 (largest overlap: financial and business services; the water-hungry growth sectors are small or not split in LBG's disclosures) and the capability point.
 - **Result:** 21 of 21 QA checks pass; 101 evidence items; 84 claims; no placeholders left in the deck.
+
+---
+
+## v4.3 addendum: ENCORE added; LBG files re-checked (9 November 2026)
+
+- **LBG files re-uploaded:** the four LBG files are byte-for-byte identical (SHA-256) to the ones already used, so nothing changes. **The LBG Annual / Sustainability Report 2025 has still not been provided.**
+- **ENCORE Insights Country Dashboard data v3.0 (Global Canopy, 2026; CC BY-SA 4.0) added as SRC-10:**
+  - The required citation is stored in Sources. The slide footnote names the dataset.
+  - 12 evidence rows were extracted by script directly from the CSV rows:
+    - UK headline: 51.38% of economic output (GVA) is highly dependent on nature, and 62% of jobs
+    - Water supply, water flow regulation and flood mitigation scores for 10 sectors
+- **Growth_Sectors:**
+  - Every sector except Creative and Defence now carries an ENCORE dependency, labelled "ENCORE (modelled, 0–1)" and kept separate from needs a source states.
+  - Data centres: ENCORE's IT-sector average (water supply 0.27) is shown next to the Environment Agency's data-centre cooling statement, rather than one replacing the other.
+  - Life sciences uses ENCORE's chemicals sector (EY mapping, noted).
+- **Page 2 context band "Why it matters":** "Over half (51%) of UK economic output depends highly on nature (ENCORE). LBG puts the UK nature finance gap at £56bn."
+- **Page 3 talk track:** ENCORE water and flood dependency for LBG's larger nature-linked sectors (construction, agriculture, food) against banking.
+- **Caught by the checks:** the abbreviation check flagged that "ENCORE" on the slide cited a different glossary entry from the one that matched. Fixed.
+- **Result:** 21 of 21 QA checks pass; 113 evidence items; 85 claims; no placeholders left in the deck.

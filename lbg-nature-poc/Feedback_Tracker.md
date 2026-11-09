@@ -1,10 +1,10 @@
-# LBG nature opportunities: feedback tracker (v4.2, 9 November 2026)
+# LBG nature opportunities: feedback tracker (v4.3, 9 November 2026)
 
 This replaces `Feedback_Tracker_v3.md`. It records the status of every point from the partner review (22 October 2026) against the v4.1 toolkit and LBG pack (cover plus 4 pages; page 5 written by the EY team).
 
 ## Done
 
-Also done in v4.2: the full UK growth sector list (Industrial Strategy, SRC-09), previously partly done.
+Also done: the full UK growth sector list (Industrial Strategy, SRC-09, v4.2); sector nature-dependency data for growth sectors and LBG sectors (ENCORE, SRC-10, v4.3).
 
 | # | Feedback (who) | Where |
 |---|---|---|
