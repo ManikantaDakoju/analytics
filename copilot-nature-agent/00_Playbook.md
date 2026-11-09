@@ -1,4 +1,4 @@
-# Nature Opportunity Assessment – Copilot Playbook (v4)
+# Nature Opportunity Assessment – Copilot Playbook (v4.1)
 
 How to produce the client pack (cover + 4 pages) for any client, in any country covered by the EY NBSAP Nature Sizing workbook, using Microsoft 365 Copilot, Excel and PowerPoint only. No code, and no tools beyond Microsoft 365.
 
@@ -7,7 +7,7 @@ How to produce the client pack (cover + 4 pages) for any client, in any country 
 | Page | Question it answers | Who writes it |
 |---|---|---|
 | Cover | — | Workbook (title and date from Slide_Content) |
-| 2 Context | Where is national nature money going, and where is the country heading? | Copilot writes the words; Excel calculates the numbers and Chart A |
+| 2 Context | What is an NBSAP and what did we measure (context band); where is national nature money going; where is the country heading? | Copilot writes the words; Excel writes the context band's first two blocks, the numbers and Chart A |
 | 3 Context × client | How does that money meet the client's book, theme by theme? | Copilot writes the client links; Excel calculates scores, values, ranks and Charts B and C |
 | 4 Client | For the top three themes: what the client does today, what is not yet visible, and the opportunity | Copilot (facts, absence checks and EY views, each traced) |
 | 5 EY | How EY can support | **The EY team writes it by hand. The agent never drafts it.** |
@@ -26,7 +26,7 @@ The speaker notes list the sources for every claim automatically, and QA_Log fai
 | Who | Does what |
 |---|---|
 | **Copilot agent** | Reads the client documents and extracts verbatim evidence with pages. Maps it to the taxonomy, proposes C1, C2 and C4, and writes the glossary entries, slide text and claims. |
-| **Master template (Excel)** | Holds the taxonomy and all countries' NBSAP commitments. Calculates C3, C5, scores, theme roll-up, shares, percentages, chart data and every placeholder value. Runs 19 QA and traceability checks. |
+| **Master template (Excel)** | Holds the taxonomy and all countries' NBSAP commitments. Calculates C3, C5, scores, theme roll-up, shares, percentages, chart data and every placeholder value. Runs 21 QA and traceability checks. |
 | **Deck skeleton + Copilot in PowerPoint** | The EY template with the layout fixed and `{{placeholders}}`. Copilot in PowerPoint (or Ctrl+H) replaces the placeholders; you paste the chart data. |
 | **You (and the EY team)** | Check evidence and scores, approve EY views, and confirm absence checks. Write page 5, then sign off (QRM). |
 
@@ -37,16 +37,17 @@ The speaker notes list the sources for every claim automatically, and QA_Log fai
 | `00_Playbook.md` | This guide |
 | `01_Agent_Instructions.md` | Paste into the agent's **Instructions** field (about 5,000 characters) |
 | `02_Methodology_and_Specifications` (.docx/.md) | Agent **Knowledge**. This is SRC-METH, the method the workbook cites. |
-| `03_Run_Prompts.md` | Prompts 0–9, in order |
+| `03_Run_Prompts.md` | Prompts 0–9 plus 3b (national growth priorities), in order |
 | `04_Slide_Writing_Guide_and_Example` (.docx/.md) | Agent **Knowledge**: rules, field guide, and the full LBG example (slide text and all 76 claims) |
 | `Nature_Opportunity_Master_Template.xlsx` | Blank workbook for every client: all countries, taxonomy, calculations, glossary, claims register and QA |
 | `Nature_Deck_Skeleton_EY.pptx` | EY template, cover + 4 pages, with placeholders and three charts. Page 5 has [EY team] placeholders only. |
 | `Nature_Opportunity_Assessment_Methodology.docx` | Plain-English methodology for partners and reviewers |
 | `build_deck.py` | Retired. Do not use. |
+| `tools/nature_v41/` (repo only) | Scripts EY used to build and test the toolkit. Not needed to run it. |
 
 The LBG worked example is in `lbg-nature-poc/`:
-- `LBG_UK_Nature_Mapping_v4.xlsx`: the master template filled in for LBG, with every QA check passing
-- `LBG_Nature_Opportunities_v4.pptx`: the skeleton filled from that workbook
+- `LBG_UK_Nature_Mapping_v4.1.xlsx`: the master template filled in for LBG, with every QA check passing
+- `LBG_Nature_Opportunities_v4.1.pptx`: the skeleton filled from that workbook
 
 ## 4. One-time setup (about 20 minutes)
 
@@ -65,10 +66,11 @@ The LBG worked example is in `lbg-nature-poc/`:
 | 1 | Paste Sources from row 7 | 1 |
 | 2 | Paste Evidence_Log, one source at a time. **Spot-check 5 quotes against the PDF page.** | 2 |
 | 3 | Paste Client_Exposure (including the group total) and the matching evidence rows | 3 |
+| 3b | Attach the country's official growth strategies (e.g. Industrial Strategy, AI Opportunities Action Plan, Environment Agency water framework). Paste the evidence rows and the Growth_Sectors rows. Do this once per country and reuse it for later clients. | 3b |
 | 4 | Paste NBSAP_Mapping. Approve any classification review in NBSAP_Commitments columns N and O. | 4 |
-| 5 | Paste C1, C2, C4, Evidence_IDs, rationale and exposure into Scoring. **Review each score.** | 5 |
+| 5 | Paste the whole table at Scoring!W5 (any row order). **Review each score.** | 5 |
 | 6 | Paste Glossary rows (from row 60) and Calculations rows (from row 30). Save. | 6 |
-| 7 | Paste back Theme_View, Scoring, Calculations and selected Deck_Tokens. Paste the agent's Slide_Content and Claims_Register. | 7 |
+| 7 | Paste back Theme_View, Scoring, Calculations, Growth_Sectors and selected Deck_Tokens. Paste the agent's Slide_Content at Slide_Content!J5 (any order) and the claims into Claims_Register. | 7 |
 | 8 | Fix anything QA_Log or the red cells flag | 8 |
 | 9 | Fill the skeleton in PowerPoint: placeholders via Copilot in PowerPoint (or Ctrl+H), then charts via Edit Data | 9 |
 | 10 | The EY team writes page 5. Book QRM. | — |

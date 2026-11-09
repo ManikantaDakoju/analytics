@@ -1,4 +1,4 @@
-# Run prompts (v4) – copy into the Copilot agent, one at a time
+# Run prompts (v4.1) – copy into the Copilot agent, one at a time
 
 Replace the text in <angle brackets>. After each answer:
 1. Check the answer.
@@ -37,6 +37,18 @@ Step 2 for <SRC-01>. Read the whole document. Produce Evidence_Log rows (start a
 Step 3. From <SRC-0x> (<tab or page of the exposure / concentration / nature-priority table>), produce Client_Exposure rows exactly as disclosed, including the group total row. Give each row its own Evidence_ID (continue from <EV-0xx>) and also give me the matching Evidence_Log rows. Use the Row type values in SRC-METH section 8. Suggest linked themes and label them "EY view". Do not convert currencies or estimate missing values.
 ```
 
+### Prompt 3b – National growth priorities (once per country)
+Attach the country's official strategies, e.g. for the UK:
+- the Modern Industrial Strategy (if available)
+- the AI Opportunities Action Plan
+- the Environment Agency National Framework for Water Resources 2025
+
+Use official national documents only, no more than 3 years old: growth or industrial strategy, sector plans, national water or infrastructure plans. No media.
+```
+Step 3b for <SRC-07, SRC-08>. These are national government strategies. (a) Produce Evidence_Log rows (continue from <EV-0xx>), Evidence type "Growth priority", Scope "External driver", for every growth sector the government names as a priority and every statement of what those sectors need from nature (water, land, flood protection, power). Quotes exact, 25 words or fewer, printed and PDF page. (b) Then produce Growth_Sectors rows: Growth_ID (GS-01 …) | Growth sector (as named in the source) | Priority Evidence_IDs | Nature dependency (as stated in the source) | Dependency Evidence_IDs | Linked themes (EY view) | Client exposure link (Evidence_IDs from Client_Exposure, or "Not split") | Note. Only include a dependency that a source states; never infer one. Return the two tables only.
+```
+*Runs after Prompt 3, so the exposure Evidence_IDs exist. Paste the evidence into Evidence_Log and the growth rows into Growth_Sectors from row 5. Column I must show OK.*
+
 ### Prompt 4 – Mapping (and optional classification review)
 ```
 Step 4. Map every Evidence_ID to the taxonomy as NBSAP_Mapping rows (exact headers in SRC-METH section 8). Use XC only for group-level or cross-cutting items.
@@ -49,13 +61,13 @@ Optional: look at the NBSAP_Commitments rows for COUNTRY_ID that I paste below a
 ```
 Step 5. For all 15 SubTheme_IDs produce: SubTheme_ID | C1 | C2 | C4 | Evidence_IDs | Rationale | Client exposure (as disclosed). Use the rubric in SRC-METH section 4, apply the C2 cap, cite Evidence_IDs for every score and label sector reasoning "EY view". Where there is no evidence, say so and score C1 = 1.
 ```
-*Paste into the blue columns E, F, H, P, Q and R of the Scoring tab.*
+*Paste the whole table into the Scoring tab's paste area (cell W5, columns W:AC). Row order doesn't matter: columns E, F, H, P, Q and R look it up.*
 
 ### Prompt 6 – Glossary and calculations
 ```
 Step 6. (a) List every abbreviation and defined term you expect to use on the slides that is not already in the Glossary (I paste the current Glossary IDs below). For each: ID (ABB- or DEF-) | Term | Type | Definition / expansion | Source_ID | Reference (page/tab). The expansion must come from a source; if no source spells it out, say so and suggest wording that avoids the abbreviation.
-(b) For every client percentage or total the slides need (e.g. a sector as % of total exposure), give a Calculations row: CALC_ID (CALC-51 …) | Description | Excel formula referencing Client_Exposure cells (I paste the Client_Exposure rows with their row numbers) | Unit | How it is calculated | Input trace IDs | Source_ID.
-<paste Glossary column A and Client_Exposure rows with row numbers>
+(b) For every client percentage or total the slides need (e.g. a sector as % of total exposure), give a Calculations row: CALC_ID (CALC-51 …) | Description | Excel formula that looks figures up by Evidence_ID, e.g. =VLOOKUP("EV-040",Client_Exposure!$A:$E,5,FALSE)/VLOOKUP("EV-067",Client_Exposure!$A:$E,5,FALSE) | Unit | How it is calculated | Input trace IDs | Source_ID.
+<paste Glossary column A and the Client_Exposure table>
 ```
 *Paste Glossary rows from row 60 and Calculations rows from row 30. Save, so the values calculate.*
 
@@ -65,13 +77,14 @@ Step 7. Here are the workbook tables:
 Theme_View (columns A–P): <paste>
 Scoring sorted by Rank (columns A–L): <paste>
 Calculations (columns A–C): <paste>
-Deck_Tokens rows for s1_left_sub, s1_callout_stat, r1–r5 and h1–h3: <paste>
+Growth_Sectors (columns A–H): <paste>
+Deck_Tokens rows for s1_ctx_what, s1_ctx_measured, s1_left_sub, s1_callout_stat, r1–r5 and h1–h3: <paste>
 Write the text for pages 2–4 as two tables.
-(a) Slide_Content: Key | Value | Claim_IDs, for exactly the keys in SRC-METH section 10, in that order.
+(a) Slide_Content: Key | Value | Claim_IDs, for exactly the keys in SRC-METH section 10.
 (b) Claims_Register: Claim_ID | Slide | Slide_Content key | Claim | Claim type | Primary trace ID | Other trace IDs | Derivation / how checked, for every claim (C-001 …), plus "auto:" claims for the Excel-written text listed above.
-Rules: page 3 links (s2_link_<Theme_ID>) give the client's main disclosed exposure for each theme, with £ and % of total from my Calculations. Page 4 columns 1–3 are the top three themes by score (h1–h3): "today" = facts only; "gap" = not yet visible (absence check, list the sources searched); "opp" = EY view with rationale. Every percentage or total must equal a CALC value. Follow 04_Slide_Writing_Guide_and_Example; keep within character limits; copy its style, never its facts. Run the guide's self-check before replying. Return the two tables only.
+Rules: page 2 context band: s1_ctx_why says why national nature spending matters for the client's sector, quoted from evidence. Page 2 tiles: prefer government sources (Prompt 3b) for the forward view; tile 4 should state the growth sectors and their nature need as the source states it. Page 3 links (s2_link_<Theme_ID>) give the client's main disclosed exposure for each theme, with £ and % of total from my Calculations. Page 4 columns 1–3 are the top three themes by score (h1–h3): "today" = facts only; "gap" = not yet visible (absence check, list the sources searched); "opp" = EY view with rationale. Every percentage or total must equal a CALC value. Follow 04_Slide_Writing_Guide_and_Example; keep within character limits; copy its style, never its facts. Run the guide's self-check before replying. Return the two tables only.
 ```
-*Paste into Slide_Content (columns B–C) and Claims_Register. Save. Fix every cell that QA_Log or the red flags show.*
+*Paste table (a) into the Slide_Content paste area (cell J5, columns J:L); columns B and C look it up by key. Paste table (b) into Claims_Register from row 5. Save. Fix every cell that QA_Log or the red flags show.*
 
 ### Prompt 8 – Self-check
 ```

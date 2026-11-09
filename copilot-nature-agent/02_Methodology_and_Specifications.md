@@ -1,4 +1,4 @@
-# Methodology and Specifications – Nature Opportunity Assessment (v4)
+# Methodology and Specifications – Nature Opportunity Assessment (v4.1)
 
 Source ID in the workbook: **SRC-METH**. Upload this file to the Copilot agent's Knowledge as .docx or .pdf. It matches the tabs of **Nature_Opportunity_Master_Template.xlsx** (v4) and the deck skeleton **Nature_Deck_Skeleton_EY.pptx** (cover + 4 pages).
 
@@ -30,7 +30,8 @@ The Nature Opportunity Assessment shows, for one client in one country, where na
    - be phrased neutrally: "not found in the documents reviewed"
 5. **Traceability.** Nothing appears on a slide without a trace (section 7).
 6. **Numbers from formulas.** Totals, shares, percentages and scores are calculated in the workbook. The agent writes words; where the workbook calculates a number, the agent never retypes it from memory.
-7. **Tone.** UK English, neutral, factual. Never criticise the client. Describe gaps as "not yet visible" or "not disclosed".
+7. **National growth sources.** The forward view (where the country is heading) uses official national documents only: growth or industrial strategy and sector plans, national water, infrastructure or digital plans, no more than 3 years old. No media. A growth sector's nature need is included only where a source states it.
+8. **Tone.** UK English, neutral, factual. Never criticise the client. Describe gaps as "not yet visible" or "not disclosed".
 
 ---
 
@@ -194,22 +195,24 @@ Every value on pages 2–4 is traced. The chain is:
 - Every exposure row is also an Evidence_Log row with the same Evidence_ID.
 
 **Evidence_Log:** Evidence_ID | Source_ID | Printed page / tab | PDF page | Verbatim quote or figure (≤25 words, exact) | Evidence type | Scope | Summary | Verified against source (initials, date)
-- Evidence type: Commitment, Quantified target, Policy, Exposure, Financing or product, Partnership, Performance metric, Disclosure, Governance, External driver.
+- Evidence type: Commitment, Quantified target, Policy, Exposure, Financing or product, Partnership, Performance metric, Disclosure, Governance, External driver, Growth priority (Prompt 3b).
 - Scope: Own operations, Value chain / portfolio, Products and services, External driver.
 
 **NBSAP_Mapping:** Evidence_ID | Source_ID | Evidence class | Primary SubTheme_ID | Primary Sub_Market_ID | Secondary SubTheme_ID | Mapping strength | Rationale
 - Evidence class: Client exposure, Client action, Client position or External driver.
 - Mapping strength: Direct or Indirect.
 
-**Scoring (agent part):** SubTheme_ID | C1 | C2 | C4 | Evidence_IDs | Rationale | Client exposure (as disclosed)
+**Scoring (agent part, pasted at Scoring!W5):** SubTheme_ID | C1 | C2 | C4 | Evidence_IDs | Rationale | Client exposure (as disclosed)
+
+**Growth_Sectors (Prompt 3b):** Growth_ID | Growth sector (as named in the source) | Priority Evidence_IDs | Nature dependency (as stated in the source) | Dependency Evidence_IDs | Linked themes (EY view) | Client exposure link (Evidence_IDs or "Not split") | Note
 
 **Classification review (optional):** Example_ID | Current SubTheme_ID | Proposed SubTheme_ID | Rationale (EY view)
 
 **Glossary (client entries):** ID | Term | Type | Definition / expansion | Source_ID | Reference (page/tab)
 
-**Calculations (client entries, from row 30):** CALC_ID | Description | Formula (Excel, referencing Client_Exposure cells) | Unit | How it is calculated | Input trace IDs | Source_ID
+**Calculations (client entries, from row 30):** CALC_ID | Description | Formula (Excel; look figures up by Evidence_ID, e.g. =VLOOKUP("EV-040",Client_Exposure!$A:$E,5,FALSE)) | Unit | How it is calculated | Input trace IDs | Source_ID
 
-**Slide_Content:** Key | Value | Claim_IDs (the keys are listed in section 10)
+**Slide_Content (pasted at Slide_Content!J5):** Key | Value | Claim_IDs (the keys are listed in section 10; any order)
 
 **Claims_Register:** Claim_ID | Slide | Slide_Content key | Claim (exact wording or value on the slide) | Claim type | Primary trace ID | Other trace IDs | Derivation / how checked
 
@@ -242,7 +245,7 @@ Every value on pages 2–4 is traced. The chain is:
 | Page | Purpose | Agent writes (Slide_Content keys) | Excel writes (Deck_Tokens) |
 |---|---|---|---|
 | Cover | Title and date | cover_title, cover_date, client_name, client_short | – |
-| 2 Context | Where national nature money goes and where the country is heading | s1_title, s1_section, s1_callout_text, s1_heading_r, s1_sub_r, s1_tile1–4_stat/text, s1_rules_lead, s1_rules, s1_sowhat, s1_footnote, s1_talk | s1_left_head, s1_left_sub, s1_callout_stat, Chart A, s1_notes |
+| 2 Context | Context band (what an NBSAP is, what we measured, why it matters), where national nature money goes, and where the country is heading | s1_title, s1_section, s1_ctx_why, s1_callout_text, s1_heading_r, s1_sub_r, s1_tile1–4_stat/text, s1_rules_lead, s1_rules, s1_sowhat, s1_footnote, s1_talk | s1_ctx_what, s1_ctx_measured, s1_left_head, s1_left_sub, s1_callout_stat, Chart A, s1_notes |
 | 3 Context × client | Theme priority, national money and the client's main link, row by row | s2_title, s2_section, s2_link_W, s2_link_AFF, s2_link_UD, s2_link_DM, s2_link_P, s2_sowhat, s2_talk | r1–r5 theme, drill-down, money and link (sorted by score), s2_footnote (method), Charts B and C, s2_notes |
 | 4 Client | For the top three themes by score: what the client does today, what is not yet visible, and the opportunity | s3_title, s3_section, s3_col1–3_today/gap/opp, s3_sowhat, s3_footnote, s3_talk | h1–h3 (column headers), s3_notes |
 | 5 EY | How EY can support | **Nothing: written by the EY team** | – |
@@ -256,7 +259,7 @@ Every value on pages 2–4 is traced. The chain is:
 
 ## 11. QA checklist (all must pass before the deck is filled)
 
-The QA_Log tab runs 19 checks automatically (items 6 and 12 below each cover two):
+The QA_Log tab runs 21 checks automatically (items 6 and 12 below each cover two; plus "Prompt 5 pasted for all 15 sub-themes" and "Growth_Sectors rows cite evidence that exists"):
 1. Country recognised.
 2. Commitments loaded.
 3. All 15 sub-themes scored.

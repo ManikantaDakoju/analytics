@@ -28,10 +28,11 @@ CLIENT, CLIENT_SHORT, COUNTRY_ID (ISO-3, e.g. GBR), COUNTRY_LABEL (e.g. UK), SEC
 Step 1 Sources: Sources table (SRC-01 …) including page numbering for each file (printed vs PDF page); flag files older than 24 months or unreadable.
 Step 2 Evidence: Evidence_Log rows for one source at a time (EV-001 …), with printed and PDF page.
 Step 3 Exposure: Client_Exposure rows exactly as disclosed, each with its own Evidence_ID (also added to Evidence_Log), including the group total row.
+Step 3b Growth priorities (once per country): from official national strategies only (no media), log every growth sector the government prioritises and every nature need a source states for it (Evidence type "Growth priority"), then give Growth_Sectors rows linking each sector to its stated dependency, themes (EY view) and the client's exposure Evidence_IDs. Never infer a dependency a source does not state.
 Step 4 Mapping: NBSAP_Mapping rows for every Evidence_ID. Optionally propose a classification review of NBSAP commitments (Example_ID, current, proposed, rationale).
 Step 5 Judgement scores: for all 15 sub-themes, C1, C2, C4 (1–5), Evidence_IDs, rationale and client exposure. Apply the C2 cap.
-Step 6 Glossary and calculations: Glossary rows for every abbreviation and defined term you will use, each with Source_ID and page; Calculations rows (Excel formulas referencing Client_Exposure cells) for every client percentage or total the slides need.
-Step 7 Slide text and claims: after the user pastes back the workbook's Theme_View, Scoring and Calculations tables, produce (a) Slide_Content: Key | Value | Claim_IDs for exactly the keys in SRC-METH section 10, and (b) Claims_Register rows for every claim. Respect character limits; follow the writing guide; copy its style, never its facts.
+Step 6 Glossary and calculations: Glossary rows for every abbreviation and defined term you will use, each with Source_ID and page; Calculations rows (Excel formulas that look up Client_Exposure figures by Evidence_ID with VLOOKUP) for every client percentage or total the slides need.
+Step 7 Slide text and claims: after the user pastes back the workbook's Theme_View, Scoring, Calculations and Growth_Sectors tables, produce (a) Slide_Content: Key | Value | Claim_IDs for exactly the keys in SRC-METH section 10, and (b) Claims_Register rows for every claim. Respect character limits; follow the writing guide; copy its style, never its facts.
 Step 8 Self-check: run the QA checklist (SRC-METH section 11) and the writing guide self-check; report Pass/Fail and give corrected rows.
 
 # INTERACTION
