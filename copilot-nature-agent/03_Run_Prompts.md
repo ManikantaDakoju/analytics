@@ -1,4 +1,4 @@
-# Run prompts (v4.4) – copy into the Copilot agent, one at a time
+# Run prompts (v4.5) – copy into the Copilot agent, one at a time
 
 Replace the text in <angle brackets>. After each answer:
 1. Check the answer.
@@ -63,6 +63,12 @@ Step 5. For all 15 SubTheme_IDs produce: SubTheme_ID | C1 | C2 | C4 | Evidence_I
 ```
 *Paste the whole table into the Scoring tab's paste area (cell W5, columns W:AC). Row order doesn't matter: columns E, F, H, P, Q and R look it up.*
 
+### Prompt 5b – Strategy alignment (not scored)
+```
+Step 5b. For each of the 5 themes (W, AFF, UD, DM, P) give: Theme_ID | In client’s stated priorities? (Yes/No) | Evidence_IDs. Say Yes only where the client itself names the theme as a priority in its own strategy or position documents (quote the Evidence_ID); being eligible under the financing framework is not enough. Return the table only.
+```
+*Paste into Theme_View columns T:U (rows 5–9, in the order W, AFF, UD, DM, P). It shows as a tag on page 3 and is not used in scores.*
+
 ### Prompt 6 – Glossary and calculations
 ```
 Step 6. (a) List every abbreviation and defined term you expect to use on the slides that is not already in the Glossary (I paste the current Glossary IDs below). For each: ID (ABB- or DEF-) | Term | Type | Definition / expansion | Source_ID | Reference (page/tab). The expansion must come from a source; if no source spells it out, say so and suggest wording that avoids the abbreviation.
@@ -82,7 +88,7 @@ Deck_Tokens rows for s1_ctx_what, s1_ctx_measured, s1_left_sub, s1_callout_stat,
 Write the text for pages 2–4 as two tables.
 (a) Slide_Content: Key | Value | Claim_IDs, for exactly the keys in SRC-METH section 10.
 (b) Claims_Register: Claim_ID | Slide | Slide_Content key | Claim | Claim type | Primary trace ID | Other trace IDs | Derivation / how checked, for every claim (C-001 …), plus "auto:" claims for the Excel-written text listed above.
-Rules: page 2 context band: s1_ctx_why says why national nature spending matters for the client's sector, quoted from evidence. Page 2 tiles: prefer government sources (Prompt 3b) for the forward view; tile 4 should state the growth sectors and their nature need as the source states it. Page 3 links (s2_link_<Theme_ID>) give the client's main disclosed exposure for each theme, with £ and % of total from my Calculations. Page 4 columns 1–3 are the top three themes by score (h1–h3): "today" = facts only; "gap" = not yet visible (absence check, list the sources searched; if the annual / sustainability report was not reviewed, say so in s3_footnote); "opp" = EY view with rationale. Every percentage or total must equal a CALC value. Follow 04_Slide_Writing_Guide_and_Example; keep within character limits; copy its style, never its facts. Run the guide's self-check before replying. Return the two tables only.
+Rules: page 2 context band: s1_ctx_why says why national nature spending matters for the client's sector, quoted from evidence. Page 2 tiles: prefer government sources (Prompt 3b) for the forward view; tile 4 should state the growth sectors and their nature need as the source states it. Page 3 growth strip (s2_grow1–4_head/_text): the four national growth sectors most relevant to the client from Growth_Sectors, each with the client’s exposure (£ and % of book from Calculations) and its nature dependency (stated or ENCORE, as labelled); write "Not split" where the client does not disclose the sector. Page 3 links (s2_link_<Theme_ID>) give the client's main disclosed exposure for each theme, with £ and % of total from my Calculations. Page 4 columns 1–3 are the top three themes by score (h1–h3): "today" = facts only; "gap" = not yet visible (absence check, list the sources searched; if the annual / sustainability report was not reviewed, say so in s3_footnote); "opp" = EY view with rationale. Every percentage or total must equal a CALC value. Follow 04_Slide_Writing_Guide_and_Example; keep within character limits; copy its style, never its facts. Run the guide's self-check before replying. Return the two tables only.
 ```
 *Paste table (a) into the Slide_Content paste area (cell J5, columns J:L); columns B and C look it up by key. Paste table (b) into Claims_Register from row 5. Save. Fix every cell that QA_Log or the red flags show.*
 

@@ -1,4 +1,4 @@
-# LBG nature opportunities: feedback tracker (v4.4, 9 November 2026)
+# LBG nature opportunities: feedback tracker (v4.5, 9 November 2026)
 
 This replaces `Feedback_Tracker_v3.md`. It records the status of every point from the partner review (22 October 2026) against the v4.1 toolkit and LBG pack (cover plus 4 pages; page 5 written by the EY team).
 
@@ -27,15 +27,15 @@ Also done: the full UK growth sector list (Industrial Strategy, SRC-09, v4.2); s
 
 | # | Feedback | Gap | Needs |
 |---|---|---|---|
-| 15 | Where to direct capital / RWAs by sector (Sean) | Growth_Sectors sets the IS-8 against LBG's book (talk track on page 3). Not yet a slide view; uses exposure, not RWAs. | Pillar 3 for RWAs; decision whether to add a growth-vs-book view to a slide |
+| 15 | Where to direct capital / RWAs by sector (Sean) | **Now on page 3** (growth-vs-book strip). Uses lending exposure, not RWAs. | Pillar 3, only if RWAs are wanted |
 | 17 | Subsidence and the other page 4 gaps | Absence check on four documents only; the annual / sustainability report is now a core source (QA warning until reviewed) | LBG Annual / Sustainability Report 2025 (upload blocked on the user side; attach in the Copilot run or paste the sections) |
 
 ## Not done
 
 | # | Feedback | Status / proposal |
 |---|---|---|
-| 18 | Strategic alignment: weight topics in the client's strategy (Sean) | Proposal: a Scoring flag column shown on slides but not scored, so comparability is kept. Needs your decision. |
-| 19 | Dummy client data to demo the data ladder (Sean) | Not built. Can add an illustrative dataset clearly labelled as such. |
+| 18 | Strategic alignment (Sean) | **Done (v4.5):** page 3 tag for themes LBG itself names as priorities (flood, water; Built to Last p.3). Not scored. |
+| 19 | Dummy client data to demo the data ladder (Sean) | Agreed: internal-only, not in the client deck. Build if Sean wants the demo. |
 | 20 | Agent scanning government publications and media (Sean) | Replaced by Prompt 3b, which uses official documents only; media is excluded for traceability |
 | 21 | Points Helen thought were wrong | List not yet received |
 | 22 | Agriculture collateral values (Sean) | Implied by data ladder step 3 (asset level) only |

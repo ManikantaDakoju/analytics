@@ -1,4 +1,4 @@
-# Nature Opportunity Assessment – Copilot Playbook (v4.4)
+# Nature Opportunity Assessment – Copilot Playbook (v4.5)
 
 How to produce the client pack (cover + 4 pages) for any client, in any country covered by the EY NBSAP Nature Sizing workbook, using Microsoft 365 Copilot, Excel and PowerPoint only. No code, and no tools beyond Microsoft 365.
 
@@ -8,7 +8,7 @@ How to produce the client pack (cover + 4 pages) for any client, in any country 
 |---|---|---|
 | Cover | — | Workbook (title and date from Slide_Content) |
 | 2 Context | What is an NBSAP and what did we measure (context band); where is national nature money going; where is the country heading? | Copilot writes the words; Excel writes the context band's first two blocks, the numbers and Chart A |
-| 3 Context × client | How does that money meet the client's book, theme by theme? | Copilot writes the client links; Excel calculates scores, values, ranks and Charts B and C |
+| 3 Context × client | How does that money meet the client's book, theme by theme, and where could it deploy capital in the national growth sectors? | Copilot writes the client links; Excel calculates scores, values, ranks and Charts B and C |
 | 4 Client | For the top three themes: what the client does today, what is not yet visible, and the opportunity | Copilot (facts, absence checks and EY views, each traced) |
 | 5 EY | How EY can support | **The EY team writes it by hand. The agent never drafts it.** |
 
@@ -26,7 +26,7 @@ The speaker notes list the sources for every claim automatically, and QA_Log fai
 | Who | Does what |
 |---|---|
 | **Copilot agent** | Reads the client documents and extracts verbatim evidence with pages. Maps it to the taxonomy, proposes C1, C2 and C4, and writes the glossary entries, slide text and claims. |
-| **Master template (Excel)** | Holds the taxonomy and all countries' NBSAP commitments. Calculates C3, C5, scores, theme roll-up, shares, percentages, chart data and every placeholder value. Runs 22 QA and traceability checks. |
+| **Master template (Excel)** | Holds the taxonomy and all countries' NBSAP commitments. Calculates C3, C5, scores, theme roll-up, shares, percentages, chart data and every placeholder value. Runs 23 QA and traceability checks. |
 | **Deck skeleton + Copilot in PowerPoint** | The EY template with the layout fixed and `{{placeholders}}`. Copilot in PowerPoint (or Ctrl+H) replaces the placeholders; you paste the chart data. |
 | **You (and the EY team)** | Check evidence and scores, approve EY views, and confirm absence checks. Write page 5, then sign off (QRM). |
 
@@ -46,8 +46,8 @@ The speaker notes list the sources for every claim automatically, and QA_Log fai
 | `tools/nature_v41/` (repo only) | Scripts EY used to build and test the toolkit. Not needed to run it. |
 
 The LBG worked example is in `lbg-nature-poc/`:
-- `LBG_UK_Nature_Mapping_v4.4.xlsx`: the master template filled in for LBG, with every QA check passing
-- `LBG_Nature_Opportunities_v4.4.pptx`: the skeleton filled from that workbook
+- `LBG_UK_Nature_Mapping_v4.5.xlsx`: the master template filled in for LBG, with every QA check passing
+- `LBG_Nature_Opportunities_v4.5.pptx`: the skeleton filled from that workbook
 
 ## 4. One-time setup (about 20 minutes)
 
@@ -69,6 +69,7 @@ The LBG worked example is in `lbg-nature-poc/`:
 | 3b | Attach the country's official growth strategies (e.g. Industrial Strategy, AI Opportunities Action Plan, Environment Agency water framework) and, optionally, the ENCORE Insights Country Dashboard data (countries.encorenature.org). Paste the evidence rows and the Growth_Sectors rows. Do this once per country and reuse it for later clients. | 3b |
 | 4 | Paste NBSAP_Mapping. Approve any classification review in NBSAP_Commitments columns N and O. | 4 |
 | 5 | Paste the whole table at Scoring!W5 (any row order). **Review each score.** | 5 |
+| 5b | Paste the strategy-alignment table into Theme_View T:U (tag on page 3; not scored) | 5b |
 | 6 | Paste Glossary rows (from row 60) and Calculations rows (from row 30). Save. | 6 |
 | 7 | Paste back Theme_View, Scoring, Calculations, Growth_Sectors and selected Deck_Tokens. Paste the agent's Slide_Content at Slide_Content!J5 (any order) and the claims into Claims_Register. | 7 |
 | 8 | Fix anything QA_Log or the red cells flag | 8 |

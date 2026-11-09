@@ -1,4 +1,4 @@
-# Slide Writing Guide and Worked Example (v4.3)
+# Slide Writing Guide and Worked Example (v4.5)
 
 Knowledge file for the Copilot agent. It shows how to write every Slide_Content value for pages 2–4, and the Claims_Register rows behind them. Use it with SRC-METH (02_Methodology_and_Specifications). Page 5 is written by the EY team.
 
@@ -78,7 +78,7 @@ Excel writes these page 2 texts itself (do not write them): s1_ctx_what, s1_ctx_
 | s2_link_DM | Mortgages £365.6bn (57%) and property £26.3bn (4%). Flood exposure of the book not disclosed. | C-041, C-042, C-043, C-044, C-045, C-046 | 105 | 93 |
 | s2_link_P | Manufacturing £13.1bn (2.0%); indirect link. | C-058, C-059, C-060 | 105 | 44 |
 | s2_sowhat | 69% of UK nature money targets water and flood, but energy and water supply is only 1.9% of LBG’s book. LBG’s largest link is indirect: flood risk across £365.6bn of mortgages. | C-010, C-048, C-061, C-041, C-046 | 190 | 176 |
-| s2_talk | Same themes, now set against LBG. Read across each row: how much UK money goes there, and where LBG’s book touches it. Water and flood lead on priority, but LBG’s direct water lending is small (1.9% of the book). The big link is the mortgage book, through flood risk. If asked why flood scores 4.6 and water 4.5: both are water-related and together they are 69% of UK commitments. Capital deployment: the Growth_Sectors tab sets the eight priority sectors against LBG’s book. The largest overlap is financial and business services; the water-hungry growth sectors (clean energy, manufacturing, data centres) are small or not split. ENCORE shows the water and flood dependency of LBG’s larger nature-linked sectors: construction (flood mitigation 0.59, water supply 0.48), agriculture (water supply 0.70) and food (0.67), against banking at 0.23. Capital also needs capability: lending into sectors such as data centres needs teams that understand them. |  | 1000 | 952 |
+| s2_talk | Same themes, now set against LBG. Read across each row: how much UK money goes there, and where LBG’s book touches it. Water and flood lead on priority, but LBG’s direct water lending is small (1.9% of the book). The big link is the mortgage book, through flood risk. If asked why flood scores 4.6 and water 4.5: both are water-related and together they are 69% of UK commitments. The strip at the bottom answers “where could LBG deploy capital?”: the government’s priority growth sectors against LBG’s book. LBG’s biggest overlap is financial and business services, which depend little on water; the water-dependent growth sectors (manufacturing, clean energy, data centres) are small or not split in its disclosures. The tags show that flood and water are also LBG’s own stated priorities. Capital also needs capability: lending into sectors such as data centres needs teams that understand them. |  | 1000 | 898 |
 | s3_title | LBG has the foundations; the gaps are scale, targets and disclosure | C-070 | 68 | 67 |
 | s3_section | LBG today: strengths and gaps |  | 40 | 29 |
 | s3_col1_today | Published Built to Last (2026) on climate resilience. With NatWest, underwrote £238.5m for Cleve Hill, which has coastal flood defences. Flood doors and barriers eligible for finance. | C-071, C-072, C-073, C-074 | 185 | 183 |
@@ -94,6 +94,14 @@ Excel writes these page 2 texts itself (do not write them): s1_ctx_what, s1_ctx_
 | s3_footnote | Sources: LBG Working with nature (2024) p.4; Built to Last (2026) PDF pp.14–17; Sustainability Data Sheet 2025, tabs 18 and 20; Sustainable Financing Framework 2025 pp.11–15. "Not yet visible" = not found in these four documents; to be checked against the Annual and Sustainability Reports 2025. Scores from page 3. |  | 330 | 315 |
 | s3_talk | Credit LBG first: HARP, Cleve Hill, the Soil Association partnership, and a financing framework that already covers water, flood resilience and regenerative farming. Then the gaps, framed as not yet visible: portfolio flood exposure, lending volumes and nature targets. Then the opportunity row. Keep the conversation on opportunity, not risk. |  | 1000 | 343 |
 | s1_ctx_why | Over half (51%) of UK economic output depends highly on nature (ENCORE). LBG puts the UK nature finance gap at £56bn. | C-120, C-121, C-001, C-117 | 150 | 117 |
+| s2_grow1_head | Financial and business services | C-130 | 32 | 31 |
+| s2_grow1_text | £75.6bn (11.7% of LBG’s book); low water dependency (0.23–0.29) | C-131, C-132, C-133 | 82 | 63 |
+| s2_grow2_head | Advanced manufacturing | C-134 | 32 | 22 |
+| s2_grow2_text | £13.1bn (2.0%); water dependency 0.36–0.55; growth needs water | C-135, C-136, C-137, C-138 | 82 | 62 |
+| s2_grow3_head | Clean energy | C-139 | 32 | 12 |
+| s2_grow3_text | Energy and water supply £12.1bn (1.9%); water dependency 0.49 | C-140, C-141, C-142 | 82 | 61 |
+| s2_grow4_head | Data centres and AI | C-143 | 32 | 19 |
+| s2_grow4_text | Not split in LBG’s book; need cooling water, land and power | C-144, C-145 | 82 | 59 |
 
 ## 4. Worked example: Claims_Register (all rows)
 
@@ -184,6 +192,23 @@ Excel writes these page 2 texts itself (do not write them): s1_ctx_what, s1_ctx_
 | C-119 | s1 | s1_sowhat | Financing water and flood resilience is how banks share in that growth | EY view | EV-080 | EV-095, EV-032, CALC-TOP2-S | Growth needs water (EV-080, EV-095); water and flood take 69% of UK NBSAP money (CALC-TOP2-S); LBG cites a $100–130bn adaptation financing opportunity for banks (EV-032) |
 | C-120 | s1 | s1_ctx_why | Over half (51%) of UK economic output depends highly on nature | Quoted fact | EV-103 | DEF-OUTPUT | ENCORE "GVA % High Dep" for GB = 51.38, shown as 51% |
 | C-121 | s1 | s1_ctx_why | ENCORE | Abbreviation | ABB-ENCORE | ABB-ENC2, SRC-10 | Full licence citation in Sources (SRC-10) |
+| C-130 | s2 | s2_grow1_head | Financial and business services | Quoted fact | EV-091 | EV-099 | Combines two IS-8 sectors (Financial Services; Professional and Business Services) to match LBG’s disclosed sector “Financial, business and other services” |
+| C-131 | s2 | s2_grow1_text | £75.6bn | Quoted fact | EV-099 |  | £75,615m ÷ 1,000, 1 d.p. |
+| C-132 | s2 | s2_grow1_text | 11.7% | Calculated | CALC-58 |  |  |
+| C-133 | s2 | s2_grow1_text | low water dependency (0.23–0.29) | Quoted fact | EV-112 | EV-113 | ENCORE water supply: banking and capital markets 0.23; professional, business and social activities 0.29. "Low" = below the other strip sectors (EY wording). |
+| C-134 | s2 | s2_grow2_head | Advanced manufacturing | Quoted fact | EV-091 |  |  |
+| C-135 | s2 | s2_grow2_text | £13.1bn | Quoted fact | EV-045 |  | £13,095m ÷ 1,000, 1 d.p. (LBG sector: manufacturing) |
+| C-136 | s2 | s2_grow2_text | 2.0% | Calculated | CALC-56 |  |  |
+| C-137 | s2 | s2_grow2_text | water dependency 0.36–0.55 | Quoted fact | EV-114 | EV-110 | ENCORE water supply: automotive 0.36; chemical and materials industry 0.55 (EY mapping of advanced manufacturing) |
+| C-138 | s2 | s2_grow2_text | growth needs water | Quoted fact | EV-095 |  | Paraphrase, no quotation marks: "so that industrial and residential developments are not held back due to pressures on water availability" |
+| C-139 | s2 | s2_grow3_head | Clean energy | Quoted fact | EV-091 | EV-093 | IS-8 sector: Clean Energy Industries |
+| C-140 | s2 | s2_grow3_text | Energy and water supply £12.1bn | Quoted fact | EV-038 |  | £12,084m ÷ 1,000, 1 d.p. |
+| C-141 | s2 | s2_grow3_text | 1.9% | Calculated | CALC-54 |  |  |
+| C-142 | s2 | s2_grow3_text | water dependency 0.49 | Quoted fact | EV-109 |  | ENCORE water supply: electricity 0.49 |
+| C-143 | s2 | s2_grow4_head | Data centres and AI | Quoted fact | EV-079 | EV-087, ABB-AI | Named as a growth priority by the Environment Agency (EV-079) and the AI Opportunities Action Plan (EV-087) |
+| C-144 | s2 | s2_grow4_text | Not split in LBG’s book | Absence check | SRC-04 | EV-100 | Data sheet tab 18 has no data-centre line; nearest disclosed sector is postal and telecommunications (EV-100). SRC-01, 02, 05 searched. |
+| C-145 | s2 | s2_grow4_text | need cooling water, land and power | Quoted fact | EV-085 | EV-088 | Paraphrase of "a large amount of water for cooling processes" (EV-085) and "access to land and power" (EV-088) |
+| C-146 | s2 | auto:r1-r5 align | ✓ In LBG’s stated priorities (flood, coastal and adaptation; water) | Definition | DEF-ALIGN | EV-115 | Built to Last names flood preparedness and drought resilience among LBG’s three critical priorities; other themes not named as LBG priorities in the documents reviewed |
 
 ## 5. Self-check before replying
 

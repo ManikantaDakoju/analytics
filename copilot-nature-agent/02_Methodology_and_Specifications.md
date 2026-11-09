@@ -1,4 +1,4 @@
-# Methodology and Specifications – Nature Opportunity Assessment (v4.4)
+# Methodology and Specifications – Nature Opportunity Assessment (v4.5)
 
 Source ID in the workbook: **SRC-METH**. Upload this file to the Copilot agent's Knowledge as .docx or .pdf. It matches the tabs of **Nature_Opportunity_Master_Template.xlsx** (v4) and the deck skeleton **Nature_Deck_Skeleton_EY.pptx** (cover + 4 pages).
 
@@ -146,6 +146,7 @@ Themes are scored so that a topic appearing several times (for example, three wa
 - **Theme C3 and C5:** recalculated from the theme's total commitments (number and share), using the same bands.
 - **Weights:** the same as for sub-themes.
 - **Drill-down:** the sub-theme scores stay visible on page 3.
+- **Strategy alignment (not scored):** each theme is tagged "In the client’s stated priorities" only if the client names it as a priority in its own strategy or position documents (Evidence_ID required); eligibility under a financing framework is not enough. The tag appears on page 3 and never changes a score, so results stay comparable across clients.
 
 ---
 
@@ -247,7 +248,7 @@ Every value on pages 2–4 is traced. The chain is:
 |---|---|---|---|
 | Cover | Title and date | cover_title, cover_date, client_name, client_short | – |
 | 2 Context | Context band (what an NBSAP is, what we measured, why it matters), where national nature money goes, and where the country is heading | s1_title, s1_section, s1_ctx_why, s1_callout_text, s1_heading_r, s1_sub_r, s1_tile1–4_stat/text, s1_rules_lead, s1_rules, s1_sowhat, s1_footnote, s1_talk | s1_ctx_what, s1_ctx_measured, s1_left_head, s1_left_sub, s1_callout_stat, Chart A, s1_notes |
-| 3 Context × client | Theme priority, national money and the client's main link, row by row | s2_title, s2_section, s2_link_W, s2_link_AFF, s2_link_UD, s2_link_DM, s2_link_P, s2_sowhat, s2_talk | r1–r5 theme, drill-down, money and link (sorted by score), s2_footnote (method), Charts B and C, s2_notes |
+| 3 Context × client | Theme priority, national money and the client's main link, row by row | s2_title, s2_section, s2_link_W, s2_link_AFF, s2_link_UD, s2_link_DM, s2_link_P, s2_grow1–4_head and s2_grow1–4_text (growth sectors vs client book), s2_sowhat, s2_talk | r1–r5 theme, drill-down, alignment tag, money and link (sorted by score), s2_footnote (method), Charts B and C, s2_notes |
 | 4 Client | For the top three themes by score: what the client does today, what is not yet visible, and the opportunity | s3_title, s3_section, s3_col1–3_today/gap/opp, s3_sowhat, s3_footnote, s3_talk | h1–h3 (column headers), s3_notes |
 | 5 EY | How EY can support | **Nothing: written by the EY team** | – |
 
@@ -260,7 +261,7 @@ Every value on pages 2–4 is traced. The chain is:
 
 ## 11. QA checklist (all must pass before the deck is filled)
 
-The QA_Log tab runs 22 checks automatically (the 22nd: core source – annual / sustainability report reviewed) (items 6 and 12 below each cover two; plus "Prompt 5 pasted for all 15 sub-themes" and "Growth_Sectors rows cite evidence that exists"):
+The QA_Log tab runs 23 checks automatically (the 23rd: strategy alignment set for all themes, with evidence for every Yes) (the 22nd: core source – annual / sustainability report reviewed) (items 6 and 12 below each cover two; plus "Prompt 5 pasted for all 15 sub-themes" and "Growth_Sectors rows cite evidence that exists"):
 1. Country recognised.
 2. Commitments loaded.
 3. All 15 sub-themes scored.

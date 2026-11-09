@@ -101,3 +101,21 @@
 - **New QA check (22nd):** **Pass** if the report is included; **Warning** if it is missing but page 4 carries the caveat; **Fail** otherwise.
 - **LBG example:** 21 of 22 checks pass. The 22nd shows "Warning: not reviewed – page 4 caveat present".
   - SRC-06 records the reason. Attach the report in the Copilot run and the warning clears.
+
+---
+
+## v4.5 addendum: growth-vs-book view and strategy alignment (9 November 2026)
+
+- **Page 3 growth strip** (Sean's "where should LBG deploy capital?"): four growth sectors set against LBG's book, all traced.
+  - **Financial and business services:** £75.6bn, 11.7% of the book; low water dependency (0.23–0.29).
+  - **Advanced manufacturing:** £13.1bn, 2.0%; water dependency 0.36–0.55; growth needs water.
+  - **Clean energy:** energy and water supply £12.1bn, 1.9%; water dependency 0.49.
+  - **Data centres and AI:** not split in LBG's book; need cooling water, land and power.
+  - New calculation: CALC-58. New glossary entry: ABB-AI. Claims: C-130 to C-145.
+- **Strategy alignment tag** (Sean's "alignment to strategy"): strict rule. A theme gets the tag only if LBG itself names it as a priority. Being eligible under its financing framework is not enough.
+  - Flagged: flood, coastal and adaptation, and water. *Built to Last* PDF p.3: "three critical priorities: cooling, flood preparedness and drought resilience" (EV-115, checked word for word).
+  - Not flagged: the other three themes. The tag is shown on page 3 but is **not scored**.
+- **Bugs caught by the checks and fixed:**
+  - The script wrote the new claims into a gap left by a deleted claim, overwriting three existing ones. The trace checks flagged it.
+  - The page 3 drill-down text overlapped the score chart. The rendering check flagged it.
+- **Result:** 22 of 23 QA checks pass. The 23rd is the expected warning that the LBG Sustainability Report has not been reviewed. 114 evidence items; 102 claims; no placeholders left.

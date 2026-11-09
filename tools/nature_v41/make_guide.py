@@ -29,7 +29,7 @@ WEAK={'s1_title':('UK nature context','A topic label, not a finding.'),'s1_ctx_w
 's2_link_W':('Utilities ~£12bn','Approximate; no % of book; informal sector name.'),'s2_sowhat':('The table shows the themes and exposures.','Describes the slide instead of the insight.'),
 's3_col1_today':('LBG is doing lots on flooding','No traced facts.'),'s3_col1_gap':('LBG has failed to disclose flood risk','Critical tone; absence must be "not yet visible" with sources searched.'),
 's3_col1_opp':('Big opportunity','Not specific; no rationale.'),'s3_sowhat':('EY can help with many things','Not the client\'s next step; page 5 covers EY.')}
-L=['# Slide Writing Guide and Worked Example (v4.3)','',
+L=['# Slide Writing Guide and Worked Example (v4.5)','',
 'Knowledge file for the Copilot agent. It shows how to write every Slide_Content value for pages 2–4, and the Claims_Register rows behind them. Use it with SRC-METH (02_Methodology_and_Specifications). Page 5 is written by the EY team.','',
 '## 1. Rules','']+[f'{i}. {r}' for i,r in enumerate(RULES,1)]+['','## 2. Field guide (limit = maximum characters)','','| Key | What to write | Limit | Good (LBG example) | Weak | Why weak |','|---|---|---|---|---|---|']
 for k,g,lim,_ in keys:
