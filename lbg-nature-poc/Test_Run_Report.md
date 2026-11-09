@@ -81,3 +81,23 @@
 - **Page 3 talk track:** ENCORE water and flood dependency for LBG's larger nature-linked sectors (construction, agriculture, food) against banking.
 - **Caught by the checks:** the abbreviation check flagged that "ENCORE" on the slide cited a different glossary entry from the one that matched. Fixed.
 - **Result:** 21 of 21 QA checks pass; 113 evidence items; 85 claims; no placeholders left in the deck.
+
+---
+
+## v4.4 addendum: annual / sustainability report as a core source (9 November 2026)
+
+- **What happened:** the LBG Sustainability Report 2025 could not be uploaded or downloaded.
+  - The upload was blocked before the file left the user's machine (no partial file reached the session).
+  - The network request to lloydsbankinggroup.com could not be approved: the approval card showed only "Deny".
+  - The report was **not** simulated: quotes and pages are never invented.
+- **Toolkit change:** the annual / sustainability report is now an **expected core source** for every client.
+  - Prompt 0 checks for it. Prompt 1 lists it even if it is missing (Included = N, with the reason).
+  - Prompt 2 mines it for:
+    - the definition of nature priority sectors
+    - physical risk (flood, drought, wildfire, subsidence; mortgage and property book)
+    - sustainable finance categories
+    - nature targets and TNFD disclosures
+  - Prompt 7 must state in the page 4 footnote when it was not reviewed.
+- **New QA check (22nd):** **Pass** if the report is included; **Warning** if it is missing but page 4 carries the caveat; **Fail** otherwise.
+- **LBG example:** 21 of 22 checks pass. The 22nd shows "Warning: not reviewed – page 4 caveat present".
+  - SRC-06 records the reason. Attach the report in the Copilot run and the warning clears.

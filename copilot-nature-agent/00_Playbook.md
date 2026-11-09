@@ -1,4 +1,4 @@
-# Nature Opportunity Assessment – Copilot Playbook (v4.3)
+# Nature Opportunity Assessment – Copilot Playbook (v4.4)
 
 How to produce the client pack (cover + 4 pages) for any client, in any country covered by the EY NBSAP Nature Sizing workbook, using Microsoft 365 Copilot, Excel and PowerPoint only. No code, and no tools beyond Microsoft 365.
 
@@ -26,7 +26,7 @@ The speaker notes list the sources for every claim automatically, and QA_Log fai
 | Who | Does what |
 |---|---|
 | **Copilot agent** | Reads the client documents and extracts verbatim evidence with pages. Maps it to the taxonomy, proposes C1, C2 and C4, and writes the glossary entries, slide text and claims. |
-| **Master template (Excel)** | Holds the taxonomy and all countries' NBSAP commitments. Calculates C3, C5, scores, theme roll-up, shares, percentages, chart data and every placeholder value. Runs 21 QA and traceability checks. |
+| **Master template (Excel)** | Holds the taxonomy and all countries' NBSAP commitments. Calculates C3, C5, scores, theme roll-up, shares, percentages, chart data and every placeholder value. Runs 22 QA and traceability checks. |
 | **Deck skeleton + Copilot in PowerPoint** | The EY template with the layout fixed and `{{placeholders}}`. Copilot in PowerPoint (or Ctrl+H) replaces the placeholders; you paste the chart data. |
 | **You (and the EY team)** | Check evidence and scores, approve EY views, and confirm absence checks. Write page 5, then sign off (QRM). |
 
@@ -46,8 +46,8 @@ The speaker notes list the sources for every claim automatically, and QA_Log fai
 | `tools/nature_v41/` (repo only) | Scripts EY used to build and test the toolkit. Not needed to run it. |
 
 The LBG worked example is in `lbg-nature-poc/`:
-- `LBG_UK_Nature_Mapping_v4.3.xlsx`: the master template filled in for LBG, with every QA check passing
-- `LBG_Nature_Opportunities_v4.3.pptx`: the skeleton filled from that workbook
+- `LBG_UK_Nature_Mapping_v4.4.xlsx`: the master template filled in for LBG, with every QA check passing
+- `LBG_Nature_Opportunities_v4.4.pptx`: the skeleton filled from that workbook
 
 ## 4. One-time setup (about 20 minutes)
 
@@ -62,7 +62,7 @@ The LBG worked example is in `lbg-nature-poc/`:
 
 | Step | You do | Prompt |
 |---|---|---|
-| 0 | Copy the master template as `<Client>_<Country>_Nature_Mapping.xlsx`. Fill Inputs: client, short name, Country_ID, country label, sector, as-at date. Collect the client's latest public documents. | 0 |
+| 0 | Copy the master template as `<Client>_<Country>_Nature_Mapping.xlsx`. Fill Inputs: client, short name, Country_ID, country label, sector, as-at date. Collect the client's latest public documents: **annual and/or sustainability report (core)**, data sheet, financing framework, nature/TNFD/climate report. If the annual / sustainability report can't be used, record why and keep the page 4 caveat; QA shows a Warning until it is reviewed. | 0 |
 | 1 | Paste Sources from row 7 | 1 |
 | 2 | Paste Evidence_Log, one source at a time. **Spot-check 5 quotes against the PDF page.** | 2 |
 | 3 | Paste Client_Exposure (including the group total) and the matching evidence rows | 3 |

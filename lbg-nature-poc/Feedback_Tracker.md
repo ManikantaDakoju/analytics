@@ -1,4 +1,4 @@
-# LBG nature opportunities: feedback tracker (v4.3, 9 November 2026)
+# LBG nature opportunities: feedback tracker (v4.4, 9 November 2026)
 
 This replaces `Feedback_Tracker_v3.md`. It records the status of every point from the partner review (22 October 2026) against the v4.1 toolkit and LBG pack (cover plus 4 pages; page 5 written by the EY team).
 
@@ -28,7 +28,7 @@ Also done: the full UK growth sector list (Industrial Strategy, SRC-09, v4.2); s
 | # | Feedback | Gap | Needs |
 |---|---|---|---|
 | 15 | Where to direct capital / RWAs by sector (Sean) | Growth_Sectors sets the IS-8 against LBG's book (talk track on page 3). Not yet a slide view; uses exposure, not RWAs. | Pillar 3 for RWAs; decision whether to add a growth-vs-book view to a slide |
-| 17 | Subsidence | Absence check on four documents only | LBG Annual / Sustainability Report 2025 |
+| 17 | Subsidence and the other page 4 gaps | Absence check on four documents only; the annual / sustainability report is now a core source (QA warning until reviewed) | LBG Annual / Sustainability Report 2025 (upload blocked on the user side; attach in the Copilot run or paste the sections) |
 
 ## Not done
 

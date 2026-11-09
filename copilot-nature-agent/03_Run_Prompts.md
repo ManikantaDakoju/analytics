@@ -1,4 +1,4 @@
-# Run prompts (v4.3) – copy into the Copilot agent, one at a time
+# Run prompts (v4.4) – copy into the Copilot agent, one at a time
 
 Replace the text in <angle brackets>. After each answer:
 1. Check the answer.
@@ -17,18 +17,18 @@ COUNTRY_ID: <GBR>   COUNTRY_LABEL: <UK>
 SECTOR: <Banking and financial services>
 AS_AT_DATE: <05/11/2026>   MEETING_DATE: <10th December 2026>
 I have attached: <list the files>.
-Confirm the inputs back to me and tell me if anything is missing. Do not start the analysis yet.
+Confirm the inputs back to me. Check the core client sources: (1) latest annual report and/or sustainability report, (2) sustainability or ESG data sheet, (3) sustainable / green financing framework, (4) any nature, TNFD or climate report. Tell me which are missing. Do not start the analysis yet.
 ```
 
 ### Prompt 1 – Sources
 ```
-Step 1. List every attached client document as a Sources table with the exact headers in SRC-METH section 8. Number them SRC-01, SRC-02 … in the order listed. In "Page numbering", state how printed page numbers relate to PDF page numbers for each file (e.g. "printed = PDF − 1", or "no printed numbers: PDF page used"; for spreadsheets "tabs"). Flag any document older than 24 months or that you could not read in full.
+Step 1. List every attached client document as a Sources table with the exact headers in SRC-METH section 8. Number them SRC-01, SRC-02 … in the order listed. In "Page numbering", state how printed page numbers relate to PDF page numbers for each file (e.g. "printed = PDF − 1", or "no printed numbers: PDF page used"; for spreadsheets "tabs"). Flag any document older than 24 months or that you could not read in full. Use the Type value "Annual / sustainability report" exactly for the annual or sustainability report. If a core source is not available, still list it with Included = N and the reason.
 ```
 *Paste into Sources from row 7. SRC-EY and SRC-METH are already there.*
 
 ### Prompt 2 – Evidence (repeat for each source)
 ```
-Step 2 for <SRC-01>. Read the whole document. Produce Evidence_Log rows (start at <EV-001>) for every nature-related commitment, target, policy, exposure, financing activity, product, eligibility criterion, partnership, metric or disclosure, and for regulations, market drivers or national figures the document cites. For each row give the printed page and the PDF page. Quotes must be copied exactly, 25 words or fewer, with no paraphrasing inside the quote. Return the table only, then tell me the last Evidence_ID used.
+Step 2 for <SRC-01>. Read the whole document. Produce Evidence_Log rows (start at <EV-001>) for every nature-related commitment, target, policy, exposure, financing activity, product, eligibility criterion, partnership, metric or disclosure, and for regulations, market drivers or national figures the document cites. For each row give the printed page and the PDF page. Quotes must be copied exactly, 25 words or fewer, with no paraphrasing inside the quote. For the annual / sustainability report, also look specifically for: (a) how the client defines nature priority sectors; (b) physical-risk analysis: flood, drought, wildfire, subsidence, and any mortgage or property book analysis; (c) sustainable finance totals and categories (including any water, resilience or nature split); (d) nature targets, metrics or TNFD disclosures. Return the table only, then tell me the last Evidence_ID used.
 ```
 *Tip: for long reports, add "PDF pages <x–y> only" and run it in chunks. Spot-check 5 quotes against the PDF, using the PDF page.*
 
@@ -82,7 +82,7 @@ Deck_Tokens rows for s1_ctx_what, s1_ctx_measured, s1_left_sub, s1_callout_stat,
 Write the text for pages 2–4 as two tables.
 (a) Slide_Content: Key | Value | Claim_IDs, for exactly the keys in SRC-METH section 10.
 (b) Claims_Register: Claim_ID | Slide | Slide_Content key | Claim | Claim type | Primary trace ID | Other trace IDs | Derivation / how checked, for every claim (C-001 …), plus "auto:" claims for the Excel-written text listed above.
-Rules: page 2 context band: s1_ctx_why says why national nature spending matters for the client's sector, quoted from evidence. Page 2 tiles: prefer government sources (Prompt 3b) for the forward view; tile 4 should state the growth sectors and their nature need as the source states it. Page 3 links (s2_link_<Theme_ID>) give the client's main disclosed exposure for each theme, with £ and % of total from my Calculations. Page 4 columns 1–3 are the top three themes by score (h1–h3): "today" = facts only; "gap" = not yet visible (absence check, list the sources searched); "opp" = EY view with rationale. Every percentage or total must equal a CALC value. Follow 04_Slide_Writing_Guide_and_Example; keep within character limits; copy its style, never its facts. Run the guide's self-check before replying. Return the two tables only.
+Rules: page 2 context band: s1_ctx_why says why national nature spending matters for the client's sector, quoted from evidence. Page 2 tiles: prefer government sources (Prompt 3b) for the forward view; tile 4 should state the growth sectors and their nature need as the source states it. Page 3 links (s2_link_<Theme_ID>) give the client's main disclosed exposure for each theme, with £ and % of total from my Calculations. Page 4 columns 1–3 are the top three themes by score (h1–h3): "today" = facts only; "gap" = not yet visible (absence check, list the sources searched; if the annual / sustainability report was not reviewed, say so in s3_footnote); "opp" = EY view with rationale. Every percentage or total must equal a CALC value. Follow 04_Slide_Writing_Guide_and_Example; keep within character limits; copy its style, never its facts. Run the guide's self-check before replying. Return the two tables only.
 ```
 *Paste table (a) into the Slide_Content paste area (cell J5, columns J:L); columns B and C look it up by key. Paste table (b) into Claims_Register from row 5. Save. Fix every cell that QA_Log or the red flags show.*
 

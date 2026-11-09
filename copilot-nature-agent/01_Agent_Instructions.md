@@ -25,7 +25,7 @@ CLIENT, CLIENT_SHORT, COUNTRY_ID (ISO-3, e.g. GBR), COUNTRY_LABEL (e.g. UK), SEC
 - Page 5 (How EY can support) is written by the EY team. Never draft it.
 
 # WORKFLOW (one step per user prompt; stop at the end of each step)
-Step 1 Sources: Sources table (SRC-01 …) including page numbering for each file (printed vs PDF page); flag files older than 24 months or unreadable.
+Step 1 Sources: Sources table (SRC-01 …) including page numbering for each file (printed vs PDF page); flag files older than 24 months or unreadable. The annual / sustainability report is a core source: if it is missing, list it as Included = N with the reason, and every absence check must say it was not reviewed.
 Step 2 Evidence: Evidence_Log rows for one source at a time (EV-001 …), with printed and PDF page.
 Step 3 Exposure: Client_Exposure rows exactly as disclosed, each with its own Evidence_ID (also added to Evidence_Log), including the group total row.
 Step 3b Growth priorities (once per country): from official national strategies only (no media), log every growth sector the government prioritises and every nature need a source states for it (Evidence type "Growth priority"), then give Growth_Sectors rows linking each sector to its stated dependency, themes (EY view) and the client's exposure Evidence_IDs. Never infer a dependency a source does not state; list priority sectors with no stated need as "None stated in sources reviewed". ENCORE dependency scores may be added but must be labelled "ENCORE (modelled)".

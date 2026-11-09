@@ -1,4 +1,4 @@
-# Methodology and Specifications – Nature Opportunity Assessment (v4.3)
+# Methodology and Specifications – Nature Opportunity Assessment (v4.4)
 
 Source ID in the workbook: **SRC-METH**. Upload this file to the Copilot agent's Knowledge as .docx or .pdf. It matches the tabs of **Nature_Opportunity_Master_Template.xlsx** (v4) and the deck skeleton **Nature_Deck_Skeleton_EY.pptx** (cover + 4 pages).
 
@@ -25,13 +25,14 @@ The Nature Opportunity Assessment shows, for one client in one country, where na
    - the printed page (or tab)
    - the PDF page
 3. **EY view.** Any interpretation or judgement is labelled "EY view". It must cite the evidence it rests on and give a one-line rationale.
-4. **Absence checks.** A statement that something is *not* disclosed ("not yet visible") must:
+4. **Core sources.** Every run expects the client's latest annual and/or sustainability report, data sheet, financing framework and any nature/TNFD/climate report. A missing core source is still listed (Included = N, with the reason), and the page 4 footnote says which core documents were not reviewed. QA_Log shows Pass if the annual / sustainability report is included, a Warning if it is missing but the caveat is present, and Fail otherwise.
+5. **Absence checks.** A statement that something is *not* disclosed ("not yet visible") must:
    - list the sources searched
    - be phrased neutrally: "not found in the documents reviewed"
-5. **Traceability.** Nothing appears on a slide without a trace (section 7).
-6. **Numbers from formulas.** Totals, shares, percentages and scores are calculated in the workbook. The agent writes words; where the workbook calculates a number, the agent never retypes it from memory.
-7. **National growth sources.** The forward view (where the country is heading) uses official national documents only: growth or industrial strategy and sector plans, national water, infrastructure or digital plans, no more than 3 years old. No media. A growth sector's nature need is included only where a source states it. Modelled dependency data (ENCORE Insights Country Dashboard, Global Canopy; CC BY-SA 4.0, citation required) may be added, labelled "ENCORE (modelled)" and kept separate from stated needs. Where ENCORE and a government source differ (e.g. IT sector average vs data centres), show both.
-8. **Tone.** UK English, neutral, factual. Never criticise the client. Describe gaps as "not yet visible" or "not disclosed".
+6. **Traceability.** Nothing appears on a slide without a trace (section 7).
+7. **Numbers from formulas.** Totals, shares, percentages and scores are calculated in the workbook. The agent writes words; where the workbook calculates a number, the agent never retypes it from memory.
+8. **National growth sources.** The forward view (where the country is heading) uses official national documents only: growth or industrial strategy and sector plans, national water, infrastructure or digital plans, no more than 3 years old. No media. A growth sector's nature need is included only where a source states it. Modelled dependency data (ENCORE Insights Country Dashboard, Global Canopy; CC BY-SA 4.0, citation required) may be added, labelled "ENCORE (modelled)" and kept separate from stated needs. Where ENCORE and a government source differ (e.g. IT sector average vs data centres), show both.
+9. **Tone.** UK English, neutral, factual. Never criticise the client. Describe gaps as "not yet visible" or "not disclosed".
 
 ---
 
@@ -259,7 +260,7 @@ Every value on pages 2–4 is traced. The chain is:
 
 ## 11. QA checklist (all must pass before the deck is filled)
 
-The QA_Log tab runs 21 checks automatically (items 6 and 12 below each cover two; plus "Prompt 5 pasted for all 15 sub-themes" and "Growth_Sectors rows cite evidence that exists"):
+The QA_Log tab runs 22 checks automatically (the 22nd: core source – annual / sustainability report reviewed) (items 6 and 12 below each cover two; plus "Prompt 5 pasted for all 15 sub-themes" and "Growth_Sectors rows cite evidence that exists"):
 1. Country recognised.
 2. Commitments loaded.
 3. All 15 sub-themes scored.
