@@ -30,7 +30,7 @@ s.addChart(pres.charts.BAR, [{ name: 'Top 2 by value', labels: lab, values: D.C.
   Object.assign({}, common, { x: COL.money, y: RY - 0.03, w: 1.0, h: 5 * RH - 0.02, chartColors: [C.Y, C.MED], showValue: false, objectName: 'chart-C-money' }));
 // growth-vs-book strip
 const GY = RY + 5 * RH + 0.08;
-s.addText([w('Growth sectors vs {{client_short}}’s book', { bold: true, fontFace: C.FB, color: C.Y, fontSize: 11 }), w('   government priority sectors · client exposure (% of book) · water dependency (ENCORE, 0–1)', { color: C.GR, fontSize: 8.5 })],
+s.addText([w('Growth sectors compared with {{client_short}}’s book', { bold: true, fontFace: C.FB, color: C.Y, fontSize: 11 }), w('   government priority sectors · client exposure (% of book) · water dependency (ENCORE, 0–1)', { color: C.GR, fontSize: 8.5 })],
   tx({ x: LX, y: GY, w: 11.46, h: 0.24, objectName: 'growth-heading' }));
 const GW = (11.46 - 3 * 0.12) / 4;
 for (let n = 1; n <= 4; n++) {

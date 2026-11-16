@@ -119,3 +119,26 @@
   - The script wrote the new claims into a gap left by a deleted claim, overwriting three existing ones. The trace checks flagged it.
   - The page 3 drill-down text overlapped the score chart. The rendering check flagged it.
 - **Result:** 22 of 23 QA checks pass. The 23rd is the expected warning that the LBG Sustainability Report has not been reviewed. 114 evidence items; 102 claims; no placeholders left.
+
+## Addendum v5.0 (16 November 2026): mock test for the 19 November review
+
+**Scope.** The pack now has the four content slides plus a cover: Context setting, UK nature finance and LBG (nexus), LBG portfolio exposure and position, and Why EY. Words are written in full, and an abbreviation key sits at the foot of slides 2–4.
+
+**What changed in the toolkit**
+
+| Area | Change |
+|---|---|
+| Template | Glossary G = Key text; Glossary I:K detect each abbreviation per page. Deck_Tokens s1_key–s3_key; Client_Exposure K:L (disclosed nature-priority and climate-risk % of Group) and M (chart rank); Deck_Chart chart D (A29:C41); new keys s3_exp_stat, s3_exp_sub and s3_exp_text; page 4 limits 150/120/110; QA 24–26 |
+| Skeleton | Page 4 rebuilt: book-by-sector chart and callout on the left, condensed grid on the right. Page 5 "Why EY" with headings and placeholders only. Key line on pages 2–4. "vs" spelt out on page 3. |
+| LBG example | All 12 sector totals logged (EV-116 to EV-119 added), with full disclosed rows; footnote 11 (EV-120); CALC-59 (9.3%). Abbreviations spelt out (biodiversity net gain, Haweswater Aqueduct Resilience Programme, key performance indicators; about, including, such as, hectares, February, page). Rounding fixed: 57% → 56.7% and 4% → 4.1% on slide 3. Claims C-029, C-050 and C-091 retired; C-147 and C-150 to C-159 added. |
+| Docs | 00, 01 (6,263 characters), 02, 03 and 04 updated to v5.0; methodology .docx updated; new LBG run script (`Copilot_Run_Script_LBG_v5.md`) |
+
+**Mock test.** The expected output of each prompt (`mock_test_v5/`) was pasted into the blank v5.0 master using only the documented paste locations. The workbook was then recalculated in LibreOffice, and the deck filled and charted. Results:
+- 0 formula errors
+- QA identical to the reference (25 Pass, 1 Warning: check 22)
+- deck identical to the reference (172 text boxes, 4 charts, speaker notes)
+- no placeholders left; no abbreviation missing from a key; no short forms
+
+All 83 PDF quotes were re-verified word for word. Reproduce with `bash tools/nature_v41/build_v50.sh <workdir>`.
+
+**Not tested here.** Copilot's own reading of the PDFs (the mock uses the reference answers), and Copilot in PowerPoint replacing placeholders (simulated by `fill_deck.py` and `fill_charts.py`). The real run is `Copilot_Run_Script_LBG_v5.md`.

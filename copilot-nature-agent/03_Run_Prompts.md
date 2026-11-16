@@ -1,4 +1,4 @@
-# Run prompts (v4.5) – copy into the Copilot agent, one at a time
+# Run prompts (v5.0) – copy into the Copilot agent, one at a time
 
 Replace the text in <angle brackets>. After each answer:
 1. Check the answer.
@@ -15,7 +15,7 @@ Start a new nature opportunity assessment.
 CLIENT: <Lloyds Banking Group>   CLIENT_SHORT: <LBG>
 COUNTRY_ID: <GBR>   COUNTRY_LABEL: <UK>
 SECTOR: <Banking and financial services>
-AS_AT_DATE: <05/11/2026>   MEETING_DATE: <10th December 2026>
+AS_AT_DATE: <16/11/2026>   MEETING_DATE: <19 November 2026>   COVER STATUS: <Draft for internal review>
 I have attached: <list the files>.
 Confirm the inputs back to me. Check the core client sources: (1) latest annual report and/or sustainability report, (2) sustainability or ESG data sheet, (3) sustainable / green financing framework, (4) any nature, TNFD or climate report. Tell me which are missing. Do not start the analysis yet.
 ```
@@ -34,7 +34,7 @@ Step 2 for <SRC-01>. Read the whole document. Produce Evidence_Log rows (start a
 
 ### Prompt 3 – Portfolio exposure
 ```
-Step 3. From <SRC-0x> (<tab or page of the exposure / concentration / nature-priority table>), produce Client_Exposure rows exactly as disclosed, including the group total row. Give each row its own Evidence_ID (continue from <EV-0xx>) and also give me the matching Evidence_Log rows. Use the Row type values in SRC-METH section 8. Suggest linked themes and label them "EY view". Do not convert currencies or estimate missing values.
+Step 3. From <SRC-0x> (<tab or page of the exposure / concentration / nature-priority table>), produce Client_Exposure rows exactly as disclosed: every sector total (they must add up to the group total), any sub-sector or subtotal rows the slides need, and the group total row. Where the client reports them, add the nature-priority % of Group and the increased-climate-risk % of Group for each sector total (as fractions, e.g. 0.011) in the last two columns. Give each row its own Evidence_ID (continue from <EV-0xx>) and also give me the matching Evidence_Log rows. Use the Row type values in SRC-METH section 8. Suggest linked themes and label them "EY view". Do not convert currencies or estimate missing values.
 ```
 
 ### Prompt 3b – National growth priorities (once per country)
@@ -71,11 +71,11 @@ Step 5b. For each of the 5 themes (W, AFF, UD, DM, P) give: Theme_ID | In client
 
 ### Prompt 6 – Glossary and calculations
 ```
-Step 6. (a) List every abbreviation and defined term you expect to use on the slides that is not already in the Glossary (I paste the current Glossary IDs below). For each: ID (ABB- or DEF-) | Term | Type | Definition / expansion | Source_ID | Reference (page/tab). The expansion must come from a source; if no source spells it out, say so and suggest wording that avoids the abbreviation.
+Step 6. (a) First, write words in full wherever space allows. Then list every abbreviation you still need on the slides, and every defined term, that is not already in the Glossary (I paste the current Glossary IDs below). For each: ID (ABB- or DEF-) | Term | Type (Abbreviation, Notation or Definition) | Definition / expansion | Source_ID | Reference (page/tab) | Key text (abbreviations only, e.g. "UK = United Kingdom"). The expansion must come from a source; if no source spells it out, say so and suggest wording that avoids the abbreviation.
 (b) For every client percentage or total the slides need (e.g. a sector as % of total exposure), give a Calculations row: CALC_ID (CALC-51 …) | Description | Excel formula that looks figures up by Evidence_ID, e.g. =VLOOKUP("EV-040",Client_Exposure!$A:$E,5,FALSE)/VLOOKUP("EV-067",Client_Exposure!$A:$E,5,FALSE) | Unit | How it is calculated | Input trace IDs | Source_ID.
 <paste Glossary column A and the Client_Exposure table>
 ```
-*Paste Glossary rows from row 60 and Calculations rows from row 30. Save, so the values calculate.*
+*Paste Glossary rows from row 60 (columns A:G; G = Key text) and Calculations rows from row 30. Save, so the values calculate.*
 
 ### Prompt 7 – Slide text and claims
 ```
@@ -84,11 +84,12 @@ Theme_View (columns A–P): <paste>
 Scoring sorted by Rank (columns A–L): <paste>
 Calculations (columns A–C): <paste>
 Growth_Sectors (columns A–H): <paste>
+Client_Exposure (columns A–L): <paste>
 Deck_Tokens rows for s1_ctx_what, s1_ctx_measured, s1_left_sub, s1_callout_stat, r1–r5 and h1–h3: <paste>
-Write the text for pages 2–4 as two tables.
+Write the text for pages 2–4 as two tables. Write words in full wherever space allows (no e.g., c., incl., ha, vs, short months or p.); every abbreviation you keep must be in the Glossary with key text.
 (a) Slide_Content: Key | Value | Claim_IDs, for exactly the keys in SRC-METH section 10.
 (b) Claims_Register: Claim_ID | Slide | Slide_Content key | Claim | Claim type | Primary trace ID | Other trace IDs | Derivation / how checked, for every claim (C-001 …), plus "auto:" claims for the Excel-written text listed above.
-Rules: page 2 context band: s1_ctx_why says why national nature spending matters for the client's sector, quoted from evidence. Page 2 tiles: prefer government sources (Prompt 3b) for the forward view; tile 4 should state the growth sectors and their nature need as the source states it. Page 3 growth strip (s2_grow1–4_head/_text): the four national growth sectors most relevant to the client from Growth_Sectors, each with the client’s exposure (£ and % of book from Calculations) and its nature dependency (stated or ENCORE, as labelled); write "Not split" where the client does not disclose the sector. Page 3 links (s2_link_<Theme_ID>) give the client's main disclosed exposure for each theme, with £ and % of total from my Calculations. Page 4 columns 1–3 are the top three themes by score (h1–h3): "today" = facts only; "gap" = not yet visible (absence check, list the sources searched; if the annual / sustainability report was not reviewed, say so in s3_footnote); "opp" = EY view with rationale. Every percentage or total must equal a CALC value. Follow 04_Slide_Writing_Guide_and_Example; keep within character limits; copy its style, never its facts. Run the guide's self-check before replying. Return the two tables only.
+Rules: page 2 context band: s1_ctx_why says why national nature spending matters for the client's sector, quoted from evidence. Page 2 tiles: prefer government sources (Prompt 3b) for the forward view; tile 4 should state the growth sectors and their nature need as the source states it. Page 3 growth strip (s2_grow1–4_head/_text): the four national growth sectors most relevant to the client from Growth_Sectors, each with the client’s exposure (£ and % of book from Calculations) and its nature dependency (stated or ENCORE, as labelled); write "Not split" where the client does not disclose the sector. Page 3 links (s2_link_<Theme_ID>) give the client's main disclosed exposure for each theme, with £ and % of total from my Calculations. Page 4 exposure panel: s3_exp_stat = one figure equal to a CALC value (e.g. the nature-priority share of the book), s3_exp_sub = what chart D shows with the total exposure and date, s3_exp_text = what the figure is and how the largest sector is classified, in the client’s own terms. Page 4 columns 1–3 are the top three themes by score (h1–h3): "today" = facts only; "gap" = not yet visible (absence check, list the sources searched; if the annual / sustainability report was not reviewed, say so in s3_footnote); "opp" = EY view with rationale. Every percentage or total must equal a CALC value. Follow 04_Slide_Writing_Guide_and_Example; keep within character limits; copy its style, never its facts. Run the guide's self-check before replying. Return the two tables only.
 ```
 *Paste table (a) into the Slide_Content paste area (cell J5, columns J:L); columns B and C look it up by key. Paste table (b) into Claims_Register from row 5. Save. Fix every cell that QA_Log or the red flags show.*
 
@@ -116,10 +117,12 @@ This presentation contains placeholders in double curly braces, for example {{s1
 - Page 2 chart: Deck_Chart A5:C10 (Chart A)
 - Page 3 left chart (score): A13:C18 (Chart B)
 - Page 3 right chart (money): A21:C26 (Chart C)
+- Page 4 chart (client book by sector): A29:C41 (Chart D) – delete any empty rows in the chart data sheet after pasting
 
-**9d – Page 5.** The EY team writes page 5 by hand. Replace every [EY team] placeholder.
+**9d – Page 5 (Why EY).** The EY team writes page 5 by hand: headings and placeholders only in the skeleton. Replace every [EY team] placeholder, or delete the ones not needed.
 
 **Then check:**
 - Search for `{{` (Home → Find); none should be left.
 - Search for `[EY team`; none should be left.
 - The speaker notes on pages 2–4 start with the talk track and then list `[Sources]`.
+- Pages 2–4 each end with an "Abbreviations:" line that lists every abbreviation on the page.

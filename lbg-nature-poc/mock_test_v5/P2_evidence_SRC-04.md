@@ -1,0 +1,12 @@
+# Prompt 2 – Evidence_Log rows for SRC-04 (paste at the next empty Evidence_Log row)
+
+| Evidence_ID | Source_ID | Printed page / tab | PDF page | Verbatim quote or figure (≤25 words, exact) | Evidence type | Scope | Summary | Verified against source (initials, date) |
+|---|---|---|---|---|---|---|---|---|
+| EV-036 | SRC-04 | Tab 18 – Environmental risk |  | Forestry ¦ 55 ¦ 9 ¦ 64 | Exposure | Value chain / portfolio | £64m forestry exposure. | Figure checked vs data sheet (05/11/2026) |
+| EV-037 | SRC-04 | Tab 18 – Environmental risk |  | Fishing ¦ 13 ¦ 4 ¦ 17 | Exposure | Value chain / portfolio | £17m fishing exposure. | Figure checked vs data sheet (05/11/2026) |
+| EV-041 | SRC-04 | Tab 20 – Sector targets |  | Agriculture – 23% reduction of absolute emissions to 5.1MtCO2e by 2030 | Quantified target | Value chain / portfolio | Agriculture target is emissions-based (5.4MtCO2e in 2024, ahead of pathway); no nature metric. | Figure checked vs data sheet (05/11/2026) |
+| EV-042 | SRC-04 | Tab 23 – Sustainable financing |  | Total amount we have committed since 2022 ¦ 84 ¦ 70.9 | Performance metric | Products and services | £70.9bn of sustainable finance since 2022; no breakdown by nature or biodiversity category. | Figure checked vs data sheet (05/11/2026) |
+| EV-043 | SRC-04 | Tab 15 – Actions, pledges and targets |  | Water neutrality by 2030 ¦ % ¦ 2018/19 ¦ 2030 ¦ 52.6% | Quantified target | Own operations | Own-operations water neutrality pledge, 52.6% progress. | Figure checked vs data sheet (05/11/2026) |
+| EV-044 | SRC-04 | Tab 18 – footnote 6 |  | waste management services which, whilst not associated with high climate risk, are associated with material impacts and dependencies on nature | Disclosure | Value chain / portfolio | LBG recognises waste management lending as nature-relevant. | Figure checked vs data sheet (05/11/2026) |
+| EV-069 | SRC-04 | Tab 18 – footnote 11 |  | whilst climate risk considers the energy usage of homes associated with our personal mortgages as a key driver | Disclosure | Value chain / portfolio | Mortgage climate-risk flag reflects home energy use, not flood. | Figure checked vs data sheet (05/11/2026) |
+| EV-120 | SRC-04 | Tab 18 – footnote 11 |  | from a nature perspective the direct influence of homeowners on the state of nature is considered to be low | Disclosure | Value chain / portfolio | LBG does not class mortgages as a nature priority sector: homeowners’ direct influence on nature is low. | Text checked vs data sheet by script (16/11/2026) |

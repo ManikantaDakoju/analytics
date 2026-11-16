@@ -1,6 +1,6 @@
-# Methodology and Specifications – Nature Opportunity Assessment (v4.5)
+# Methodology and Specifications – Nature Opportunity Assessment (v5.0)
 
-Source ID in the workbook: **SRC-METH**. Upload this file to the Copilot agent's Knowledge as .docx or .pdf. It matches the tabs of **Nature_Opportunity_Master_Template.xlsx** (v4) and the deck skeleton **Nature_Deck_Skeleton_EY.pptx** (cover + 4 pages).
+Source ID in the workbook: **SRC-METH**. Upload this file to the Copilot agent's Knowledge as .docx or .pdf. It matches the tabs of **Nature_Opportunity_Master_Template.xlsx** (v5.0) and the deck skeleton **Nature_Deck_Skeleton_EY.pptx** (cover + 4 pages).
 
 ---
 
@@ -14,7 +14,7 @@ The Nature Opportunity Assessment shows, for one client in one country, where na
   - the EY NBSAP Nature Sizing workbook (SRC-EY), where NBSAP = National Biodiversity Strategy and Action Plan
 - **Output:** a 5-page slide pack (cover + 4 pages) on the EY template:
   - pages 2–4 are produced by this method
-  - page 5 (How EY can support) is written by the EY team, not the agent
+  - page 5 (Why EY) is written by the EY team, not the agent: the skeleton holds headings and [EY team] placeholders only
 
 ---
 
@@ -33,6 +33,7 @@ The Nature Opportunity Assessment shows, for one client in one country, where na
 7. **Numbers from formulas.** Totals, shares, percentages and scores are calculated in the workbook. The agent writes words; where the workbook calculates a number, the agent never retypes it from memory.
 8. **National growth sources.** The forward view (where the country is heading) uses official national documents only: growth or industrial strategy and sector plans, national water, infrastructure or digital plans, no more than 3 years old. No media. A growth sector's nature need is included only where a source states it. Modelled dependency data (ENCORE Insights Country Dashboard, Global Canopy; CC BY-SA 4.0, citation required) may be added, labelled "ENCORE (modelled)" and kept separate from stated needs. Where ENCORE and a government source differ (e.g. IT sector average vs data centres), show both.
 9. **Tone.** UK English, neutral, factual. Never criticise the client. Describe gaps as "not yet visible" or "not disclosed".
+10. **Full forms first.** Write words in full on the slides (biodiversity net gain, key performance indicators, "such as" not "e.g.", "about" not "c.", "including" not "incl.", "hectares" not "ha", months in full, "page" not "p."). Keep an abbreviation only where space requires it or it is a name (client short name, EY, NBSAP, ENCORE, country label, regulator codes). Every abbreviation left on a page is listed automatically in the abbreviation key at the foot of that page (section 10).
 
 ---
 
@@ -192,8 +193,10 @@ Every value on pages 2–4 is traced. The chain is:
 
 **Sources:** Source_ID | Title | Publisher | Year | Type | File name / URL | Date accessed | Page numbering | Included (Y/N) | Note
 
-**Client_Exposure:** Evidence_ID | Source_ID | Sector (as disclosed) | Sub-sector | Exposure (m, reporting currency) | Currency | Nature priority (as disclosed) | Row type | Linked themes (EY view) | Reference (tab/page)
+**Client_Exposure:** Evidence_ID | Source_ID | Sector (as disclosed) | Sub-sector | Exposure (m, reporting currency) | Currency | Nature priority (as disclosed) | Row type | Linked themes (EY view) | Reference (tab/page) | Nature priority % of Group (as disclosed; optional) | Increased climate risk % of Group (as disclosed; optional)
 - Row type: Sector total, Sub-sector, Subtotal or Group total.
+- Give **every** sector total the client discloses, so the sector totals add up to the Group total (QA 26). The page 4 chart (chart D) shows each sector total as a share of the Group total.
+- The two % columns are copied as disclosed (as fractions, e.g. 0.011); leave blank if the client does not report them.
 - Every exposure row is also an Evidence_Log row with the same Evidence_ID.
 
 **Evidence_Log:** Evidence_ID | Source_ID | Printed page / tab | PDF page | Verbatim quote or figure (≤25 words, exact) | Evidence type | Scope | Summary | Verified against source (initials, date)
@@ -210,7 +213,9 @@ Every value on pages 2–4 is traced. The chain is:
 
 **Classification review (optional):** Example_ID | Current SubTheme_ID | Proposed SubTheme_ID | Rationale (EY view)
 
-**Glossary (client entries):** ID | Term | Type | Definition / expansion | Source_ID | Reference (page/tab)
+**Glossary (client entries, from row 60):** ID | Term | Type | Definition / expansion | Source_ID | Reference (page/tab) | (Appears in slide text? – formula, leave blank) | Key text
+- Type: Abbreviation, Notation (a unit written straight after a number, e.g. bn, m) or Definition.
+- Key text: how the abbreviation is shown in the abbreviation key, e.g. "UK = United Kingdom". Required for every Abbreviation and Notation entry.
 
 **Calculations (client entries, from row 30):** CALC_ID | Description | Formula (Excel; look figures up by Evidence_ID, e.g. =VLOOKUP("EV-040",Client_Exposure!$A:$E,5,FALSE)) | Unit | How it is calculated | Input trace IDs | Source_ID
 
@@ -224,16 +229,16 @@ Every value on pages 2–4 is traced. The chain is:
 
 **Notation**
 - £bn = billion pounds sterling; £m = million pounds sterling (use the country's currency symbol).
-- ha = hectares.
-- c. = approximately (rounded from the source figure).
+- bn and m (after an amount) are listed in the abbreviation key automatically.
+- Write "about" for a rounded figure and "hectares" in full.
 - Write money as £12.1bn or £120m, and percentages as 9.3%.
 - Billions take one decimal place where the source allows.
 
-**Standard abbreviations** (each needs an ABB- entry when used)
+**Standard abbreviations** (each needs an ABB- entry with key text when used)
 - EY (Ernst & Young)
 - NBSAP (National Biodiversity Strategy and Action Plan)
-- KPI (key performance indicator)
 - ENCORE (Exploring Natural Capital Opportunities, Risks and Exposure)
+- Spell out "key performance indicator" rather than KPI.
 
 **Wording**
 - Spell out any other abbreviation in the Glossary, with its source.
@@ -244,24 +249,29 @@ Every value on pages 2–4 is traced. The chain is:
 
 ## 10. Slide specification (cover + 4 pages)
 
+Page names: 2 Context setting · 3 National nature finance and the client (nexus) · 4 Client portfolio exposure and position · 5 Why EY.
+
 | Page | Purpose | Agent writes (Slide_Content keys) | Excel writes (Deck_Tokens) |
 |---|---|---|---|
-| Cover | Title and date | cover_title, cover_date, client_name, client_short | – |
+| Cover | Title, review status and date | cover_title, cover_date (e.g. "Draft for internal review – 19 November 2026"), client_name, client_short | – |
 | 2 Context | Context band (what an NBSAP is, what we measured, why it matters), where national nature money goes, and where the country is heading | s1_title, s1_section, s1_ctx_why, s1_callout_text, s1_heading_r, s1_sub_r, s1_tile1–4_stat/text, s1_rules_lead, s1_rules, s1_sowhat, s1_footnote, s1_talk | s1_ctx_what, s1_ctx_measured, s1_left_head, s1_left_sub, s1_callout_stat, Chart A, s1_notes |
-| 3 Context × client | Theme priority, national money and the client's main link, row by row | s2_title, s2_section, s2_link_W, s2_link_AFF, s2_link_UD, s2_link_DM, s2_link_P, s2_grow1–4_head and s2_grow1–4_text (growth sectors vs client book), s2_sowhat, s2_talk | r1–r5 theme, drill-down, alignment tag, money and link (sorted by score), s2_footnote (method), Charts B and C, s2_notes |
-| 4 Client | For the top three themes by score: what the client does today, what is not yet visible, and the opportunity | s3_title, s3_section, s3_col1–3_today/gap/opp, s3_sowhat, s3_footnote, s3_talk | h1–h3 (column headers), s3_notes |
-| 5 EY | How EY can support | **Nothing: written by the EY team** | – |
+| 3 Context × client | Theme priority, national money and the client's main link, row by row | s2_title, s2_section, s2_link_W, s2_link_AFF, s2_link_UD, s2_link_DM, s2_link_P, s2_grow1–4_head and s2_grow1–4_text (growth sectors compared with the client book), s2_sowhat, s2_talk | r1–r5 theme, drill-down, alignment tag, money and link (sorted by score), s2_footnote (method), Charts B and C, s2_notes |
+| 4 Client | Left: the client’s book by sector (chart D) with the nature-priority share. Right: for the top three themes by score, what the client does today, what is not yet visible, and the opportunity | s3_title, s3_section, s3_exp_stat, s3_exp_sub, s3_exp_text, s3_col1–3_today (≤150) / gap (≤120) / opp (≤110), s3_sowhat, s3_footnote, s3_talk | h1–h3 (column headers), Chart D, s3_notes |
+| 5 Why EY | Headings and [EY team] placeholders only | **Nothing: written by the EY team** | – |
+
+**Abbreviation key:** Excel writes s1_key, s2_key and s3_key at the foot of pages 2–4: every Glossary Abbreviation or Notation entry found as a whole word on that page (including fixed skeleton text), shown with its key text. Spell more words out if a key exceeds 330 characters (QA 25).
 
 **Charts:** paste the Deck_Chart blocks into the charts (Edit Data):
 - **Chart A:** page 2, value by theme
 - **Chart B:** page 3, theme score
 - **Chart C:** page 3, value by theme in score order
+- **Chart D:** page 4, the client’s book by sector (Deck_Chart A29:C41; delete empty rows after pasting)
 
 ---
 
 ## 11. QA checklist (all must pass before the deck is filled)
 
-The QA_Log tab runs 23 checks automatically (the 23rd: strategy alignment set for all themes, with evidence for every Yes) (the 22nd: core source – annual / sustainability report reviewed) (items 6 and 12 below each cover two; plus "Prompt 5 pasted for all 15 sub-themes" and "Growth_Sectors rows cite evidence that exists"):
+The QA_Log tab runs 26 checks automatically. Besides the list below: Prompt 5 pasted for all 15 sub-themes (20); Growth_Sectors rows cite evidence that exists (21); core source – annual / sustainability report reviewed (22); strategy alignment set for all themes, with evidence for every Yes (23); every abbreviation on pages 2–4 has key text (24); each abbreviation key fits the footer (25); LOGIC – sector totals add up to the Group total (26). Items 6 and 12 below each cover two checks:
 1. Country recognised.
 2. Commitments loaded.
 3. All 15 sub-themes scored.
