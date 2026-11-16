@@ -23,7 +23,7 @@ Every figure below was read from the recalculated workbook. Nothing was typed by
 | 6 | Page 3 rank order follows the scores | 4.6, 4.5 (4.45 unrounded), 4.2, 3.8, 3.2 | Pass |
 | 7 | Page 4 column headers = the top three themes on page 3 | Flood, coastal and adaptation 4.6; Water 4.5; Agriculture and forestry 4.2 | Pass |
 | 8 | Each LBG figure is identical wherever it repeats | Mortgages £365.6bn / 56.7%: page 3 row 1, page 3 "So what", page 4 title, chart D, page 4 gap cell. Energy and water supply £12.1bn / 1.9%: page 3 row 2, growth strip, chart D, page 4 gap cell. Agriculture £6.8bn / 1.1%, manufacturing £13.1bn / 2.0%, construction £5.9bn / 0.9%, financial and business services £75.6bn / 11.7% | Pass (**fixed in v5**: row 1 showed 57% and 4%) |
-| 9 | LBG's sector totals add up to its Group total, so chart D shows the whole book | 12 sector totals = £645,058m = Group total (QA 26) | Pass |
+| 9 | LBG's sector totals add up to its Group total, so chart D shows the whole book | 12 sector totals = £645,058m = Group total (QA 27) | Pass |
 | 10 | The disclosed nature-priority shares add up to the headline | 1.1 + 0.9 + 1.7 + 0.3 + 1.2 + 0.2 + 1.7 + 2.2 = 9.3% = £59,991m ÷ £645,058m (CALC-59) | Pass |
 | 11 | Every calculated figure on a slide equals its formula | Claims_Register value check, 0 differences (QA 16) | Pass |
 
@@ -67,7 +67,14 @@ The expected Copilot output for every prompt (`mock_test_v5/P0`–`P7`) was past
 | Check | Result |
 |---|---|
 | Recalculation errors | 0 |
-| QA_Log | 25 Pass, 1 Warning (Sustainability Report not reviewed), the same as the reference |
+| QA_Log | 26 Pass, 1 Warning (Sustainability Report not reviewed), the same as the reference |
 | Deck rebuilt from the blank template vs reference deck | Identical: all 172 text boxes, 4 charts and speaker notes |
 | Placeholders left (`{{`) | None |
 | Abbreviations on pages 2–4 missing from the key | None |
+
+## Found during the final preview (16 November)
+
+In 60 legacy rows of NBSAP_Mapping (EV-001 to EV-060, carried over from v4), the Mapping strength and Rationale columns were swapped. As a result, the Scoring "Direct mappings" count missed them.
+
+- **Fixed in the LBG example.** Scores and slides are unchanged. The workbook-only confidence rating rises from Medium to High for nature-positive buildings (UD01), flood mitigation (DM02) and long-term adaptation (DM03).
+- **New QA check 26** fails if any mapping row's strength is not "Direct" or "Indirect". This also catches Copilot returning the columns in the wrong order. QA_Log now has 27 checks.

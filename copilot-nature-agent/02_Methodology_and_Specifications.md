@@ -195,7 +195,7 @@ Every value on pages 2–4 is traced. The chain is:
 
 **Client_Exposure:** Evidence_ID | Source_ID | Sector (as disclosed) | Sub-sector | Exposure (m, reporting currency) | Currency | Nature priority (as disclosed) | Row type | Linked themes (EY view) | Reference (tab/page) | Nature priority % of Group (as disclosed; optional) | Increased climate risk % of Group (as disclosed; optional)
 - Row type: Sector total, Sub-sector, Subtotal or Group total.
-- Give **every** sector total the client discloses, so the sector totals add up to the Group total (QA 26). The page 4 chart (chart D) shows each sector total as a share of the Group total.
+- Give **every** sector total the client discloses, so the sector totals add up to the Group total (QA 27). The page 4 chart (chart D) shows each sector total as a share of the Group total.
 - The two % columns are copied as disclosed (as fractions, e.g. 0.011); leave blank if the client does not report them.
 - Every exposure row is also an Evidence_Log row with the same Evidence_ID.
 
@@ -271,7 +271,7 @@ Page names: 2 Context setting · 3 National nature finance and the client (nexus
 
 ## 11. QA checklist (all must pass before the deck is filled)
 
-The QA_Log tab runs 26 checks automatically. Besides the list below: Prompt 5 pasted for all 15 sub-themes (20); Growth_Sectors rows cite evidence that exists (21); core source – annual / sustainability report reviewed (22); strategy alignment set for all themes, with evidence for every Yes (23); every abbreviation on pages 2–4 has key text (24); each abbreviation key fits the footer (25); LOGIC – sector totals add up to the Group total (26). Items 6 and 12 below each cover two checks:
+The QA_Log tab runs 27 checks automatically. Besides the list below: Prompt 5 pasted for all 15 sub-themes (20); Growth_Sectors rows cite evidence that exists (21); core source – annual / sustainability report reviewed (22); strategy alignment set for all themes, with evidence for every Yes (23); every abbreviation on pages 2–4 has key text (24); each abbreviation key fits the footer (25); every mapping row has Mapping strength Direct or Indirect (26); LOGIC – sector totals add up to the Group total (27). Items 6 and 12 below each cover two checks:
 1. Country recognised.
 2. Commitments loaded.
 3. All 15 sub-themes scored.

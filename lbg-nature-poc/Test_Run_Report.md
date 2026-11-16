@@ -128,14 +128,14 @@
 
 | Area | Change |
 |---|---|
-| Template | Glossary G = Key text; Glossary I:K detect each abbreviation per page. Deck_Tokens s1_key–s3_key; Client_Exposure K:L (disclosed nature-priority and climate-risk % of Group) and M (chart rank); Deck_Chart chart D (A29:C41); new keys s3_exp_stat, s3_exp_sub and s3_exp_text; page 4 limits 150/120/110; QA 24–26 |
+| Template | Glossary G = Key text; Glossary I:K detect each abbreviation per page. Deck_Tokens s1_key–s3_key; Client_Exposure K:L (disclosed nature-priority and climate-risk % of Group) and M (chart rank); Deck_Chart chart D (A29:C41); new keys s3_exp_stat, s3_exp_sub and s3_exp_text; page 4 limits 150/120/110; QA 24–27, incl. a check that mapping strength is Direct or Indirect |
 | Skeleton | Page 4 rebuilt: book-by-sector chart and callout on the left, condensed grid on the right. Page 5 "Why EY" with headings and placeholders only. Key line on pages 2–4. "vs" spelt out on page 3. |
 | LBG example | All 12 sector totals logged (EV-116 to EV-119 added), with full disclosed rows; footnote 11 (EV-120); CALC-59 (9.3%). Abbreviations spelt out (biodiversity net gain, Haweswater Aqueduct Resilience Programme, key performance indicators; about, including, such as, hectares, February, page). Rounding fixed: 57% → 56.7% and 4% → 4.1% on slide 3. Claims C-029, C-050 and C-091 retired; C-147 and C-150 to C-159 added. |
 | Docs | 00, 01 (6,263 characters), 02, 03 and 04 updated to v5.0; methodology .docx updated; new LBG run script (`Copilot_Run_Script_LBG_v5.md`) |
 
 **Mock test.** The expected output of each prompt (`mock_test_v5/`) was pasted into the blank v5.0 master using only the documented paste locations. The workbook was then recalculated in LibreOffice, and the deck filled and charted. Results:
 - 0 formula errors
-- QA identical to the reference (25 Pass, 1 Warning: check 22)
+- QA identical to the reference (26 Pass, 1 Warning: check 22)
 - deck identical to the reference (172 text boxes, 4 charts, speaker notes)
 - no placeholders left; no abbreviation missing from a key; no short forms
 

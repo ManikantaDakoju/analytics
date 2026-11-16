@@ -26,7 +26,7 @@ The speaker notes list the sources for every claim automatically, and QA_Log fai
 | Who | Does what |
 |---|---|
 | **Copilot agent** | Reads the client documents and extracts verbatim evidence with pages. Maps it to the taxonomy, proposes C1, C2 and C4, and writes the glossary entries, slide text and claims. |
-| **Master template (Excel)** | Holds the taxonomy and all countries' NBSAP commitments. Calculates C3, C5, scores, theme roll-up, shares, percentages, chart data and every placeholder value. Runs 26 QA, traceability and logic checks. |
+| **Master template (Excel)** | Holds the taxonomy and all countries' NBSAP commitments. Calculates C3, C5, scores, theme roll-up, shares, percentages, chart data and every placeholder value. Runs 27 QA, traceability and logic checks. |
 | **Deck skeleton + Copilot in PowerPoint** | The EY template with the layout fixed and `{{placeholders}}`. Copilot in PowerPoint (or Ctrl+H) replaces the placeholders; you paste the chart data. |
 | **You (and the EY team)** | Check evidence and scores, approve EY views, and confirm absence checks. Write page 5, then sign off (QRM). |
 
@@ -66,7 +66,7 @@ The LBG worked example is in `lbg-nature-poc/`:
 | 0 | Copy the master template as `<Client>_<Country>_Nature_Mapping.xlsx`. Fill Inputs: client, short name, Country_ID, country label, sector, as-at date. Collect the client's latest public documents: **annual and/or sustainability report (core)**, data sheet, financing framework, nature/TNFD/climate report. If the annual / sustainability report can't be used, record why and keep the page 4 caveat; QA shows a Warning until it is reviewed. | 0 |
 | 1 | Paste Sources from row 7 | 1 |
 | 2 | Paste Evidence_Log, one source at a time. **Spot-check 5 quotes against the PDF page.** | 2 |
-| 3 | Paste Client_Exposure (every sector total, the group total, and the disclosed % columns) and the matching evidence rows. QA 26 checks that the sector totals add up. | 3 |
+| 3 | Paste Client_Exposure (every sector total, the group total, and the disclosed % columns) and the matching evidence rows. QA 27 checks that the sector totals add up. | 3 |
 | 3b | Attach the country's official growth strategies (e.g. Industrial Strategy, AI Opportunities Action Plan, Environment Agency water framework) and, optionally, the ENCORE Insights Country Dashboard data (countries.encorenature.org). Paste the evidence rows and the Growth_Sectors rows. Do this once per country and reuse it for later clients. | 3b |
 | 4 | Paste NBSAP_Mapping. Approve any classification review in NBSAP_Commitments columns N and O. | 4 |
 | 5 | Paste the whole table at Scoring!W5 (any row order). **Review each score.** | 5 |

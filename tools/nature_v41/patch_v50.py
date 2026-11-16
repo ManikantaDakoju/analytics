@@ -150,6 +150,8 @@ def patch50(wb):
                '=IF(SUMPRODUCT(((Glossary!C5:C154="Abbreviation")+(Glossary!C5:C154="Notation"))*(((Glossary!I5:I154="Yes")+(Glossary!J5:J154="Yes")+(Glossary!K5:K154="Yes"))>0)*(Glossary!G5:G154=""))=0,"Pass",SUMPRODUCT(((Glossary!C5:C154="Abbreviation")+(Glossary!C5:C154="Notation"))*(((Glossary!I5:I154="Yes")+(Glossary!J5:J154="Yes")+(Glossary!K5:K154="Yes"))>0)*(Glossary!G5:G154=""))&" abbreviations need key text")'),
               ('Abbreviation key fits the footer (≤ 330 characters on each page)',
                '=IF(MAX(LEN(INDEX(Deck_Tokens!B:B,MATCH("{{s1_key}}",Deck_Tokens!A:A,0))),LEN(INDEX(Deck_Tokens!B:B,MATCH("{{s2_key}}",Deck_Tokens!A:A,0))),LEN(INDEX(Deck_Tokens!B:B,MATCH("{{s3_key}}",Deck_Tokens!A:A,0))))<=330,"Pass","Too long: spell out more abbreviations in the slide text")'),
+              ('Every mapping row has Mapping strength "Direct" or "Indirect" (catches swapped columns)',
+               '=IF(SUMPRODUCT((NBSAP_Mapping!A5:A304<>"")*(NBSAP_Mapping!G5:G304<>"Direct")*(NBSAP_Mapping!G5:G304<>"Indirect"))=0,"Pass",SUMPRODUCT((NBSAP_Mapping!A5:A304<>"")*(NBSAP_Mapping!G5:G304<>"Direct")*(NBSAP_Mapping!G5:G304<>"Indirect"))&" rows: check columns G and H")'),
               ('LOGIC: sector totals in Client_Exposure add up to the Group total (chart D shows the whole book)',
                '=IF(COUNTIF(Client_Exposure!H5:H200,"Group total")<>1,"Fail – add exactly one Group total row",IF(ABS(SUMIFS(Client_Exposure!E5:E200,Client_Exposure!H5:H200,"Sector total")/SUMIFS(Client_Exposure!E5:E200,Client_Exposure!H5:H200,"Group total")-1)<=0.005,"Pass","Warning: sector totals = "&TEXT(SUMIFS(Client_Exposure!E5:E200,Client_Exposure!H5:H200,"Sector total")/SUMIFS(Client_Exposure!E5:E200,Client_Exposure!H5:H200,"Group total"),"0.0%")&" of Group total – add the missing sectors or say so on page 4"))')]
     for t, f in checks:
@@ -158,7 +160,7 @@ def patch50(wb):
     rd.cell(x, 1).value = 'v5.0 changes'
     rd.cell(x, 2).value = ('Abbreviation key at the foot of pages 2–4, built from Glossary G and I:K (Deck_Tokens s1_key–s3_key). Page 4 portfolio-exposure panel: '
                            'Client_Exposure K:M feed chart D (Deck_Chart A30:C41); new keys s3_exp_stat, s3_exp_sub, s3_exp_text. Cover line carries the review status. '
-                           'Page 4 cell limits 150/120/110. QA checks 24–26 (key text, key length, sector totals add up).')
+                           'Page 4 cell limits 150/120/110. QA checks 24–27 (key text, key length, mapping strength, sector totals add up).')
 
 if __name__ == '__main__':
     wb = openpyxl.load_workbook(sys.argv[1]); patch50(wb); wb.save(sys.argv[2]); print('v5.0', sys.argv[2])

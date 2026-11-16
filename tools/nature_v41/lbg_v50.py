@@ -77,6 +77,11 @@ for r in range(5, 201):
     if ev in vals:
         _, J, L = vals[ev]; CE.cell(r, 11).value = L; CE.cell(r, 12).value = J; CE.cell(r, 11).font = BL; CE.cell(r, 12).font = BL
 
+# fix legacy rows (v4) where Mapping strength (G) and Rationale (H) were swapped
+for r in range(5, 305):
+    g_, h_ = M.cell(r, 7).value, M.cell(r, 8).value
+    if M.cell(r, 1).value and g_ not in ('Direct', 'Indirect') and h_ in ('Direct', 'Indirect'):
+        M.cell(r, 7).value, M.cell(r, 8).value = h_, g_
 # ---------- 2. Calculations ----------
 C = wb['Calculations']; c = nextrow(C, 1, 30)
 setrow(C, c, ['CALC-59', 'Nature priority sectors as % of Group exposure', '=VLOOKUP("EV-034",Client_Exposure!$A:$E,5,FALSE)/VLOOKUP("EV-067",Client_Exposure!$A:$E,5,FALSE)', '%', '59,991 ÷ 645,058', 'EV-034, EV-067', 'SRC-04'])
@@ -165,7 +170,7 @@ NEW = [('C-147', 's3', 's3_title', '56.7%', 'Calculated', 'CALC-52', 'EV-040, EV
        ('C-155', 's3', 's3_exp_text', 'sectors LBG classes as nature priorities', 'Definition', 'DEF-NATPRIOR', 'EV-034', 'LBG’s own classification (data sheet tab 18, footnote 12)'),
        ('C-156', 's3', 's3_exp_text', 'Mortgages count as climate risk, not nature', 'Quoted fact', 'EV-040', 'EV-069, EV-120', 'Tab 18: mortgages 56.7% of Group as increased climate risk, 0.0% as nature priority (EV-040); footnote 11 (EV-069, EV-120)'),
        ('C-157', 's3', 's3_exp_text', 'homeowners’ influence is low', 'Quoted fact', 'EV-120', '', 'Paraphrase, no quotation marks: "the direct influence of homeowners on the state of nature is considered to be low"'),
-       ('C-158', 's3', 'auto:chart D', 'Book by sector: each sector total as % of the £645.1bn Group total; yellow = disclosed nature-priority %', 'Calculated', 'CALC-51', EXP, 'Deck_Chart A30:C41 = Client_Exposure sector totals ÷ Group total (QA 26: sector totals add up to the Group total); nature-priority % copied from tab 18 (Client_Exposure K)'),
+       ('C-158', 's3', 'auto:chart D', 'Book by sector: each sector total as % of the £645.1bn Group total; yellow = disclosed nature-priority %', 'Calculated', 'CALC-51', EXP, 'Deck_Chart A30:C41 = Client_Exposure sector totals ÷ Group total (QA 27: sector totals add up to the Group total); nature-priority % copied from tab 18 (Client_Exposure K)'),
        ('C-159', 's1', 'auto:abbreviation keys', 'Abbreviation key at the foot of pages 2–4', 'Definition', 'ABB-NBSAP', 'ABB-EY, ABB-ENCORE, ABB-LBG, ABB-UK, ABB-PRA, ABB-SS525, ABB-AI, ABB-BN, ABB-M', 'Built by Excel from Glossary column G (key text) for every abbreviation found on the page (Glossary I:K)')]
 for row in NEW: setrow(CR, cr, list(row)); cr += 1
 wb.save(OUT); print('saved', OUT)

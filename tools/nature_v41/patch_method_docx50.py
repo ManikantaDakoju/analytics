@@ -44,13 +44,13 @@ for p in d.paragraphs:
     t = p.text
     if t.startswith('Automatic checks (QA_Log):'):
         for i, r in enumerate(p.runs): r.text = '' if i else ''
-        p.runs[0].text = ('Automatic checks (QA_Log): 26 checks, including 6 for traceability, 1 for growth-sector evidence, 1 confirming the client’s annual / sustainability report '
-                          'was reviewed, 1 for strategy-alignment evidence, 2 for the abbreviation key and 1 logic check that the client’s sector totals add up to its Group total. '
+        p.runs[0].text = ('Automatic checks (QA_Log): 27 checks, including 6 for traceability, 1 for growth-sector evidence, 1 confirming the client’s annual / sustainability report '
+                          'was reviewed, 1 for strategy-alignment evidence, 2 for the abbreviation key, 1 for mapping strength and 1 logic check that the client’s sector totals add up to its Group total. '
                           'Every slide value must have valid claims, every claim must resolve to a source, and every calculated figure must equal its formula.')
     if t.startswith('Evidence base:'):
         for i, r in enumerate(p.runs): r.text = ''
         p.runs[0].text = ('Evidence base: 119 evidence items: all 83 PDF quotes were checked word for word against the PDF page, the 24 data-sheet figures and notes against the spreadsheet, '
-                          'and the 12 ENCORE figures were extracted directly from the CSV rows. There are 110 claims. 25 of 26 QA checks pass; the 26th is a Warning because the '
+                          'and the 12 ENCORE figures were extracted directly from the CSV rows. There are 110 claims. 26 of 27 QA checks pass; the other is a Warning because the '
                           'LBG Sustainability Report 2025 could not be reviewed, and page 4 says so. A mock run from the blank template reproduced the deck exactly.')
     if t.startswith('Step 7: Fill the EY template'): pass
 d.save(sys.argv[2]); print('saved')

@@ -64,7 +64,7 @@ Repeat for SRC-02, SRC-05 and SRC-04, each time continuing from the last Evidenc
 Step 3. From SRC-04 (tab "18 - Environmental risk", 31 December 2025 columns), produce Client_Exposure rows exactly as disclosed: all 12 sector totals (they must add up to the Group total of 645,058), the Agriculture and Housebuilders sub-sector rows, the "Nature priority sectors" subtotal, and the Group total row. For each sector total also give "Nature priority sector % of Group" and "Increased climate risk % of Group" as fractions (e.g. 0.011). Give each row its own Evidence_ID (continue from EV-0xx) and also give me the matching Evidence_Log rows, quoting the whole row (lending | off-balance sheet | total | climate % | nature %). Also log footnote 11 on mortgages as a Disclosure. Use the Row type values in SRC-METH section 8. Suggest linked themes and label them "EY view". Do not convert currencies or estimate missing values.
 ```
 - **Expected:** `P3_exposure.md`
-- **Check:** QA 26 shows Pass, meaning the sector totals add up to the Group total.
+- **Check:** QA 27 shows Pass, meaning the sector totals add up to the Group total.
 - **Paste:** Client_Exposure at A5 (columns A:L; never column M). Evidence rows into Evidence_Log.
 
 ### Prompt 3b (national growth priorities; reuse for later UK clients)
@@ -104,7 +104,7 @@ Cover: cover_date = "Draft for internal review – 19 November 2026". Section la
 - **Paste:** Slide_Content at J5; claims at Claims_Register A5.
 
 ### Prompt 8
-Use the generic Prompt 8 until QA_Log shows 25 Pass and 1 Warning (check 22, Sustainability Report not reviewed). If SRC-06 was attached and logged, all 26 should pass.
+Use the generic Prompt 8 until QA_Log shows 26 Pass and 1 Warning (check 22, Sustainability Report not reviewed). If SRC-06 was attached and logged, all 27 should pass.
 
 ### Prompt 9 (PowerPoint)
 1. Copy `Nature_Deck_Skeleton_EY.pptx` (v5.0).
