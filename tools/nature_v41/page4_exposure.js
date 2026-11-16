@@ -24,7 +24,7 @@ s.addShape(pres.shapes.LINE, { x: LX + PW + 0.17, y: TOP, w: 0, h: 4.63, line: {
 const GX = LX + PW + 0.34, LW = 0.98, GAP = 0.1, CX = GX + LW + 0.06, CW = (12.04 - CX - 2 * GAP) / 3;
 const ROWS = [
   { key: 'today', y: TOP + 0.6, h: 1.42, label: ['{{client_short}} today', 'What public disclosures show'], opp: false },
-  { key: 'gap', y: TOP + 2.1, h: 1.2, label: ['Not yet visible', 'In the documents reviewed'], opp: false },
+  { key: 'gap', y: TOP + 2.1, h: 1.2, label: ['Questions to explore', 'Not found in the documents reviewed'], opp: false },
   { key: 'opp', y: TOP + 3.38, h: 1.25, label: ['Opportunity', 'EY view'], opp: true }];
 for (let c = 1; c <= 3; c++) {
   const x = CX + (c - 1) * (CW + GAP);

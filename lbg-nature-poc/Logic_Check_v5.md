@@ -78,3 +78,7 @@ In 60 legacy rows of NBSAP_Mapping (EV-001 to EV-060, carried over from v4), the
 
 - **Fixed in the LBG example.** Scores and slides are unchanged. The workbook-only confidence rating rises from Medium to High for nature-positive buildings (UD01), flood mitigation (DM02) and long-term adaptation (DM03).
 - **New QA check 26** fails if any mapping row's strength is not "Direct" or "Indirect". This also catches Copilot returning the columns in the wrong order. QA_Log now has 27 checks.
+
+## Wording change (16 November)
+
+The slide 4 row "Not yet visible" is now labelled **"Questions to explore"**, with the sub-label "Not found in the documents reviewed". The content and the absence checks behind it are unchanged; the footnote and talk track now use the same term.

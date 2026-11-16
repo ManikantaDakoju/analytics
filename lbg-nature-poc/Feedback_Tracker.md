@@ -47,6 +47,7 @@ Slide numbers below are deck page numbers.
 | Cover: "Draft for internal review" | "Draft for internal review – 19 November 2026" | Cover |
 | Address every feedback point and say where | This file | — |
 | Mock test before the Copilot script | Ran every prompt from the blank template; the rebuilt deck is identical to the reference | `Logic_Check_v5.md` (mock test), `mock_test_v5/` |
+| Make the slide 4 gap row easier to read | Row renamed "Questions to explore" (sub-label: "Not found in the documents reviewed"); footnote and talk track match | Slide 4 middle row |
 | Treat the Sustainability Report as a source | Listed as SRC-06 (Included = N, upload failed); QA 22 Warning; slide 4 footnote caveat | Sources tab; slide 4 footnote |
 
 ## Still open

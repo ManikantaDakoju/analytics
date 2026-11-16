@@ -9,7 +9,7 @@ How to produce the client pack (cover + 4 pages) for any client, in any country 
 | Cover | — | Workbook (title, review status and date from Slide_Content) |
 | 2 Context setting | What is an NBSAP and what did we measure (context band); where is national nature money going; where is the country heading? | Copilot writes the words; Excel writes the context band's first two blocks, the numbers and Chart A |
 | 3 National nature finance and the client (nexus) | How does that money meet the client's book, theme by theme, and where could it deploy capital in the national growth sectors? | Copilot writes the client links; Excel calculates scores, values, ranks and Charts B and C |
-| 4 Client portfolio exposure and position | The client's book by sector and its nature-priority share; then, for the top three themes, what the client does today, what is not yet visible, and the opportunity | Copilot (facts, absence checks and EY views, each traced); Excel draws Chart D |
+| 4 Client portfolio exposure and position | The client's book by sector and its nature-priority share; then, for the top three themes, what the client does today, the questions to explore (not found in the documents reviewed), and the opportunity | Copilot (facts, absence checks and EY views, each traced); Excel draws Chart D |
 | 5 Why EY | Headings and [EY team] placeholders only | **The EY team writes it by hand. The agent never drafts it.** |
 
 Every value on pages 2–4 is traced through four links:

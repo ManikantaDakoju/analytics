@@ -12,7 +12,7 @@
 | DEF-NOTATION | £bn, £m | Definition | £bn = billion pounds sterling; £m = million pounds sterling (the abbreviations "c.", "e.g." and "ha" are no longer used on the slides) | SRC-METH | Section 9 (style rules) |  |
 | DEF-EXPOSURE | Exposure / LBG’s book | Definition | Total exposure = lending (loans and advances before impairment) + off-balance sheet (commitments, guarantees, contingent liabilities). "LBG’s book" = Group total exposure, £645,058m at 31 Dec 2025 | SRC-04 | Tab 18, footnotes 3 and 4 |  |
 | DEF-NATPRIOR | Nature priority sector | Definition | Sector LBG identifies as a priority for nature, separately from increased climate risk | SRC-04 | Tab 18, footnote 12 |  |
-| DEF-NOTVISIBLE | Not yet visible | Definition | Not found in the four LBG documents reviewed (SRC-01, 02, 04, 05); may be covered in reports not reviewed | SRC-METH | Section 2 (absence checks) |  |
+| DEF-NOTVISIBLE | Questions to explore (not yet visible) | Definition | Not found in the four LBG documents reviewed (SRC-01, 02, 04, 05); may be covered in reports not reviewed | SRC-METH | Section 2 (absence checks) |  |
 | DEF-OUTPUT | Economic output highly dependent on nature | Definition | Share of UK gross value added (GVA) from domestic production in activities with a high nature-dependency rating, as modelled by ENCORE Insights (Global Canopy) | SRC-10 | country_headline_figures.csv; ReadMe.txt |  |
 | ABB-ENC2 | ENCORE Insights | Definition | ENCORE Insights: Country Dashboard by Global Canopy (ENCORE = Exploring Natural Capital Opportunities, Risks and Exposure) | SRC-10 | ReadMe.txt |  |
 | ABB-AI | AI | Abbreviation | Artificial Intelligence | SRC-08 | p.6 ("data centres and Artificial Intelligence") | AI = artificial intelligence |
