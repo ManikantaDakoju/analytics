@@ -1,16 +1,16 @@
-# Copilot run script: Lloyds Banking Group, UK (toolkit v5.0)
+# Copilot run script: Lloyds Banking Group, UK (toolkit v5.1)
 
-This is the LBG run, ready to paste into the Copilot agent. Send one prompt at a time and check each answer before going on. After each answer, compare it with the expected output in `mock_test_v5/`. The Evidence_IDs and wording will differ, but the content should match. Then paste the answer where shown.
+This is the LBG run, ready to paste into the Copilot agent. Send one prompt at a time and check each answer before going on. After each answer, compare it with the expected output in `mock_test_v51/`. The Evidence_IDs and wording will differ, but the content should match. Then paste the answer where shown.
 
 The generic prompts are in `copilot-nature-agent/03_Run_Prompts.md`. This script fills them in for LBG.
 
 ## Before you start (about 20 minutes, once)
 
 1. **Agent.** Create or update the agent "Nature Opportunity Analyst":
-   - Instructions: paste `01_Agent_Instructions.md` (v5.0).
-   - Knowledge: upload `02_Methodology_and_Specifications.docx` and `04_Slide_Writing_Guide_and_Example.docx` (both v5.0), replacing the v4.5 files.
+   - Instructions: paste `01_Agent_Instructions.md` (v5.1).
+   - Knowledge: upload `02_Methodology_and_Specifications.docx` and `04_Slide_Writing_Guide_and_Example.docx` (both v5.1), replacing the v4.5 files.
    - Web search: off.
-2. **Workbook.** Copy `Nature_Opportunity_Master_Template.xlsx` (v5.0) to `LBG_UK_Nature_Mapping.xlsx`.
+2. **Workbook.** Copy `Nature_Opportunity_Master_Template.xlsx` (v5.1) to `LBG_UK_Nature_Mapping.xlsx`.
 3. **Files to attach in the chat** (not as Knowledge):
    - `working-with-nature-report.pdf`
    - `lbg-built-to-last-report.pdf`
@@ -31,11 +31,11 @@ Start a new nature opportunity assessment.
 CLIENT: Lloyds Banking Group   CLIENT_SHORT: LBG
 COUNTRY_ID: GBR   COUNTRY_LABEL: UK
 SECTOR: Banking and financial services
-AS_AT_DATE: 16/11/2026   MEETING_DATE: 19 November 2026   COVER STATUS: Draft for internal review
+AS_AT_DATE: 16/11/2026   MEETING_DATE: 10 December 2026   COVER STATUS: For discussion
 I have attached: working-with-nature-report.pdf; lbg-built-to-last-report.pdf; 2025-lbg-sustainability-data-sheet.xlsx; 2025-lbg-sustainable-financing-framework.pdf<; LBG Sustainability Report 2025 if attached>.
 Confirm the inputs back to me. Check the core client sources: (1) latest annual report and/or sustainability report, (2) sustainability or ESG data sheet, (3) sustainable / green financing framework, (4) any nature, TNFD or climate report. Tell me which are missing. Do not start the analysis yet.
 ```
-- **Expected:** `mock_test_v5/P0_inputs.md`
+- **Expected:** `mock_test_v51/P0_inputs.md`
 - **Do:** fill in the Inputs tab.
 
 ### Prompt 1
@@ -95,7 +95,7 @@ Use the generic Prompt 6 (v5.0 asks for the Key text column).
 ### Prompt 7
 Use the generic Prompt 7, and paste back the five tables it asks for. Add this line:
 ```
-Cover: cover_date = "Draft for internal review – 19 November 2026". Section labels: s2_section "UK nature finance and LBG"; s3_section "LBG portfolio exposure and position".
+Cover: cover_date = "For discussion – 10 December 2026". Section labels: s2_section "Translating UK investment priorities to LBG’s portfolio"; s3_section "Portfolio exposure, current actions and areas to explore".
 ```
 - **Expected:** `P7_slides_claims.md`
 - **Check:**
@@ -107,17 +107,15 @@ Cover: cover_date = "Draft for internal review – 19 November 2026". Section la
 Use the generic Prompt 8 until QA_Log shows 26 Pass and 1 Warning (check 22, Sustainability Report not reviewed). If SRC-06 was attached and logged, all 27 should pass.
 
 ### Prompt 9 (PowerPoint)
-1. Copy `Nature_Deck_Skeleton_EY.pptx` (v5.0).
+1. Copy `Nature_Deck_Skeleton_EY.pptx` (v5.1).
 2. **9b:** Run the Copilot-in-PowerPoint prompt with Deck_Tokens A5:B down. Columns C, D and G:I are helpers; do not copy them.
-3. **9c:** Paste the four charts:
-   - A5:C10: page 2
-   - A13:C18: page 3, score
-   - A21:C26: page 3, money
-   - A29:C41: page 4, book by sector
-4. **9d:** The EY team writes slide 5.
+3. **9c:** Paste the three charts:
+   - A5:C10: page 3, UK investment by theme
+   - A13:C18: page 4, score
+   - A29:C41: page 5, book by sector (delete empty rows)
+4. **9d:** Read page 2 (what the agent does). It is fixed text; adjust it if needed. There is no Why EY page.
 
 **Final check:**
 - No `{{` left.
-- No `[EY team` left (once slide 5 is written).
-- Each of pages 2–4 ends with an "Abbreviations:" line.
-- Compare with `LBG_Nature_Opportunities_v5.0.pdf`.
+- Each of pages 2–5 ends with an "Abbreviations:" line.
+- Compare with `LBG_Nature_Opportunities_v5.1.pdf`.

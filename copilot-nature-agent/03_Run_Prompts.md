@@ -1,4 +1,4 @@
-# Run prompts (v5.0) – copy into the Copilot agent, one at a time
+# Run prompts (v5.1) – copy into the Copilot agent, one at a time
 
 Replace the text in <angle brackets>. After each answer:
 1. Check the answer.
@@ -67,7 +67,7 @@ Step 5. For all 15 SubTheme_IDs produce: SubTheme_ID | C1 | C2 | C4 | Evidence_I
 ```
 Step 5b. For each of the 5 themes (W, AFF, UD, DM, P) give: Theme_ID | In client’s stated priorities? (Yes/No) | Evidence_IDs. Say Yes only where the client itself names the theme as a priority in its own strategy or position documents (quote the Evidence_ID); being eligible under the financing framework is not enough. Return the table only.
 ```
-*Paste into Theme_View columns T:U (rows 5–9, in the order W, AFF, UD, DM, P). It shows as a tag on page 3 and is not used in scores.*
+*Paste into Theme_View columns T:U (rows 5–9, in the order W, AFF, UD, DM, P). It shows as a tag on page 4 and is not used in scores.*
 
 ### Prompt 6 – Glossary and calculations
 ```
@@ -85,11 +85,11 @@ Scoring sorted by Rank (columns A–L): <paste>
 Calculations (columns A–C): <paste>
 Growth_Sectors (columns A–H): <paste>
 Client_Exposure (columns A–L): <paste>
-Deck_Tokens rows for s1_ctx_what, s1_ctx_measured, s1_left_sub, s1_callout_stat, r1–r5 and h1–h3: <paste>
-Write the text for pages 2–4 as two tables. Write words in full wherever space allows (no e.g., c., incl., ha, vs, short months or p.); every abbreviation you keep must be in the Glossary with key text.
+Deck_Tokens rows for s1_ctx_what, s1_ctx_measured, s1_left_sub, s1_callout_stat, r1–r5 (including r1_uk–r5_uk) and h1–h3: <paste>
+Write the text for pages 3–5 as two tables. Write words in full wherever space allows (no e.g., c., incl., ha, vs, short months or p.); every abbreviation you keep must be in the Glossary with key text.
 (a) Slide_Content: Key | Value | Claim_IDs, for exactly the keys in SRC-METH section 10.
 (b) Claims_Register: Claim_ID | Slide | Slide_Content key | Claim | Claim type | Primary trace ID | Other trace IDs | Derivation / how checked, for every claim (C-001 …), plus "auto:" claims for the Excel-written text listed above.
-Rules: page 2 context band: s1_ctx_why says why national nature spending matters for the client's sector, quoted from evidence. Page 2 tiles: prefer government sources (Prompt 3b) for the forward view; tile 4 should state the growth sectors and their nature need as the source states it. Page 3 growth strip (s2_grow1–4_head/_text): the four national growth sectors most relevant to the client from Growth_Sectors, each with the client’s exposure (£ and % of book from Calculations) and its nature dependency (stated or ENCORE, as labelled); write "Not split" where the client does not disclose the sector. Page 3 links (s2_link_<Theme_ID>) give the client's main disclosed exposure for each theme, with £ and % of total from my Calculations. Page 4 exposure panel: s3_exp_stat = one figure equal to a CALC value (e.g. the nature-priority share of the book), s3_exp_sub = what chart D shows with the total exposure and date, s3_exp_text = what the figure is and how the largest sector is classified, in the client’s own terms. Page 4 columns 1–3 are the top three themes by score (h1–h3): "today" = facts only; "gap" = not yet visible (absence check, list the sources searched; if the annual / sustainability report was not reviewed, say so in s3_footnote); "opp" = EY view with rationale. Every percentage or total must equal a CALC value. Follow 04_Slide_Writing_Guide_and_Example; keep within character limits; copy its style, never its facts. Run the guide's self-check before replying. Return the two tables only.
+Rules: page 3 context band: s1_ctx_why says why national nature spending matters for the client's sector, quoted from evidence. Page 3 tiles: prefer government sources (Prompt 3b) for the forward view; tile 4 should state the growth sectors and their nature need as the source states it. Page 4 title (s2_title): the share of national commitments taken by the top three themes (CALC-TOP3-S). Page 4 lead band (s2_lead): the national headline and what the table does. Page 4 'beyond the top three' strip (s2_other1/2_head and _text): for the themes ranked 4 and 5, the client's link and one opportunity (EY view), with figures from Calculations. Page 4 links (s2_link_<Theme_ID>) give the client's main disclosed exposure for each theme, with £ and % of total from my Calculations. Page 5 exposure panel: s3_exp_stat = one figure equal to a CALC value (e.g. the nature-priority share of the book), s3_exp_sub = what chart D shows with the total exposure and date, s3_exp_text = what the figure is; s3_exp_note = how the client classifies its largest sector, in the client’s own terms. Page 5 title (s3_title): the nature-priority share of the book, not the largest sector. Page 5 columns 1–3 are the top three themes by score (h1–h3): "today" = facts only; "gap" = areas to explore, written as short, clear questions (absence check, list the sources searched; if the annual / sustainability report was not reviewed, say so in s3_footnote); "opp" = EY view with rationale; check it against the client's financing framework and, if the client already offers it, reword it as scale, connect or report. Every percentage or total must equal a CALC value. Follow 04_Slide_Writing_Guide_and_Example; keep within character limits; copy its style, never its facts. Run the guide's self-check before replying. Return the two tables only.
 ```
 *Paste table (a) into the Slide_Content paste area (cell J5, columns J:L); columns B and C look it up by key. Paste table (b) into Claims_Register from row 5. Save. Fix every cell that QA_Log or the red flags show.*
 
@@ -114,15 +114,14 @@ This presentation contains placeholders in double curly braces, for example {{s1
 *Fallback: Home → Replace (Ctrl+H), one placeholder at a time (about 25 minutes).*
 
 **9c – Charts.** For each chart: right-click → Edit Data → click cell A1 of the data sheet → paste → close.
-- Page 2 chart: Deck_Chart A5:C10 (Chart A)
-- Page 3 left chart (score): A13:C18 (Chart B)
-- Page 3 right chart (money): A21:C26 (Chart C)
-- Page 4 chart (client book by sector): A29:C41 (Chart D) – delete any empty rows in the chart data sheet after pasting
+- Page 3 chart: Deck_Chart A5:C10 (Chart A)
+- Page 4 left chart (score): A13:C18 (Chart B)
+- Page 5 chart (client book by sector): A29:C41 (Chart D) – delete any empty rows in the chart data sheet after pasting
 
-**9d – Page 5 (Why EY).** The EY team writes page 5 by hand: headings and placeholders only in the skeleton. Replace every [EY team] placeholder, or delete the ones not needed.
+**9d – Page 2 (what the agent does).** Fixed text in the skeleton: read it and adjust if needed for the client. There is no Why EY page.
 
 **Then check:**
 - Search for `{{` (Home → Find); none should be left.
 - Search for `[EY team`; none should be left.
-- The speaker notes on pages 2–4 start with the talk track and then list `[Sources]`.
-- Pages 2–4 each end with an "Abbreviations:" line that lists every abbreviation on the page.
+- The speaker notes on pages 3–5 start with the talk track and then list `[Sources]`.
+- Pages 2–5 each end with an "Abbreviations:" line that lists every abbreviation on the page.

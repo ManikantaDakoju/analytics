@@ -1,6 +1,6 @@
-# Methodology and Specifications – Nature Opportunity Assessment (v5.0)
+# Methodology and Specifications – Nature Opportunity Assessment (v5.1)
 
-Source ID in the workbook: **SRC-METH**. Upload this file to the Copilot agent's Knowledge as .docx or .pdf. It matches the tabs of **Nature_Opportunity_Master_Template.xlsx** (v5.0) and the deck skeleton **Nature_Deck_Skeleton_EY.pptx** (cover + 4 pages).
+Source ID in the workbook: **SRC-METH**. Upload this file to the Copilot agent's Knowledge as .docx or .pdf. It matches the tabs of **Nature_Opportunity_Master_Template.xlsx** (v5.1) and the deck skeleton **Nature_Deck_Skeleton_EY.pptx** (cover + 4 pages).
 
 ---
 
@@ -13,8 +13,8 @@ The Nature Opportunity Assessment shows, for one client in one country, where na
   - the client's public documents
   - the EY NBSAP Nature Sizing workbook (SRC-EY), where NBSAP = National Biodiversity Strategy and Action Plan
 - **Output:** a 5-page slide pack (cover + 4 pages) on the EY template:
-  - pages 2–4 are produced by this method
-  - page 5 (Why EY) is written by the EY team, not the agent: the skeleton holds headings and [EY team] placeholders only
+  - pages 3–5 are produced by this method
+  - page 2 (what the agent does) is fixed text in the skeleton; there is no Why EY page (removed after the 19 November review)
 
 ---
 
@@ -25,7 +25,7 @@ The Nature Opportunity Assessment shows, for one client in one country, where na
    - the printed page (or tab)
    - the PDF page
 3. **EY view.** Any interpretation or judgement is labelled "EY view". It must cite the evidence it rests on and give a one-line rationale.
-4. **Core sources.** Every run expects the client's latest annual and/or sustainability report, data sheet, financing framework and any nature/TNFD/climate report. A missing core source is still listed (Included = N, with the reason), and the page 4 footnote says which core documents were not reviewed. QA_Log shows Pass if the annual / sustainability report is included, a Warning if it is missing but the caveat is present, and Fail otherwise.
+4. **Core sources.** Every run expects the client's latest annual and/or sustainability report, data sheet, financing framework and any nature/TNFD/climate report. A missing core source is still listed (Included = N, with the reason), and the page 5 footnote says which core documents were not reviewed. QA_Log shows Pass if the annual / sustainability report is included, a Warning if it is missing but the caveat is present, and Fail otherwise.
 5. **Absence checks.** A statement that something is *not* disclosed ("not yet visible") must:
    - list the sources searched
    - be phrased neutrally: "not found in the documents reviewed"
@@ -146,14 +146,14 @@ Themes are scored so that a topic appearing several times (for example, three wa
 - **Theme C1, C2 and C4:** the highest sub-theme score in the theme.
 - **Theme C3 and C5:** recalculated from the theme's total commitments (number and share), using the same bands.
 - **Weights:** the same as for sub-themes.
-- **Drill-down:** the sub-theme scores stay visible on page 3.
-- **Strategy alignment (not scored):** each theme is tagged "In the client’s stated priorities" only if the client names it as a priority in its own strategy or position documents (Evidence_ID required); eligibility under a financing framework is not enough. The tag appears on page 3 and never changes a score, so results stay comparable across clients.
+- **Drill-down:** the sub-theme scores are kept in Theme_View (column P) and Scoring for questions; the reviewed page design shows the theme score only.
+- **Strategy alignment (not scored):** each theme is tagged "In the client’s stated priorities" only if the client names it as a priority in its own strategy or position documents (Evidence_ID required); eligibility under a financing framework is not enough. The tag appears on page 4 and never changes a score, so results stay comparable across clients.
 
 ---
 
 ## 7. Traceability system
 
-Every value on pages 2–4 is traced. The chain is:
+Every value on pages 3–5 is traced. The chain is:
 
 > **Slide text → Claim_ID (Claims_Register) → primary trace ID → source document and page**
 
@@ -195,7 +195,7 @@ Every value on pages 2–4 is traced. The chain is:
 
 **Client_Exposure:** Evidence_ID | Source_ID | Sector (as disclosed) | Sub-sector | Exposure (m, reporting currency) | Currency | Nature priority (as disclosed) | Row type | Linked themes (EY view) | Reference (tab/page) | Nature priority % of Group (as disclosed; optional) | Increased climate risk % of Group (as disclosed; optional)
 - Row type: Sector total, Sub-sector, Subtotal or Group total.
-- Give **every** sector total the client discloses, so the sector totals add up to the Group total (QA 27). The page 4 chart (chart D) shows each sector total as a share of the Group total.
+- Give **every** sector total the client discloses, so the sector totals add up to the Group total (QA 27). The page 5 chart (chart D) shows each sector total as a share of the Group total.
 - The two % columns are copied as disclosed (as fractions, e.g. 0.011); leave blank if the client does not report them.
 - Every exposure row is also an Evidence_Log row with the same Evidence_ID.
 
@@ -249,29 +249,27 @@ Every value on pages 2–4 is traced. The chain is:
 
 ## 10. Slide specification (cover + 4 pages)
 
-Page names: 2 Context setting · 3 National nature finance and the client (nexus) · 4 Client portfolio exposure and position · 5 Why EY.
+Page names: 2 What the agent does (fixed) · 3 Context setting · 4 National nature finance and the client (nexus) · 5 Client portfolio exposure and position.
 
 | Page | Purpose | Agent writes (Slide_Content keys) | Excel writes (Deck_Tokens) |
 |---|---|---|---|
 | Cover | Title, review status and date | cover_title, cover_date (e.g. "Draft for internal review – 19 November 2026"), client_name, client_short | – |
 | 2 Context | Context band (what an NBSAP is, what we measured, why it matters), where national nature money goes, and where the country is heading | s1_title, s1_section, s1_ctx_why, s1_callout_text, s1_heading_r, s1_sub_r, s1_tile1–4_stat/text, s1_rules_lead, s1_rules, s1_sowhat, s1_footnote, s1_talk | s1_ctx_what, s1_ctx_measured, s1_left_head, s1_left_sub, s1_callout_stat, Chart A, s1_notes |
-| 3 Context × client | Theme priority, national money and the client's main link, row by row | s2_title, s2_section, s2_link_W, s2_link_AFF, s2_link_UD, s2_link_DM, s2_link_P, s2_grow1–4_head and s2_grow1–4_text (growth sectors compared with the client book), s2_sowhat, s2_talk | r1–r5 theme, drill-down, alignment tag, money and link (sorted by score), s2_footnote (method), Charts B and C, s2_notes |
-| 4 Client | Left: the client’s book by sector (chart D) with the nature-priority share. Right: for the top three themes by score, what the client does today, the questions to explore (row label for the absence checks: not found in the documents reviewed), and the opportunity | s3_title, s3_section, s3_exp_stat, s3_exp_sub, s3_exp_text, s3_col1–3_today (≤150) / gap (≤120) / opp (≤110), s3_sowhat, s3_footnote, s3_talk | h1–h3 (column headers), Chart D, s3_notes |
-| 5 Why EY | Headings and [EY team] placeholders only | **Nothing: written by the EY team** | – |
+| 3 Context × client | Lead band; theme priority, national money and the client's main link, row by row; the two themes beyond the top three | s2_title (share of national commitments taken by the top three themes, CALC-TOP3-S), s2_section, s2_lead, s2_link_W, s2_link_AFF, s2_link_UD, s2_link_DM, s2_link_P (≤160 each), s2_other1_head/_text and s2_other2_head/_text (themes ranked 4 and 5: client link and one opportunity, EY view), s2_sowhat, s2_talk | r1–r5 theme, alignment tag, UK priority tick (r1_uk–r5_uk: ✓ = 10% or more of identified commitments), money and link (sorted by score), s2_footnote (score definition), Chart B, s2_notes |
+| 4 Client | Left: the client’s book by sector (chart D) with the nature-priority share. Right: for the top three themes by score, what the client does today, the questions to explore (row label for the absence checks: not found in the documents reviewed), and the opportunity | s3_title (the nature-priority share of the book, not the largest sector), s3_section, s3_exp_stat, s3_exp_sub, s3_exp_text, s3_exp_note (how the client classifies its largest sector), s3_col1–3_today (≤240) / gap (≤170, written as questions) / opp (≤170), s3_sowhat, s3_footnote, s3_talk | h1–h3 (column headers), Chart D, s3_notes |
 
-**Abbreviation key:** Excel writes s1_key, s2_key and s3_key at the foot of pages 2–4: every Glossary Abbreviation or Notation entry found as a whole word on that page (including fixed skeleton text), shown with its key text. Spell more words out if a key exceeds 330 characters (QA 25).
+**Abbreviation key:** Excel writes s1_key, s2_key and s3_key at the foot of pages 3–5: every Glossary Abbreviation or Notation entry found as a whole word on that page (including fixed skeleton text), shown with its key text. Spell more words out if a key exceeds 330 characters (QA 25).
 
 **Charts:** paste the Deck_Chart blocks into the charts (Edit Data):
-- **Chart A:** page 2, value by theme
-- **Chart B:** page 3, theme score
-- **Chart C:** page 3, value by theme in score order
-- **Chart D:** page 4, the client’s book by sector (Deck_Chart A29:C41; delete empty rows after pasting)
+- **Chart A:** page 3, value by theme
+- **Chart B:** page 4, theme score
+- **Chart D:** page 5, the client’s book by sector (Deck_Chart A29:C41; delete empty rows after pasting)
 
 ---
 
 ## 11. QA checklist (all must pass before the deck is filled)
 
-The QA_Log tab runs 27 checks automatically. Besides the list below: Prompt 5 pasted for all 15 sub-themes (20); Growth_Sectors rows cite evidence that exists (21); core source – annual / sustainability report reviewed (22); strategy alignment set for all themes, with evidence for every Yes (23); every abbreviation on pages 2–4 has key text (24); each abbreviation key fits the footer (25); every mapping row has Mapping strength Direct or Indirect (26); LOGIC – sector totals add up to the Group total (27). Items 6 and 12 below each cover two checks:
+The QA_Log tab runs 27 checks automatically. Besides the list below: Prompt 5 pasted for all 15 sub-themes (20); Growth_Sectors rows cite evidence that exists (21); core source – annual / sustainability report reviewed (22); strategy alignment set for all themes, with evidence for every Yes (23); every abbreviation on pages 3–5 has key text (24); each abbreviation key fits the footer (25); every mapping row has Mapping strength Direct or Indirect (26); LOGIC – sector totals add up to the Group total (27). Items 6 and 12 below each cover two checks:
 1. Country recognised.
 2. Commitments loaded.
 3. All 15 sub-themes scored.
@@ -295,4 +293,5 @@ The analyst also checks these by hand:
 - Spot-check 5 quotes against the PDFs, using the PDF page.
 - Read every EY view rationale.
 - Confirm the absence checks against any report not reviewed (e.g. the annual report).
-- Make sure page 5 has no [EY team] placeholders left.
+- Check that the fixed text on page 2 (what the agent does) suits the client.
+- Check every opportunity against the client's financing framework, so the client cannot say "we already do that".

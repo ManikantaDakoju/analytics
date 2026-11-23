@@ -82,3 +82,15 @@ In 60 legacy rows of NBSAP_Mapping (EV-001 to EV-060, carried over from v4), the
 ## Wording change (16 November)
 
 The slide 4 row "Not yet visible" is now labelled **"Questions to explore"**, with the sub-label "Not found in the documents reviewed". The content and the absence checks behind it are unchanged; the footnote and talk track now use the same term.
+
+## v5.1 checks (23 November)
+
+| Check | Result |
+|---|---|
+| 81% in the slide 4 title = flood 38.3% + water 30.5% + agriculture 12.0% (unrounded 80.7%, shown as 81%) | Pass |
+| UK priority ticks match the shares (10% or more): flood 38%, water 31%, agriculture 12%, pollution 18% ✓; urban 1% no tick | Pass |
+| Chart labels: £ amount and share agree with the slide 4 links and the slide 5 cells | Pass |
+| £10.8bn and 18% in the "beyond the top three" strip = the chart on slide 3 | Pass |
+| No opportunity repeats something LBG already offers (checked against the financing framework) | Pass (agriculture reworded) |
+| Deck built from the new skeleton = the styled deck, item for item | Pass |
+| Practice run from the blank v5.1 template = reference (QA, deck, notes) | Pass |

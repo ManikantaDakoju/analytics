@@ -20,7 +20,8 @@ RULES=[
 '**Write money and units consistently:** £12.1bn, £120m, 9.3%, about £41bn (rounded), 238,494 hectares. Shares of the client’s book take one decimal place everywhere (56.7%, not 57%). Use the country\'s currency symbol.',
 '**Use UK English and a neutral tone.** Never name individuals, never use EY confidential data, never mention fees.',
 '**Page 4 exposure panel:** s3_exp_stat is one figure that equals a CALC value (e.g. the nature-priority share of the book); s3_exp_text says what it is and how the largest sector is classified, using the client’s own definitions.',
-'**Never draft page 5 (Why EY).** It is written by the EY team.',
+'**Never draft a Why EY or EY offer page.** Page 2 (what the agent does) is fixed text in the skeleton.',
+'**Check opportunities against the client’s own framework.** If the client already offers it, reword it as scale, connect or report, so the client cannot say "we already do that".',
 '**Return only the two tables** (Slide_Content; Claims_Register), with no blank keys.']
 WEAK={'s1_title':('UK nature context','A topic label, not a finding.'),'s1_ctx_why':('Nature is important for banks','No evidence, no figure, no source.'),
 's1_callout_text':('is a lot of money','No subject; no traced value.'),'s1_tile1_stat':('Huge','Not a figure.'),'s1_tile1_text':('infrastructure spending is going up','No scope, no source figure.'),
@@ -31,8 +32,8 @@ WEAK={'s1_title':('UK nature context','A topic label, not a finding.'),'s1_ctx_w
 's2_link_W':('Utilities ~£12bn','Approximate; no % of book; informal sector name.'),'s2_sowhat':('The table shows the themes and exposures.','Describes the slide instead of the insight.'),
 's3_col1_today':('LBG is doing lots on flooding','No traced facts.'),'s3_col1_gap':('LBG has failed to disclose flood risk','Critical tone; absence must be "not yet visible" with sources searched.'),
 's3_col1_opp':('Big opportunity','Not specific; no rationale.'),'s3_exp_text':('of the book is green','Not the client’s own definition; vague; mixes up nature-priority and green finance.'),'s3_title':('LBG today','A label; no finding, no traced figure.'),'s3_sowhat':('EY can help with many things','Not the client\'s next step; page 5 covers EY.')}
-L=['# Slide Writing Guide and Worked Example (v5.0)','',
-'Knowledge file for the Copilot agent. It shows how to write every Slide_Content value for pages 2–4, and the Claims_Register rows behind them. Use it with SRC-METH (02_Methodology_and_Specifications). Page 5 (Why EY) is written by the EY team.','',
+L=['# Slide Writing Guide and Worked Example (v5.1)','',
+'Knowledge file for the Copilot agent. It shows how to write every Slide_Content value for pages 3–5, and the Claims_Register rows behind them. Use it with SRC-METH (02_Methodology_and_Specifications). There is no Why EY page.','',
 '## 1. Rules','']+[f'{i}. {r}' for i,r in enumerate(RULES,1)]+['','## 2. Field guide (limit = maximum characters)','','| Key | What to write | Limit | Good (LBG example) | Weak | Why weak |','|---|---|---|---|---|---|']
 for k,g,lim,_ in keys:
     if k in WEAK: L.append(f'| {k} | {g} | {lim} | {paste[k][0]} | {WEAK[k][0]} | {WEAK[k][1]} |')

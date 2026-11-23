@@ -1,4 +1,4 @@
-# LBG nature opportunities: feedback mapping (v5.0, 16 November 2026)
+# LBG nature opportunities: feedback mapping (v5.1, 23 November 2026)
 
 This file shows where every point from Sean and Helen, and from the 16 November brief, is handled in the v5.0 pack. It replaces the v4.5 tracker. The pack has five slides:
 
@@ -57,3 +57,41 @@ Slide numbers below are deck page numbers.
 | LBG Sustainability Report 2025 | Attach it in the Copilot run, or paste the passages on nature-priority sectors (around page 76), physical risk to the mortgage book and sustainable finance totals. Re-run Prompts 2 and 7, and the Warning clears. |
 | Slide 5 | EY team to write it |
 | QRM | To schedule |
+
+## Review with Helen (19 November 2026) and the styled deck → v5.1
+
+Slide numbers below are for the v5.1 deck:
+1. Cover
+2. What the agent does
+3. UK context
+4. UK nature finance and LBG
+5. LBG portfolio
+
+| # | Point | How it is handled | Where |
+|---|---|---|---|
+| H1 | PRA SS5/25 covers climate risk in general, not physical risk only | Now reads "physical and transition climate risk", matching the source wording | Slide 3, regulation line |
+| H2 | Slide title should state the priority areas and their share | "Three priority themes take 81% of UK nature commitments" (new calculation CALC-TOP3-S) | Slide 4 title |
+| H3 | Tick where a theme is a UK priority | New "UK priority" column: ✓ where the theme takes 10% or more of identified UK commitments (flood, water, agriculture, pollution and waste) | Slide 4 |
+| H4 | Remove the growth-sector strip and ENCORE scores | Removed. The data stays in the workbook (Growth_Sectors) and still feeds the slide 3 tiles | Slide 4 |
+| H5 | Anything for urban development and pollution and waste? | New "Beyond the top three" strip, one opportunity each (EY view): net gain finance for housebuilders; waste and circular-economy finance | Slide 4 bottom |
+| H6 | Slide title should focus on the yellow (nature-priority) sectors, not mortgages | "Nature-priority sectors make up 9.3% (£60.0bn) of LBG’s book" | Slide 5 title |
+| H7 | "Its climate flag reflects home energy use" is confusing (energy use is transition risk) | Removed; the flood questions now read as plain questions | Slide 5 |
+| H8 | Make the areas to explore punchy and clear | Written as short questions (from your styled deck) | Slide 5 middle row |
+| H9 | Check opportunities against what LBG already does | Checked against the financing framework. Farm KPIs already exist (sustainability-linked loans, page 24), so the opportunity now reads "link the Soil Association Exchange scorecards to LBG’s existing sustainability-linked loans, and report the volumes". This rule is now part of the agent instructions | Slide 5, agriculture column |
+| H10 | Add a slide on what the agent does | New slide 2: inputs, extract and trace, score and match, review | Slide 2 |
+| H11 | Why EY slide not needed | Removed from the deck and the toolkit | — |
+| H12 | Cheat sheet on the numbers for the client meeting | `Numbers_Cheat_Sheet_LBG.docx`, including three corrections to what was said in the meeting | Separate file |
+| S1 | Your styling and formatting (Mani) | Your deck is now the toolkit skeleton. Filling it from the LBG workbook reproduces your design exactly | `Nature_Deck_Skeleton_EY.pptx` |
+| S2 | Slide 5 chart: show amounts as well as percentages (Mani) | Labels now read, for example, "Personal: Mortgages £365.6bn \| 56.7%" | Slide 5 chart |
+
+Restored from v5.0, because your edit had removed them:
+- the abbreviation keys
+- the source footnotes on slides 4 and 5
+- the speaker notes
+
+Also fixed:
+- the typos "underwater-use" and "£ 645.1bn"
+- the chart legend: yellow is the part of each sector that LBG classes as nature priority, not the whole sector
+- the mortgage note: LBG classes mortgages as 0% nature priority; they are not outside the classification
+
+Note: your design drops the sub-theme drill-down that Helen asked for in October. The detail stays in the workbook (Theme_View column P) for questions.

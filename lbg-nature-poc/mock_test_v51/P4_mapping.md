@@ -121,6 +121,7 @@
 | EV-118 | Client exposure | XC |  |  | Indirect | Exposure for the page 4 book-by-sector chart (EY view: no direct NBSAP link) |
 | EV-119 | Client exposure | XC |  |  | Indirect | Exposure for the page 4 book-by-sector chart (EY view: no direct NBSAP link) |
 | EV-120 | Client position | XC |  |  | Direct | How LBG classifies mortgages for nature (page 4 exposure panel) |
+| EV-121 | Client action | AFF02 |  |  | Indirect | Sustainability-linked loan structure usable for nature-linked farm lending |
 
 | Example_ID | Current SubTheme_ID | Proposed SubTheme_ID | Rationale (EY view) |
 |---|---|---|---|

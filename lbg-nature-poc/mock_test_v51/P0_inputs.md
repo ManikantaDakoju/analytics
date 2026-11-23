@@ -5,8 +5,8 @@
 | Client | Lloyds Banking Group |
 | Country_ID | GBR |
 | Sector | Banking and financial services |
-| Audience | Internal review (presented) |
-| As-at date | 16/11/2026 |
+| Audience | Client discussion (presented) |
+| As-at date | 23/11/2026 |
 | Prepared by | EY CCaSS |
 | Client short name | LBG |
 | Country label for slides | UK |
