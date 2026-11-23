@@ -1,5 +1,5 @@
 """v5.2: the reviewer's deck is the master. Change ONLY Helen's outstanding points (19 November) and plain errors,
-in the existing shapes and formatting; add the agent slide (as generated in v5.1, without an abbreviation line).
+in the existing shapes and formatting; no agent slide (left out at the reviewer's request).
 No speaker notes, source footnotes or abbreviation keys are added.  Usage: python apply_helen_v52.py MASTER.pptx WB_v5.1.xlsx OUT.pptx"""
 import sys, copy, openpyxl
 from pptx import Presentation
@@ -83,49 +83,6 @@ for nm, v in ser: cd.add_series(nm, v)
 ch.replace_data(cd)
 LOG.append((4, 'Your request: chart labels show the amount as well as the share (e.g. "' + new[0] + '")', '', ''))
 
-# ---- agent slide (as generated in v5.1, no abbreviation line), placed after the cover
-ns = p.slides.add_slide(s_uk.slide_layout)
-for sp in list(ns.shapes): sp._element.getparent().remove(sp._element)
-def clone(src, x, y, w, h, text=None):
-    ns.shapes._spTree.insert_element_before(copy.deepcopy(src._element), 'p:extLst'); sh = ns.shapes[-1]
-    sh.left, sh.top, sh.width, sh.height = Inches(x), Inches(y), Inches(w), Inches(h)
-    if text is not None:
-        tf = sh.text_frame
-        for extra in tf.paragraphs[1:]: extra._p.getparent().remove(extra._p)
-        rr = tf.paragraphs[0].runs; rr[0].text = text
-        for r in rr[1:]: r._r.getparent().remove(r._r)
-    return sh
-for nm in ('TextBox 135', 'TextBox 136', 'Straight Connector 3'):
-    ns.shapes._spTree.insert_element_before(copy.deepcopy(shp(s_uk, nm)._element), 'p:extLst')
-def first(sh, t):
-    tf = sh.text_frame
-    for extra in tf.paragraphs[1:]: extra._p.getparent().remove(extra._p)
-    rr = tf.paragraphs[0].runs; rr[0].text = t
-    for r in rr[1:]: r._r.getparent().remove(r._r)
-first(shp(ns, 'TextBox 135'), 'An agent that matches national nature priorities to a client’s book')
-first(shp(ns, 'TextBox 136'), 'Lloyds Banking Group  |  What the nature opportunity agent does')
-tile, stat, txt = shp(s_uk, 'tile-1'), shp(s_uk, 'tile-1-stat'), shp(s_uk, 'tile-1-text')
-STEPS = [('1  Inputs', 'EY research on national nature commitments (11 countries), the client’s public documents and official government strategies'),
-         ('2  Extract and trace', 'A Microsoft Copilot agent pulls facts with exact quotes and page references. Every number is calculated in a controlled Excel workbook, not typed'),
-         ('3  Score and match', 'Five nature themes are scored for the client, and national money is matched to the client’s lending by sector'),
-         ('4  Review and output', 'The EY team checks every fact, score and view; 27 automatic checks run before the draft slides are produced')]
-for i, (head, body) in enumerate(STEPS):
-    x = 0.58 + i * 2.92
-    clone(tile, x, 1.45, 2.72, 2.45); hs = clone(stat, x + 0.12, 1.6, 2.48, 0.45, head); clone(txt, x + 0.15, 2.2, 2.42, 1.55, body)
-    for r in hs.text_frame.paragraphs[0].runs: r.font.size = Pt(15)
-clone(shp(s_uk, 'left-heading'), 0.58, 4.15, 11.46, 0.3, 'What it shows')
-tb = ns.shapes.add_textbox(Inches(0.58), Inches(4.5), Inches(11.46), Inches(0.75)); tf = tb.text_frame; tf.word_wrap = True
-for m in ('margin_left', 'margin_right', 'margin_top', 'margin_bottom'): setattr(tf, m, 0)
-r = tf.paragraphs[0].add_run(); r.text = ('Using public information only, the following pages show where UK nature money is going, how it connects to LBG’s lending, and the areas worth exploring. '
-    'With LBG’s own data (lending by sector, region and product, and property locations), the same approach can size opportunities at portfolio and asset level.')
-r.font.name = 'EYInterstate Light'; r.font.size = Pt(11); r.font.color.rgb = RGBColor(0xF2, 0xF2, 0xF2)
-clone(shp(s_uk, 'so-what-panel'), 0.58, 5.55, 11.46, 0.52)
-clone(shp(s_uk, 'so-what'), 0.63, 5.57, 11.37, 0.48, 'A conversation starter: what the national data says about your book, and where we could help you go further.')
-tb = ns.shapes.add_textbox(Inches(0.58), Inches(6.5), Inches(11.46), Inches(0.3)); tf = tb.text_frame
-for m in ('margin_left', 'margin_right', 'margin_top', 'margin_bottom'): setattr(tf, m, 0)
-r = tf.paragraphs[0].add_run(); r.text = 'Draft output of the agent, reviewed by the EY team. Public information only; national figures are indicative.'
-r.font.name = 'EYInterstate Light'; r.font.size = Pt(8); r.font.italic = True; r.font.color.rgb = RGBColor(0xBF, 0xBF, 0xC7)
-lst = p.slides._sldIdLst; ids = list(lst); lst.remove(ids[-1]); lst.insert(1, ids[-1])
-LOG.append(('new 2', 'Helen: a slide on what the agent does, so LBG can see how the analysis was done', '', ''))
+# (no agent slide: the reviewer asked for it to be left out)
 p.save(OUT)
 import json; json.dump(LOG, open(OUT + '.changes.json', 'w'), ensure_ascii=False, indent=1); print('saved', OUT, len(LOG), 'changes')
