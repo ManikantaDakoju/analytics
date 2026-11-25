@@ -41,19 +41,19 @@ def shape(kind, x, y, w, h, fill=None, line=None, lw=1.0):
     return c
 def icon(name, tag, x, y, d): s.shapes.add_picture(f'{ICONS}/{name}-{tag}.png', Inches(x), Inches(y), Inches(d), Inches(d))
 
-clone('TextBox 135', text='Nature Opportunity Agent: faster, traceable insight, expert-led')
-clone('TextBox 136', text='EY Climate Change and Sustainability Services  |  How it works and what it brings you')
+clone('TextBox 135', text='Evidence-led nature insight in hours, governed by EY experts')
+clone('TextBox 136', text='EY Climate Change and Sustainability Services  |  Nature Opportunity Agent')
 clone('Straight Connector 3')
 
 # ---------------- left: how it works
 LX, LW, TOP = 0.58, 5.95, 1.3
-clone('left-heading', LX, TOP, 4, 0.3, 'How it works')
+clone('left-heading', LX, TOP, 4, 0.3, 'How the agent works')
 icon('user-check', 'yellow', LX + 4.42, TOP + 0.03, 0.24); text(LX + 4.72, TOP, 1.25, 0.3, [[('= EY review point', 9, GR, False, L)]])
-STEPS = [('files', 'Inputs', 'Client reports, national commitments, government strategies', 'EY confirms sources', True),
-         ('scan-search', 'Extract and trace', 'Every fact captured with its source and page', 'EY spot-checks quotes', True),
-         ('scale', 'Map and score', 'Evidence mapped to nature themes and scored', 'EY approves scores', True),
-         ('calculator', 'Calculate and check', 'Every number a formula; 27 automatic checks', 'Automatic; flags to EY', False),
-         ('file-check', 'Write and sign off', 'Draft slides, each claim traced', 'EY signs off views', True)]
+STEPS = [('files', 'Ingest', 'Client disclosures, national commitments, government strategy', 'EY defines scope and sources', True),
+         ('scan-search', 'Extract', 'Every data point sourced to the page', 'EY validates evidence', True),
+         ('scale', 'Assess', 'Evidence mapped to nature themes and prioritised', 'EY approves prioritisation', True),
+         ('calculator', 'Quantify', 'Formula-driven figures; 27 automated controls', 'Automated; exceptions to EY', False),
+         ('file-check', 'Report', 'Client-ready outputs, every claim referenced', 'EY signs off conclusions', True)]
 RY, RH, GAP = TOP + 0.45, 0.62, 0.09
 ln = s.shapes.add_connector(MSO_CONNECTOR.STRAIGHT, Inches(LX + 0.27), Inches(RY + 0.3), Inches(LX + 0.27), Inches(RY + 4 * (RH + GAP) + 0.3))
 ln.line.color.rgb = RGBColor.from_string(Y); ln.line.width = Pt(1.5)
@@ -70,13 +70,13 @@ d.line.color.rgb = RGBColor.from_string(LINE); d.line.width = Pt(1)
 
 # ---------------- right: what it brings you
 RX, RW = 6.78, 5.26
-clone('left-heading', RX, TOP, 4, 0.3, 'What it brings you')
+clone('left-heading', RX, TOP, 4, 0.3, 'Value to your organisation')
 shape(MSO_SHAPE.ROUNDED_RECTANGLE, RX, RY - 0.02, RW, 5 * RH + 4 * GAP + 0.04, fill=CARD, line=Y, lw=1.0)
-BEN = [('zap', 'Speed', 'Days of document review in hours', '2 · 3 · 4'),
-       ('link', 'Trust', 'Every number traced to its source page', '2 · 4'),
-       ('shield-check', 'Quality', 'Automatic checks plus expert judgement', '3 · 4 · 5'),
-       ('target', 'Insight', 'Where national nature money meets your book', '1 · 3'),
-       ('layers', 'Scale', 'Any client, 11 countries; deeper with your data', '1 · 5')]
+BEN = [('zap', 'Speed', 'Days of analysis compressed into hours', '2 · 3 · 4'),
+       ('link', 'Assurance', 'Every figure traceable to its source', '2 · 4'),
+       ('shield-check', 'Rigour', 'Automated controls with expert oversight', '3 · 4 · 5'),
+       ('target', 'Insight', 'National nature spend mapped to your portfolio', '1 · 3'),
+       ('layers', 'Scalability', 'Repeatable across clients and 11 countries', '1 · 5')]
 for i, (ic, head, body, steps) in enumerate(BEN):
     y = RY + i * (RH + GAP)
     shape(MSO_SHAPE.OVAL, RX + 0.2, y + 0.08, 0.46, 0.46, fill=Y); icon(ic, 'dark', RX + 0.31, y + 0.19, 0.24)
@@ -85,9 +85,9 @@ for i, (ic, head, body, steps) in enumerate(BEN):
 
 # ---------------- bottom: the ask and the guardrail
 clone('so-what-panel', 0.58, 5.5, 11.46, 0.55)
-pn = clone('so-what', 1.15, 5.52, 10.75, 0.51, 'Share your portfolio data, and we size opportunities at portfolio and asset level.')
+pn = clone('so-what', 1.15, 5.52, 10.75, 0.51, 'Share your portfolio data to size opportunities at portfolio and asset level.')
 icon('database', 'dark', 0.78, 5.62, 0.3)
-text(0.58, 6.25, 11.46, 0.3, [[('The agent proposes; EY decides. Approved Microsoft tools; public information unless client data is shared.', 8.5, GR, False, L)]], anchor=MSO_ANCHOR.TOP)
+text(0.58, 6.25, 11.46, 0.3, [[('The agent recommends; EY decides. Approved Microsoft tools only; public information unless client data is provided.', 8.5, GR, False, L)]], anchor=MSO_ANCHOR.TOP)
 
 lst = p.slides._sldIdLst
 for sid in list(lst)[:-1]:
